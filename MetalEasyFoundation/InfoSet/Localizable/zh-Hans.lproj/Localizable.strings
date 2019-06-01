@@ -1,0 +1,6 @@
+
+// MARK: - TabBarItem
+root.tab.bar.metal="Metal";
+root.tab.bar.setting="设置";
+metal.root.title="Metal 习题集";
+setting.root.title="通用设置";

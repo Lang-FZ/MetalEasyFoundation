@@ -1,0 +1,6 @@
+module Pods_MetalEasyFoundation {
+  umbrella header "Pods-MetalEasyFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

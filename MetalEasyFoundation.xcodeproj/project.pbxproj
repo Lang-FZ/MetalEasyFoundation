@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
+		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
+		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
+		CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */; };
+		CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37D22A213B1008F4219 /* BaseViewController.swift */; };
+		CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */; };
+		CF65F38622A216D6008F4219 /* RootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F38422A216D6008F4219 /* RootTabBar.swift */; };
+		CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F38522A216D6008F4219 /* RootTabBarController.swift */; };
+		CF65F38922A21791008F4219 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F38822A21791008F4219 /* Default.swift */; };
+		CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F38B22A218C8008F4219 /* Extension+UIFont.swift */; };
+		CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F38C22A218C8008F4219 /* Extension+UIColor.swift */; };
+		CF65F39522A21A9E008F4219 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF65F39122A21A9E008F4219 /* Localizable.strings */; };
+		CF65F39622A21A9E008F4219 /* LocalizationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F39422A21A9E008F4219 /* LocalizationTool.swift */; };
+		CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F39922A21DEF008F4219 /* MetalController.swift */; };
+		CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F39B22A21E02008F4219 /* SettingController.swift */; };
+		CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F39D22A22807008F4219 /* CurrentDelegate.swift */; };
+		E0575B0DB8077C2D98F85B5A /* libPods-MetalEasyFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF0F5ED822A2126D0032E902 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0F5EBB22A2126C0032E902 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0F5EC222A2126C0032E902;
+			remoteInfo = MetalEasyFoundation;
+		};
+		CF0F5EE322A2126D0032E902 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0F5EBB22A2126C0032E902 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0F5EC222A2126C0032E902;
+			remoteInfo = MetalEasyFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.debug.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalEasyFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0F5EC622A2126C0032E902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF0F5ECD22A2126D0032E902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF0F5ED022A2126D0032E902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF0F5ED222A2126D0032E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		CF65F37D22A213B1008F4219 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		CF65F38422A216D6008F4219 /* RootTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBar.swift; sourceTree = "<group>"; };
+		CF65F38522A216D6008F4219 /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		CF65F38822A21791008F4219 /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
+		CF65F38B22A218C8008F4219 /* Extension+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		CF65F38C22A218C8008F4219 /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		CF65F39222A21A9E008F4219 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CF65F39322A21A9E008F4219 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF65F39422A21A9E008F4219 /* LocalizationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationTool.swift; sourceTree = "<group>"; };
+		CF65F39922A21DEF008F4219 /* MetalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalController.swift; sourceTree = "<group>"; };
+		CF65F39B22A21E02008F4219 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		CF65F39D22A22807008F4219 /* CurrentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDelegate.swift; sourceTree = "<group>"; };
+		FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.release.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF0F5EC022A2126C0032E902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0575B0DB8077C2D98F85B5A /* libPods-MetalEasyFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5ED422A2126D0032E902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5EDF22A2126D0032E902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42FE188EB86C907B2F230D66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C7626D2F74BBEFF10A534C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */,
+				FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF0F5EBA22A2126C0032E902 = {
+			isa = PBXGroup;
+			children = (
+				CF0F5EC522A2126C0032E902 /* MetalEasyFoundation */,
+				CF0F5EC422A2126C0032E902 /* Products */,
+				7C7626D2F74BBEFF10A534C5 /* Pods */,
+				42FE188EB86C907B2F230D66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CF0F5EC422A2126C0032E902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */,
+				CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */,
+				CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF0F5EC522A2126C0032E902 /* MetalEasyFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F5EC622A2126C0032E902 /* AppDelegate.swift */,
+				CF65F39D22A22807008F4219 /* CurrentDelegate.swift */,
+				CF65F38322A213CC008F4219 /* MetalFoundation */,
+				CF65F37B22A213A8008F4219 /* BaseViewController */,
+				CF65F38222A213BC008F4219 /* Root */,
+				CF65F38A22A218C8008F4219 /* Extension */,
+				CF0F5ECD22A2126D0032E902 /* Assets.xcassets */,
+				CF65F38F22A21A86008F4219 /* InfoSet */,
+				CF65F38822A21791008F4219 /* Default.swift */,
+			);
+			path = MetalEasyFoundation;
+			sourceTree = "<group>";
+		};
+		CF65F37B22A213A8008F4219 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */,
+				CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */,
+				CF65F37D22A213B1008F4219 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CF65F38222A213BC008F4219 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F38522A216D6008F4219 /* RootTabBarController.swift */,
+				CF65F38422A216D6008F4219 /* RootTabBar.swift */,
+				CF65F39822A21DCC008F4219 /* Metal */,
+				CF65F39722A21DCC008F4219 /* Setting */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CF65F38322A213CC008F4219 /* MetalFoundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MetalFoundation;
+			sourceTree = "<group>";
+		};
+		CF65F38A22A218C8008F4219 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F38B22A218C8008F4219 /* Extension+UIFont.swift */,
+				CF65F38C22A218C8008F4219 /* Extension+UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CF65F38F22A21A86008F4219 /* InfoSet */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F39022A21A9E008F4219 /* Localizable */,
+				CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */,
+				CF0F5ED222A2126D0032E902 /* Info.plist */,
+			);
+			path = InfoSet;
+			sourceTree = "<group>";
+		};
+		CF65F39022A21A9E008F4219 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F39422A21A9E008F4219 /* LocalizationTool.swift */,
+				CF65F39122A21A9E008F4219 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		CF65F39722A21DCC008F4219 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F39B22A21E02008F4219 /* SettingController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CF65F39822A21DCC008F4219 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				CF65F39922A21DEF008F4219 /* MetalController.swift */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0F5EEB22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundation" */;
+			buildPhases = (
+				41B915A766C693ABC1EC1344 /* [CP] Check Pods Manifest.lock */,
+				CF0F5EBF22A2126C0032E902 /* Sources */,
+				CF0F5EC022A2126C0032E902 /* Frameworks */,
+				CF0F5EC122A2126C0032E902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalEasyFoundation;
+			productName = MetalEasyFoundation;
+			productReference = CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF0F5ED622A2126D0032E902 /* MetalEasyFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0F5EEE22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationTests" */;
+			buildPhases = (
+				CF0F5ED322A2126D0032E902 /* Sources */,
+				CF0F5ED422A2126D0032E902 /* Frameworks */,
+				CF0F5ED522A2126D0032E902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0F5ED922A2126D0032E902 /* PBXTargetDependency */,
+			);
+			name = MetalEasyFoundationTests;
+			productName = MetalEasyFoundationTests;
+			productReference = CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF0F5EE122A2126D0032E902 /* MetalEasyFoundationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0F5EF122A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationUITests" */;
+			buildPhases = (
+				CF0F5EDE22A2126D0032E902 /* Sources */,
+				CF0F5EDF22A2126D0032E902 /* Frameworks */,
+				CF0F5EE022A2126D0032E902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0F5EE422A2126D0032E902 /* PBXTargetDependency */,
+			);
+			name = MetalEasyFoundationUITests;
+			productName = MetalEasyFoundationUITests;
+			productReference = CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF0F5EBB22A2126C0032E902 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = LFZ;
+				TargetAttributes = {
+					CF0F5EC222A2126C0032E902 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CF0F5ED622A2126D0032E902 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CF0F5EC222A2126C0032E902;
+					};
+					CF0F5EE122A2126D0032E902 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CF0F5EC222A2126C0032E902;
+					};
+				};
+			};
+			buildConfigurationList = CF0F5EBE22A2126C0032E902 /* Build configuration list for PBXProject "MetalEasyFoundation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = CF0F5EBA22A2126C0032E902;
+			productRefGroup = CF0F5EC422A2126C0032E902 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */,
+				CF0F5ED622A2126D0032E902 /* MetalEasyFoundationTests */,
+				CF0F5EE122A2126D0032E902 /* MetalEasyFoundationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF0F5EC122A2126C0032E902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */,
+				CF65F39522A21A9E008F4219 /* Localizable.strings in Resources */,
+				CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5ED522A2126D0032E902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5EE022A2126D0032E902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41B915A766C693ABC1EC1344 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetalEasyFoundation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF0F5EBF22A2126C0032E902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
+				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
+				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
+				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
+				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
+				CF65F39622A21A9E008F4219 /* LocalizationTool.swift in Sources */,
+				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
+				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
+				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
+				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,
+				CF65F38922A21791008F4219 /* Default.swift in Sources */,
+				CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */,
+				CF65F38622A216D6008F4219 /* RootTabBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5ED322A2126D0032E902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0F5EDE22A2126D0032E902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF0F5ED922A2126D0032E902 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */;
+			targetProxy = CF0F5ED822A2126D0032E902 /* PBXContainerItemProxy */;
+		};
+		CF0F5EE422A2126D0032E902 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */;
+			targetProxy = CF0F5EE322A2126D0032E902 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0F5ED022A2126D0032E902 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CF65F39122A21A9E008F4219 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF65F39222A21A9E008F4219 /* zh-Hans */,
+				CF65F39322A21A9E008F4219 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF0F5EE922A2126D0032E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF0F5EEA22A2126D0032E902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF0F5EEC22A2126D0032E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF0F5EED22A2126D0032E902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF0F5EEF22A2126D0032E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalEasyFoundation.app/MetalEasyFoundation";
+			};
+			name = Debug;
+		};
+		CF0F5EF022A2126D0032E902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalEasyFoundation.app/MetalEasyFoundation";
+			};
+			name = Release;
+		};
+		CF0F5EF222A2126D0032E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetalEasyFoundation;
+			};
+			name = Debug;
+		};
+		CF0F5EF322A2126D0032E902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496JMV52SE;
+				INFOPLIST_FILE = MetalEasyFoundationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetalEasyFoundation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF0F5EBE22A2126C0032E902 /* Build configuration list for PBXProject "MetalEasyFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0F5EE922A2126D0032E902 /* Debug */,
+				CF0F5EEA22A2126D0032E902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0F5EEB22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0F5EEC22A2126D0032E902 /* Debug */,
+				CF0F5EED22A2126D0032E902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0F5EEE22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0F5EEF22A2126D0032E902 /* Debug */,
+				CF0F5EF022A2126D0032E902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0F5EF122A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0F5EF222A2126D0032E902 /* Debug */,
+				CF0F5EF322A2126D0032E902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF0F5EBB22A2126C0032E902 /* Project object */;
+}

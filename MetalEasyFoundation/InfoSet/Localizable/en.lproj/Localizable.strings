@@ -1,0 +1,6 @@
+
+// MARK: - TabBarItem
+root.tab.bar.metal="Metal";
+root.tab.bar.setting="Settings";
+metal.root.title="Metal Set";
+setting.root.title="Settings";
