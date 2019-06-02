@@ -2,5 +2,10 @@
 // MARK: - TabBarItem
 root.tab.bar.metal="Metal";
 root.tab.bar.setting="设置";
+// MARK: - RootNaviTitle
 metal.root.title="Metal 习题集";
 setting.root.title="通用设置";
+// MARK: - Setting
+setting.language.list.title="设置语言";
+setting.language.chinese="中文";
+setting.language.english="英文";

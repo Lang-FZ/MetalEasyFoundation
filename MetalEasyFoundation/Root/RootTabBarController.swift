@@ -51,8 +51,6 @@ class RootTabBarController: BaseTabBarController {
         tabBar.addSubview(custom_tabBar)
         
         custom_tabBar.selectedItem(getLastIndex())
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(changedLanguage), name: Language_Changed_Notification, object: nil)
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -71,13 +69,6 @@ extension RootTabBarController {
         }
         
         return last_index
-    }
-    
-    //TODO: 切换语言
-    @objc private func changedLanguage() {
-        metal.changedLanguage()
-        setting.changedLanguage()
-        custom_tabBar.changedLanguage()
     }
 }
 

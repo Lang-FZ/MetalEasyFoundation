@@ -10,6 +10,9 @@
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
 		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
+		CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC222A446A1002F02D0 /* BaseListModel.swift */; };
+		CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC422A44973002F02D0 /* BaseListCell.swift */; };
+		CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC622A44E4C002F02D0 /* LanguageController.swift */; };
 		CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */; };
 		CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37D22A213B1008F4219 /* BaseViewController.swift */; };
 		CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */; };
@@ -53,6 +56,9 @@
 		CF0F5ED222A2126D0032E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF164FC222A446A1002F02D0 /* BaseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListModel.swift; sourceTree = "<group>"; };
+		CF164FC422A44973002F02D0 /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
+		CF164FC622A44E4C002F02D0 /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		CF65F37D22A213B1008F4219 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -110,7 +116,6 @@
 				ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */,
 				FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +161,8 @@
 				CF65F37E22A213B1008F4219 /* BaseNavigationController.swift */,
 				CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */,
 				CF65F37D22A213B1008F4219 /* BaseViewController.swift */,
+				CF164FC222A446A1002F02D0 /* BaseListModel.swift */,
+				CF164FC422A44973002F02D0 /* BaseListCell.swift */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				CF65F39B22A21E02008F4219 /* SettingController.swift */,
+				CF164FC622A44E4C002F02D0 /* LanguageController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -381,7 +389,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
+				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
+				CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
 				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
@@ -389,6 +399,7 @@
 				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
 				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
 				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
+				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,
 				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,
 				CF65F38922A21791008F4219 /* Default.swift in Sources */,
 				CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */,

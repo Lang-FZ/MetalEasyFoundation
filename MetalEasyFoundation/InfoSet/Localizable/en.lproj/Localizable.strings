@@ -2,5 +2,10 @@
 // MARK: - TabBarItem
 root.tab.bar.metal="Metal";
 root.tab.bar.setting="Settings";
+// MARK: - RootNaviTitle
 metal.root.title="Metal Set";
 setting.root.title="Settings";
+// MARK: - Setting
+setting.language.list.title="Language";
+setting.language.chinese="Chinese";
+setting.language.english="English";

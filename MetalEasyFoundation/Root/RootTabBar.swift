@@ -88,12 +88,17 @@ class RootTabBar: UIView {
         self.backgroundColor = UIColor.init(white: 1, alpha: 0.8)
         self.isUserInteractionEnabled = true
         self.createRootTabBar()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changedLanguage), name: Language_Changed_Notification, object: nil)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
-    public func changedLanguage() {
+    @objc public func changedLanguage() {
         metal_title.text = LocalizationTool.getStr("root.tab.bar.metal")
         setting_title.text = LocalizationTool.getStr("root.tab.bar.setting")
     }
