@@ -9,3 +9,11 @@ setting.root.title="通用设置";
 setting.language.list.title="设置语言";
 setting.language.chinese="中文";
 setting.language.english="英文";
+// MARK: - Metal
+metal.list.title.normal="显示视图";
+metal.list.title.lut="LUT颜色滤镜";
+metal.list.title.zoom.blur="Zoom Blur";
+metal.list.title.toon="Toon";
+metal.list.title.style.transfer="Core ML 风格映射";
+metal.list.title.heap="增高";
+metal.list.title.mask="抠图换背景";

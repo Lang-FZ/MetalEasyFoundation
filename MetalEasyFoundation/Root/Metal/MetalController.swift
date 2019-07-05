@@ -16,6 +16,55 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         
         let model = BaseListModel.init([:])
         
+        let model1 = BaseListModel.init([:])
+        model1.title = "metal.list.title.normal"
+        model1.action = { [weak self] in
+            self?.pushNormal()
+        }
+        model.data.append(model1)
+        
+        let model2 = BaseListModel.init([:])
+        model2.title = "metal.list.title.lut"
+        model2.action = { [weak self] in
+            self?.pushLUT()
+        }
+        model.data.append(model2)
+        
+        let model3 = BaseListModel.init([:])
+        model3.title = "metal.list.title.zoom.blur"
+        model3.action = { [weak self] in
+            self?.pushZoomBlur()
+        }
+        model.data.append(model3)
+        
+        let model4 = BaseListModel.init([:])
+        model4.title = "metal.list.title.toon"
+        model4.action = { [weak self] in
+            self?.pushToon()
+        }
+        model.data.append(model4)
+        
+        let model5 = BaseListModel.init([:])
+        model5.title = "metal.list.title.style.transfer"
+        model5.action = { [weak self] in
+            self?.pushStyleTransfer()
+        }
+        model.data.append(model5)
+        
+        let model6 = BaseListModel.init([:])
+        model6.title = "metal.list.title.heap"
+        model6.action = { [weak self] in
+            self?.pushMTLHeap()
+        }
+        model.data.append(model6)
+        
+        let model7 = BaseListModel.init([:])
+        model7.title = "metal.list.title.mask"
+        model7.action = { [weak self] in
+            self?.pushMask()
+        }
+        model.data.append(model7)
+        
         return model
     }()
     
@@ -68,6 +117,7 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MetalListIdentifier) as! BaseListCell
         cell.model = model.data[indexPath.row]
+        cell.isLast = (indexPath.row == (model.data.count-1))
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,5 +128,25 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
 
 extension MetalController {
     
-    
+    private func pushNormal() {
+        print("pushNormal")
+    }
+    private func pushLUT() {
+        print("pushLUT")
+    }
+    private func pushZoomBlur() {
+        print("pushZoomBlur")
+    }
+    private func pushToon() {
+        print("pushToon")
+    }
+    private func pushStyleTransfer() {
+        print("pushStyleTransfer")
+    }
+    private func pushMTLHeap() {
+        print("pushMTLHeap")
+    }
+    private func pushMask() {
+        print("pushMask")
+    }
 }

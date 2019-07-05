@@ -76,6 +76,7 @@ extension SettingController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingListIdentifier) as! BaseListCell
         cell.model = model.data[indexPath.row]
+        cell.isLast = (indexPath.row == (model.data.count-1))
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

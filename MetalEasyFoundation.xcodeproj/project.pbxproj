@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E9C939922CDF807005E8FDE /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939822CDF807005E8FDE /* Pipeline.swift */; };
+		5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939A22CE0CA2005E8FDE /* Texture.swift */; };
+		5E9C939D22CE0E02005E8FDE /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939C22CE0E02005E8FDE /* Context.swift */; };
+		5E9C939F22CE1039005E8FDE /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939E22CE1039005E8FDE /* Rendering.swift */; };
+		5E9C93A122CE1099005E8FDE /* ShaderUniformSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93A022CE1099005E8FDE /* ShaderUniformSettings.swift */; };
+		5E9C93A322CE1743005E8FDE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93A222CE1743005E8FDE /* Color.swift */; };
+		5E9C93A522CE199E005E8FDE /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93A422CE199E005E8FDE /* Position.swift */; };
+		5E9C93A722CE1BE2005E8FDE /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93A622CE1BE2005E8FDE /* Matrix.swift */; };
+		5E9C93A922CE2E08005E8FDE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93A822CE2E08005E8FDE /* Constants.swift */; };
+		5E9C93AB22CF2F35005E8FDE /* FillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93AA22CF2F35005E8FDE /* FillMode.swift */; };
+		5E9C93AD22CF3C97005E8FDE /* PictureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93AC22CF3C97005E8FDE /* PictureInput.swift */; };
+		5E9C93AF22CF5701005E8FDE /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93AE22CF5701005E8FDE /* RenderView.swift */; };
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
 		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
@@ -48,6 +60,18 @@
 
 /* Begin PBXFileReference section */
 		0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9C939822CDF807005E8FDE /* Pipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
+		5E9C939A22CE0CA2005E8FDE /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		5E9C939C22CE0E02005E8FDE /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		5E9C939E22CE1039005E8FDE /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
+		5E9C93A022CE1099005E8FDE /* ShaderUniformSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderUniformSettings.swift; sourceTree = "<group>"; };
+		5E9C93A222CE1743005E8FDE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5E9C93A422CE199E005E8FDE /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		5E9C93A622CE1BE2005E8FDE /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		5E9C93A822CE2E08005E8FDE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E9C93AA22CF2F35005E8FDE /* FillMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillMode.swift; sourceTree = "<group>"; };
+		5E9C93AC22CF3C97005E8FDE /* PictureInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInput.swift; sourceTree = "<group>"; };
+		5E9C93AE22CF5701005E8FDE /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
 		ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.debug.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalEasyFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F5EC622A2126C0032E902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +134,128 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E9C938A22CDDE87005E8FDE /* MetalListSubController */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C938B22CDDE87005E8FDE /* MTLHeap */,
+				5E9C938C22CDDE87005E8FDE /* CoreMLStyleTransfer */,
+				5E9C938D22CDDE87005E8FDE /* Toon */,
+				5E9C938E22CDDE87005E8FDE /* Mask */,
+				5E9C938F22CDDE87005E8FDE /* LookupTable */,
+				5E9C939022CDDE87005E8FDE /* NormalImage */,
+				5E9C939122CDDE87005E8FDE /* ZoomBlur */,
+			);
+			path = MetalListSubController;
+			sourceTree = "<group>";
+		};
+		5E9C938B22CDDE87005E8FDE /* MTLHeap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MTLHeap;
+			sourceTree = "<group>";
+		};
+		5E9C938C22CDDE87005E8FDE /* CoreMLStyleTransfer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreMLStyleTransfer;
+			sourceTree = "<group>";
+		};
+		5E9C938D22CDDE87005E8FDE /* Toon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toon;
+			sourceTree = "<group>";
+		};
+		5E9C938E22CDDE87005E8FDE /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
+		5E9C938F22CDDE87005E8FDE /* LookupTable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LookupTable;
+			sourceTree = "<group>";
+		};
+		5E9C939022CDDE87005E8FDE /* NormalImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NormalImage;
+			sourceTree = "<group>";
+		};
+		5E9C939122CDDE87005E8FDE /* ZoomBlur */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZoomBlur;
+			sourceTree = "<group>";
+		};
+		5E9C939222CDDF58005E8FDE /* MetalFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C939722CDDF58005E8FDE /* Inputs */,
+				5E9C939422CDDF58005E8FDE /* Outputs */,
+				5E9C939322CDDF58005E8FDE /* Operations */,
+				5E9C939522CDDF58005E8FDE /* Base */,
+			);
+			path = MetalFoundation;
+			sourceTree = "<group>";
+		};
+		5E9C939322CDDF58005E8FDE /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5E9C939422CDDF58005E8FDE /* Outputs */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C93AE22CF5701005E8FDE /* RenderView.swift */,
+			);
+			path = Outputs;
+			sourceTree = "<group>";
+		};
+		5E9C939522CDDF58005E8FDE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C939622CDDF58005E8FDE /* DataTypes */,
+				5E9C939822CDF807005E8FDE /* Pipeline.swift */,
+				5E9C939A22CE0CA2005E8FDE /* Texture.swift */,
+				5E9C93A822CE2E08005E8FDE /* Constants.swift */,
+				5E9C939C22CE0E02005E8FDE /* Context.swift */,
+				5E9C939E22CE1039005E8FDE /* Rendering.swift */,
+				5E9C93A022CE1099005E8FDE /* ShaderUniformSettings.swift */,
+				5E9C93AA22CF2F35005E8FDE /* FillMode.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5E9C939622CDDF58005E8FDE /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C93A222CE1743005E8FDE /* Color.swift */,
+				5E9C93A422CE199E005E8FDE /* Position.swift */,
+				5E9C93A622CE1BE2005E8FDE /* Matrix.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		5E9C939722CDDF58005E8FDE /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C93AC22CF3C97005E8FDE /* PictureInput.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
 		7C7626D2F74BBEFF10A534C5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +290,7 @@
 			children = (
 				CF0F5EC622A2126C0032E902 /* AppDelegate.swift */,
 				CF65F39D22A22807008F4219 /* CurrentDelegate.swift */,
-				CF65F38322A213CC008F4219 /* MetalFoundation */,
+				5E9C939222CDDF58005E8FDE /* MetalFoundation */,
 				CF65F37B22A213A8008F4219 /* BaseViewController */,
 				CF65F38222A213BC008F4219 /* Root */,
 				CF65F38A22A218C8008F4219 /* Extension */,
@@ -176,13 +322,6 @@
 				CF65F39722A21DCC008F4219 /* Setting */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		CF65F38322A213CC008F4219 /* MetalFoundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MetalFoundation;
 			sourceTree = "<group>";
 		};
 		CF65F38A22A218C8008F4219 /* Extension */ = {
@@ -226,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				CF65F39922A21DEF008F4219 /* MetalController.swift */,
+				5E9C938A22CDDE87005E8FDE /* MetalListSubController */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -388,21 +528,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9C93A922CE2E08005E8FDE /* Constants.swift in Sources */,
+				5E9C939F22CE1039005E8FDE /* Rendering.swift in Sources */,
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
 				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
 				CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */,
+				5E9C939922CDF807005E8FDE /* Pipeline.swift in Sources */,
+				5E9C93A122CE1099005E8FDE /* ShaderUniformSettings.swift in Sources */,
+				5E9C939D22CE0E02005E8FDE /* Context.swift in Sources */,
+				5E9C93A522CE199E005E8FDE /* Position.swift in Sources */,
+				5E9C93AD22CF3C97005E8FDE /* PictureInput.swift in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
+				5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */,
 				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
 				CF65F39622A21A9E008F4219 /* LocalizationTool.swift in Sources */,
+				5E9C93A322CE1743005E8FDE /* Color.swift in Sources */,
 				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
+				5E9C93AB22CF2F35005E8FDE /* FillMode.swift in Sources */,
 				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
 				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
 				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,
 				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,
+				5E9C93A722CE1BE2005E8FDE /* Matrix.swift in Sources */,
 				CF65F38922A21791008F4219 /* Default.swift in Sources */,
 				CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */,
+				5E9C93AF22CF5701005E8FDE /* RenderView.swift in Sources */,
 				CF65F38622A216D6008F4219 /* RootTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,8 +731,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
+				DEVELOPMENT_TEAM = 6EMFL9A2M9;
 				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,8 +751,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
+				DEVELOPMENT_TEAM = 6EMFL9A2M9;
 				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,6 +16,7 @@ class BaseListModel: NSObject {
     public var data:[BaseListModel] = []
     
     public var title:String = ""
+    public var sub_title:String = ""
     public var action:(() -> ())?
     
     

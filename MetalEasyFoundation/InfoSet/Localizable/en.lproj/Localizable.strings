@@ -9,3 +9,11 @@ setting.root.title="Settings";
 setting.language.list.title="Language";
 setting.language.chinese="Chinese";
 setting.language.english="English";
+// MARK: - Metal
+metal.list.title.normal="Normal Image";
+metal.list.title.lut="LookupTable";
+metal.list.title.zoom.blur="Zoom Blur";
+metal.list.title.toon="Toon";
+metal.list.title.style.transfer="Core ML Style Transfer";
+metal.list.title.heap="MTLHeap";
+metal.list.title.mask="Mask";
