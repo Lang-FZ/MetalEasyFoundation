@@ -9,7 +9,7 @@
 import Foundation
 import Metal
 
-class ShaderUniformSettings {
+public class ShaderUniformSettings {
 
     private var uniformValues: [Float] = []
     private var uniformValueOffsets: [Int] = []
