@@ -126,20 +126,51 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - 跳转
+
 extension MetalController {
-    
+
+    //TODO: 渲染图片
     private func pushNormal(_ title:String) {
-        let normal = NormalImageController()
-        normal.title = title
-        navigationController?.pushViewController(normal, animated: true)
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let normal = NormalImageController()
+            normal.title = title
+            normal.picture_name = picture_name
+            self?.navigationController?.pushViewController(normal, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
+    //TODO: LookupTable 阿宝色
     private func pushLUT(_ title:String) {
-        let lut = LookupTableController()
-        lut.title = title
-        navigationController?.pushViewController(lut, animated: true)
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let lut = LookupTableController()
+            lut.picture_name = picture_name
+            lut.title = title
+            self?.navigationController?.pushViewController(lut, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
+    //TODO: ZoomBlur 径向模糊
     private func pushZoomBlur(_ title:String) {
-        print("pushZoomBlur")
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let zoom_blur = ZoomBlurController()
+            zoom_blur.picture_name = picture_name
+            zoom_blur.title = title
+            self?.navigationController?.pushViewController(zoom_blur, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
     private func pushToon(_ title:String) {
         print("pushToon")

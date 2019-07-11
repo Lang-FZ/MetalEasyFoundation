@@ -10,6 +10,7 @@ setting.language.list.title="Language";
 setting.language.chinese="Chinese";
 setting.language.english="English";
 // MARK: - Metal
+metal.select.picture.title="Select Picture";
 metal.list.title.normal="Normal Image";
 metal.list.title.lut="LookupTable";
 metal.list.title.zoom.blur="Zoom Blur";
@@ -21,3 +22,5 @@ metal.list.title.mask="Mask";
 metal.lut.saturation="Saturation";
 metal.lut.brightness="Brightness";
 metal.lut.abao.intensity="ABaoIntensity";
+// MARK: - Metal-ZoomBlur
+metal.zoom.blur.slider.title="Blur Size";

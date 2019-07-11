@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0DEE7722D73DD6002DF990 /* SelectPicturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */; };
+		5E0DEE7922D754CF002DF990 /* ZoomBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7822D754CF002DF990 /* ZoomBlurController.swift */; };
+		5E0DEE7B22D754DF002DF990 /* ZoomBlur.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7A22D754DF002DF990 /* ZoomBlur.metal */; };
+		5E0DEE7D22D754F7002DF990 /* ZoomBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7C22D754F7002DF990 /* ZoomBlur.swift */; };
 		5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158822D4A0000025E86B /* NormalImageController.swift */; };
 		5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158A22D4A87C0025E86B /* LookupTableController.swift */; };
 		5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
@@ -92,6 +96,10 @@
 
 /* Begin PBXFileReference section */
 		0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPicturesController.swift; sourceTree = "<group>"; };
+		5E0DEE7822D754CF002DF990 /* ZoomBlurController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlurController.swift; sourceTree = "<group>"; };
+		5E0DEE7A22D754DF002DF990 /* ZoomBlur.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ZoomBlur.metal; sourceTree = "<group>"; };
+		5E0DEE7C22D754F7002DF990 /* ZoomBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlur.swift; sourceTree = "<group>"; };
 		5E3F158822D4A0000025E86B /* NormalImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalImageController.swift; sourceTree = "<group>"; };
 		5E3F158A22D4A87C0025E86B /* LookupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTableController.swift; sourceTree = "<group>"; };
 		5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 		5E9C938A22CDDE87005E8FDE /* MetalListSubController */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */,
 				5E9C939022CDDE87005E8FDE /* NormalImage */,
 				5E9C938F22CDDE87005E8FDE /* LookupTable */,
 				5E9C939122CDDE87005E8FDE /* ZoomBlur */,
@@ -245,11 +254,11 @@
 		5E9C938F22CDDE87005E8FDE /* LookupTable */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F158A22D4A87C0025E86B /* LookupTableController.swift */,
 				5E3F159B22D5FA460025E86B /* SaturationFilter.swift */,
 				5E3F159922D5F92C0025E86B /* SaturationFilter.metal */,
 				5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */,
 				5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */,
-				5E3F158A22D4A87C0025E86B /* LookupTableController.swift */,
 			);
 			path = LookupTable;
 			sourceTree = "<group>";
@@ -265,6 +274,9 @@
 		5E9C939122CDDE87005E8FDE /* ZoomBlur */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEE7822D754CF002DF990 /* ZoomBlurController.swift */,
+				5E0DEE7C22D754F7002DF990 /* ZoomBlur.swift */,
+				5E0DEE7A22D754DF002DF990 /* ZoomBlur.metal */,
 			);
 			path = ZoomBlur;
 			sourceTree = "<group>";
@@ -644,6 +656,7 @@
 				5E9C93A122CE1099005E8FDE /* ShaderUniformSettings.swift in Sources */,
 				5E9C939D22CE0E02005E8FDE /* Context.swift in Sources */,
 				5E9C93A522CE199E005E8FDE /* Position.swift in Sources */,
+				5E0DEE7722D73DD6002DF990 /* SelectPicturesController.swift in Sources */,
 				5E9C93AD22CF3C97005E8FDE /* PictureInput.swift in Sources */,
 				5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
@@ -651,6 +664,7 @@
 				5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */,
 				5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */,
 				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
+				5E0DEE7D22D754F7002DF990 /* ZoomBlur.swift in Sources */,
 				CF65F39622A21A9E008F4219 /* LocalizationTool.swift in Sources */,
 				5E9C93A322CE1743005E8FDE /* Color.swift in Sources */,
 				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
@@ -661,12 +675,14 @@
 				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,
 				5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */,
 				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,
+				5E0DEE7922D754CF002DF990 /* ZoomBlurController.swift in Sources */,
 				5E9C93A722CE1BE2005E8FDE /* Matrix.swift in Sources */,
 				CF65F38922A21791008F4219 /* Default.swift in Sources */,
 				CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */,
 				5E9C93B322D31AE9005E8FDE /* LookupFilter.swift in Sources */,
 				5E9C93AF22CF5701005E8FDE /* RenderView.swift in Sources */,
 				CF65F38622A216D6008F4219 /* RootTabBar.swift in Sources */,
+				5E0DEE7B22D754DF002DF990 /* ZoomBlur.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

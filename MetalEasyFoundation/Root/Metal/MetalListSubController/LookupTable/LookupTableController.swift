@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LookupTableController: UIViewController {
+class LookupTableController: BaseViewController {
     
     // MARK: - 懒加载
     private lazy var renderView: RenderView = {
@@ -16,10 +16,7 @@ class LookupTableController: UIViewController {
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
-    private lazy var picture : PictureInput = {
-        let picture = PictureInput.init(image: UIImage.init(named: "girl2.jpg")!)
-        return picture
-    }()
+    private var picture : PictureInput!
     
     //TODO: 饱和度
     private lazy var saturation_l: UILabel = {
@@ -32,6 +29,8 @@ class LookupTableController: UIViewController {
     }()
     private lazy var saturation_s: UISlider = {
         let saturation_s = UISlider.init(frame: CGRect.zero)
+        saturation_s.maximumValue = 2
+        saturation_s.minimumValue = 0
         saturation_s.value = 1
         saturation_s.addTarget(self, action: #selector(saturationChanged(_:)), for: .valueChanged)
         return saturation_s
@@ -53,6 +52,9 @@ class LookupTableController: UIViewController {
     }()
     private lazy var brightness_s: UISlider = {
         let brightness_s = UISlider.init(frame: CGRect.zero)
+        brightness_s.maximumValue = 1
+        brightness_s.minimumValue = -1
+        brightness_s.value = 0
         brightness_s.addTarget(self, action: #selector(brightnessChanged(_:)), for: .valueChanged)
         return brightness_s
     }()
@@ -73,6 +75,9 @@ class LookupTableController: UIViewController {
     }()
     private lazy var abao_intensity_s: UISlider = {
         let abao_intensity_s = UISlider.init(frame: CGRect.zero)
+        abao_intensity_s.maximumValue = 5
+        abao_intensity_s.minimumValue = 0
+        abao_intensity_s.value = 0
         abao_intensity_s.addTarget(self, action: #selector(abaoIntensityChanged(_:)), for: .valueChanged)
         return abao_intensity_s
     }()
@@ -82,6 +87,12 @@ class LookupTableController: UIViewController {
         abao_fillter.intensity = 0
         return abao_fillter
     }()
+    
+    public var picture_name:String = "" {
+        didSet {
+            picture = PictureInput.init(image: UIImage.init(named: picture_name)!)
+        }
+    }
     
     
     // MARK: - 系统方法

@@ -14,7 +14,7 @@ typedef struct {
     float intensity;
 } IntensityUniform;
 
-fragment half4 lookupFragment(TwoInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], texture2d<half> inputTexture2 [[texture(1)]], constant IntensityUniform& uniform [[buffer(1)]]) {
+fragment half4 lookupFragment(TwoInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], texture2d<half> inputTexture2 [[texture(1)]], constant IntensityUniform &uniform [[buffer(1)]]) {
     
     constexpr sampler quadSampler;
     half4 base = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate);

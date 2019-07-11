@@ -10,6 +10,7 @@ setting.language.list.title="设置语言";
 setting.language.chinese="中文";
 setting.language.english="英文";
 // MARK: - Metal
+metal.select.picture.title="选择图片";
 metal.list.title.normal="显示视图";
 metal.list.title.lut="LUT颜色滤镜";
 metal.list.title.zoom.blur="Zoom Blur";
@@ -21,3 +22,5 @@ metal.list.title.mask="抠图换背景";
 metal.lut.saturation="饱和度";
 metal.lut.brightness="亮度";
 metal.lut.abao.intensity="阿宝色";
+// MARK: - Metal-ZoomBlur
+metal.zoom.blur.slider.title="模糊系数";

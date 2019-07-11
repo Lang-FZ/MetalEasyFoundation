@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NormalImageController: UIViewController {
+class NormalImageController: BaseViewController {
     
     // MARK: - 懒加载
     private lazy var renderView: RenderView = {
@@ -16,10 +16,12 @@ class NormalImageController: UIViewController {
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
-    private lazy var picture : PictureInput = {
-        let picture = PictureInput.init(image: UIImage.init(named: "natural_light_purple1.jpg")!)
-        return picture
-    }()
+    private var picture : PictureInput!
+    public var picture_name:String = "" {
+        didSet {
+            picture = PictureInput.init(image: UIImage.init(named: picture_name)!)
+        }
+    }
     
     
     // MARK: - 系统方法
