@@ -13,7 +13,7 @@ extension MTLCommandBuffer {
     
     func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings: ShaderUniformSettings? = nil, inputTextures: [UInt: Texture], outputTexture: Texture, clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices, textureCoordinates: [Float] = standardTextureCoordinates) {
         
-        let vertexBuffer = sharedContext.device.makeBuffer(bytes: imageVertices, length: imageVertices.count * MemoryLayout<Float>.size, options: [])!
+        let vertexBuffer = sharedContext.device.makeBuffer(bytes: imageVertices, length: imageVertices.count * MemoryLayout<Float> .size, options: [])!
         
         let renderPass = MTLRenderPassDescriptor.init()
         renderPass.colorAttachments[0].texture = outputTexture.texture
@@ -28,6 +28,13 @@ extension MTLCommandBuffer {
         renderEncoder.setFrontFacing(.counterClockwise)
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+//        renderEncoder.setVertexBytes(&vertexBuffer, length: MemoryLayout<MTLBuffer>.size, index: 1)
+        
+//        let sampleDes:MTLSamplerDescriptor = MTLSamplerDescriptor.init()
+//        sampleDes.minFilter = MTLSamplerMinMagFilter.nearest
+//        sampleDes.magFilter = MTLSamplerMinMagFilter.linear
+//        let samplerState = device.makeSamplerState(descriptor: sampleDes)
+//        renderEncoder.setFragmentSamplerState(samplerState, index: 0)
         
         for textureIndex in 0..<inputTextures.count {
             

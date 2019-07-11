@@ -18,50 +18,50 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         
         let model1 = BaseListModel.init([:])
         model1.title = "metal.list.title.normal"
-        model1.action = { [weak self] in
-            self?.pushNormal()
+        model1.action = { [weak self] (title) in
+            self?.pushNormal(title)
         }
         model.data.append(model1)
         
         let model2 = BaseListModel.init([:])
         model2.title = "metal.list.title.lut"
-        model2.action = { [weak self] in
-            self?.pushLUT()
+        model2.action = { [weak self] (title) in
+            self?.pushLUT(title)
         }
         model.data.append(model2)
         
         let model3 = BaseListModel.init([:])
         model3.title = "metal.list.title.zoom.blur"
-        model3.action = { [weak self] in
-            self?.pushZoomBlur()
+        model3.action = { [weak self] (title) in
+            self?.pushZoomBlur(title)
         }
         model.data.append(model3)
         
         let model4 = BaseListModel.init([:])
         model4.title = "metal.list.title.toon"
-        model4.action = { [weak self] in
-            self?.pushToon()
+        model4.action = { [weak self] (title) in
+            self?.pushToon(title)
         }
         model.data.append(model4)
         
         let model5 = BaseListModel.init([:])
         model5.title = "metal.list.title.style.transfer"
-        model5.action = { [weak self] in
-            self?.pushStyleTransfer()
+        model5.action = { [weak self] (title) in
+            self?.pushStyleTransfer(title)
         }
         model.data.append(model5)
         
         let model6 = BaseListModel.init([:])
         model6.title = "metal.list.title.heap"
-        model6.action = { [weak self] in
-            self?.pushMTLHeap()
+        model6.action = { [weak self] (title) in
+            self?.pushMTLHeap(title)
         }
         model.data.append(model6)
         
         let model7 = BaseListModel.init([:])
         model7.title = "metal.list.title.mask"
-        model7.action = { [weak self] in
-            self?.pushMask()
+        model7.action = { [weak self] (title) in
+            self?.pushMask(title)
         }
         model.data.append(model7)
         
@@ -122,31 +122,35 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        model.data[indexPath.row].action?()
+        model.data[indexPath.row].action?(LocalizationTool.getStr(model.data[indexPath.row].title))
     }
 }
 
 extension MetalController {
     
-    private func pushNormal() {
-        print("pushNormal")
+    private func pushNormal(_ title:String) {
+        let normal = NormalImageController()
+        normal.title = title
+        navigationController?.pushViewController(normal, animated: true)
     }
-    private func pushLUT() {
-        print("pushLUT")
+    private func pushLUT(_ title:String) {
+        let lut = LookupTableController()
+        lut.title = title
+        navigationController?.pushViewController(lut, animated: true)
     }
-    private func pushZoomBlur() {
+    private func pushZoomBlur(_ title:String) {
         print("pushZoomBlur")
     }
-    private func pushToon() {
+    private func pushToon(_ title:String) {
         print("pushToon")
     }
-    private func pushStyleTransfer() {
+    private func pushStyleTransfer(_ title:String) {
         print("pushStyleTransfer")
     }
-    private func pushMTLHeap() {
+    private func pushMTLHeap(_ title:String) {
         print("pushMTLHeap")
     }
-    private func pushMask() {
+    private func pushMask(_ title:String) {
         print("pushMask")
     }
 }

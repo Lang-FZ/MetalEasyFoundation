@@ -17,3 +17,7 @@ metal.list.title.toon="Toon";
 metal.list.title.style.transfer="Core ML 风格映射";
 metal.list.title.heap="增高";
 metal.list.title.mask="抠图换背景";
+// MARK: - Metal-LUT
+metal.lut.saturation="饱和度";
+metal.lut.brightness="亮度";
+metal.lut.abao.intensity="阿宝色";

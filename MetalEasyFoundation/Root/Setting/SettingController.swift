@@ -18,7 +18,7 @@ class SettingController: BaseViewController, HadTabBarProtocol {
         
         let model1 = BaseListModel.init([:])
         model1.title = "setting.language.list.title"
-        model1.action = { [weak self] in
+        model1.action = { [weak self] (title) in
             self?.pushToLanguageVC()
         }
         
@@ -81,7 +81,7 @@ extension SettingController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        model.data[indexPath.row].action?()
+        model.data[indexPath.row].action?("")
     }
 }
 

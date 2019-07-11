@@ -14,7 +14,7 @@ public class ShaderUniformSettings {
     private var uniformValues: [Float] = []
     private var uniformValueOffsets: [Int] = []
     public var colorUniformsUseAlpha: Bool = false
-    let shaderUniformSettingsQueue = DispatchQueue.init(label: "com.colin.MetalImageProcessing.shaderUniformSettings", attributes: [])
+    let shaderUniformSettingsQueue = DispatchQueue.init(label: "me.CodeSet.shaderUniformSettings", attributes: [])
     
     private func internalIndex(for index: Int) -> Int {
         if index == 0 {
@@ -142,9 +142,9 @@ public class ShaderUniformSettings {
     }
     
     public func restoreShaderSettings(renderEncoder: MTLRenderCommandEncoder) {
-        shaderUniformSettingsQueue.async {
+        shaderUniformSettingsQueue.sync {
             guard self.uniformValues.count > 0 else { return }
-            let uniformBuffer = sharedContext.device.makeBuffer(bytes: self.uniformValues, length: self.uniformValues.count * MemoryLayout<Float>.size, options: [])!
+            let uniformBuffer = sharedContext.device.makeBuffer(bytes: uniformValues, length: uniformValues.count * MemoryLayout<Float>.size, options: [])!
             renderEncoder.setFragmentBuffer(uniformBuffer, offset: 0, index: 1)
         }
     }

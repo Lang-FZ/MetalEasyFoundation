@@ -17,3 +17,7 @@ metal.list.title.toon="Toon";
 metal.list.title.style.transfer="Core ML Style Transfer";
 metal.list.title.heap="MTLHeap";
 metal.list.title.mask="Mask";
+// MARK: - Metal-LUT
+metal.lut.saturation="Saturation";
+metal.lut.brightness="Brightness";
+metal.lut.abao.intensity="ABaoIntensity";

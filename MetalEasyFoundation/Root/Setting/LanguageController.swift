@@ -18,12 +18,12 @@ class LanguageController: BaseViewController {
         
         let model1 = BaseListModel.init([:])
         model1.title = "setting.language.chinese"
-        model1.action = { [weak self] in
+        model1.action = { [weak self] (title) in
             self?.saveLanguage("zh-Hans")
         }
         let model2 = BaseListModel.init([:])
         model2.title = "setting.language.english"
-        model2.action = { [weak self] in
+        model2.action = { [weak self] (title) in
             self?.saveLanguage("en")
         }
         
@@ -66,11 +66,12 @@ extension LanguageController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LanguageListIdentifier) as! BaseListCell
         cell.model = model.data[indexPath.row]
+        cell.isLast = (indexPath.row == (model.data.count-1))
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        model.data[indexPath.row].action?()
+        model.data[indexPath.row].action?("")
     }
 }
 

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158822D4A0000025E86B /* NormalImageController.swift */; };
+		5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158A22D4A87C0025E86B /* LookupTableController.swift */; };
+		5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
+		5E3F159822D5F50D0025E86B /* BrightnessFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */; };
+		5E3F159A22D5F92C0025E86B /* SaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159922D5F92C0025E86B /* SaturationFilter.metal */; };
+		5E3F159C22D5FA460025E86B /* SaturationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159B22D5FA460025E86B /* SaturationFilter.swift */; };
+		5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */; };
 		5E9C939922CDF807005E8FDE /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939822CDF807005E8FDE /* Pipeline.swift */; };
 		5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939A22CE0CA2005E8FDE /* Texture.swift */; };
 		5E9C939D22CE0E02005E8FDE /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C939C22CE0E02005E8FDE /* Context.swift */; };
@@ -22,7 +29,6 @@
 		5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B022D2ED87005E8FDE /* BasicOperation.swift */; };
 		5E9C93B322D31AE9005E8FDE /* LookupFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B222D31AE9005E8FDE /* LookupFilter.swift */; };
 		5E9C93B522D31B7C005E8FDE /* LookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B422D31B7C005E8FDE /* LookupFilter.metal */; };
-		5E9C93B822D3368D005E8FDE /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
 		5E9C93BC22D34BA4005E8FDE /* lut_abao.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BA22D34BA4005E8FDE /* lut_abao.png */; };
 		5E9C93BD22D34BA4005E8FDE /* lut_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BB22D34BA4005E8FDE /* lut_neutral.png */; };
 		5E9C93BF22D34BD9005E8FDE /* city_light_yellow1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BE22D34BD9005E8FDE /* city_light_yellow1.jpg */; };
@@ -84,25 +90,14 @@
 		E0575B0DB8077C2D98F85B5A /* libPods-MetalEasyFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CF0F5ED822A2126D0032E902 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF0F5EBB22A2126C0032E902 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF0F5EC222A2126C0032E902;
-			remoteInfo = MetalEasyFoundation;
-		};
-		CF0F5EE322A2126D0032E902 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF0F5EBB22A2126C0032E902 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF0F5EC222A2126C0032E902;
-			remoteInfo = MetalEasyFoundation;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E3F158822D4A0000025E86B /* NormalImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalImageController.swift; sourceTree = "<group>"; };
+		5E3F158A22D4A87C0025E86B /* LookupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTableController.swift; sourceTree = "<group>"; };
+		5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
+		5E3F159922D5F92C0025E86B /* SaturationFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SaturationFilter.metal; sourceTree = "<group>"; };
+		5E3F159B22D5FA460025E86B /* SaturationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationFilter.swift; sourceTree = "<group>"; };
+		5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessFilter.swift; sourceTree = "<group>"; };
 		5E9C939822CDF807005E8FDE /* Pipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
 		5E9C939A22CE0CA2005E8FDE /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
 		5E9C939C22CE0E02005E8FDE /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
@@ -165,8 +160,6 @@
 		CF0F5ECD22A2126D0032E902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0F5ED022A2126D0032E902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF0F5ED222A2126D0032E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalEasyFoundationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF164FC222A446A1002F02D0 /* BaseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListModel.swift; sourceTree = "<group>"; };
 		CF164FC422A44973002F02D0 /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
 		CF164FC622A44E4C002F02D0 /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
@@ -193,20 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0575B0DB8077C2D98F85B5A /* libPods-MetalEasyFoundation.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF0F5ED422A2126D0032E902 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF0F5EDF22A2126D0032E902 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +245,11 @@
 		5E9C938F22CDDE87005E8FDE /* LookupTable */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F159B22D5FA460025E86B /* SaturationFilter.swift */,
+				5E3F159922D5F92C0025E86B /* SaturationFilter.metal */,
+				5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */,
+				5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */,
+				5E3F158A22D4A87C0025E86B /* LookupTableController.swift */,
 			);
 			path = LookupTable;
 			sourceTree = "<group>";
@@ -273,6 +257,7 @@
 		5E9C939022CDDE87005E8FDE /* NormalImage */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F158822D4A0000025E86B /* NormalImageController.swift */,
 			);
 			path = NormalImage;
 			sourceTree = "<group>";
@@ -417,8 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */,
-				CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */,
-				CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,42 +513,6 @@
 			productReference = CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF0F5ED622A2126D0032E902 /* MetalEasyFoundationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF0F5EEE22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationTests" */;
-			buildPhases = (
-				CF0F5ED322A2126D0032E902 /* Sources */,
-				CF0F5ED422A2126D0032E902 /* Frameworks */,
-				CF0F5ED522A2126D0032E902 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CF0F5ED922A2126D0032E902 /* PBXTargetDependency */,
-			);
-			name = MetalEasyFoundationTests;
-			productName = MetalEasyFoundationTests;
-			productReference = CF0F5ED722A2126D0032E902 /* MetalEasyFoundationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CF0F5EE122A2126D0032E902 /* MetalEasyFoundationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF0F5EF122A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationUITests" */;
-			buildPhases = (
-				CF0F5EDE22A2126D0032E902 /* Sources */,
-				CF0F5EDF22A2126D0032E902 /* Frameworks */,
-				CF0F5EE022A2126D0032E902 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CF0F5EE422A2126D0032E902 /* PBXTargetDependency */,
-			);
-			name = MetalEasyFoundationUITests;
-			productName = MetalEasyFoundationUITests;
-			productReference = CF0F5EE222A2126D0032E902 /* MetalEasyFoundationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,14 +525,6 @@
 				TargetAttributes = {
 					CF0F5EC222A2126C0032E902 = {
 						CreatedOnToolsVersion = 10.2.1;
-					};
-					CF0F5ED622A2126D0032E902 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = CF0F5EC222A2126C0032E902;
-					};
-					CF0F5EE122A2126D0032E902 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = CF0F5EC222A2126C0032E902;
 					};
 				};
 			};
@@ -604,8 +543,6 @@
 			projectRoot = "";
 			targets = (
 				CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */,
-				CF0F5ED622A2126D0032E902 /* MetalEasyFoundationTests */,
-				CF0F5EE122A2126D0032E902 /* MetalEasyFoundationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -660,20 +597,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF0F5ED522A2126D0032E902 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF0F5EE022A2126D0032E902 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -707,18 +630,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9C93A922CE2E08005E8FDE /* Constants.swift in Sources */,
+				5E3F159C22D5FA460025E86B /* SaturationFilter.swift in Sources */,
 				5E9C93B522D31B7C005E8FDE /* LookupFilter.metal in Sources */,
 				5E9C939F22CE1039005E8FDE /* Rendering.swift in Sources */,
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
 				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
+				5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */,
+				5E3F159A22D5F92C0025E86B /* SaturationFilter.metal in Sources */,
+				5E3F159822D5F50D0025E86B /* BrightnessFilter.metal in Sources */,
 				CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */,
 				5E9C939922CDF807005E8FDE /* Pipeline.swift in Sources */,
 				5E9C93A122CE1099005E8FDE /* ShaderUniformSettings.swift in Sources */,
 				5E9C939D22CE0E02005E8FDE /* Context.swift in Sources */,
-				5E9C93B822D3368D005E8FDE /* Passthrough.metal in Sources */,
 				5E9C93A522CE199E005E8FDE /* Position.swift in Sources */,
 				5E9C93AD22CF3C97005E8FDE /* PictureInput.swift in Sources */,
+				5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
 				5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */,
@@ -729,8 +656,10 @@
 				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
 				5E9C93AB22CF2F35005E8FDE /* FillMode.swift in Sources */,
 				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
+				5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */,
 				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
 				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,
+				5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */,
 				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,
 				5E9C93A722CE1BE2005E8FDE /* Matrix.swift in Sources */,
 				CF65F38922A21791008F4219 /* Default.swift in Sources */,
@@ -741,34 +670,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF0F5ED322A2126D0032E902 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF0F5EDE22A2126D0032E902 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CF0F5ED922A2126D0032E902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */;
-			targetProxy = CF0F5ED822A2126D0032E902 /* PBXContainerItemProxy */;
-		};
-		CF0F5EE422A2126D0032E902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CF0F5EC222A2126C0032E902 /* MetalEasyFoundation */;
-			targetProxy = CF0F5EE322A2126D0032E902 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */ = {
@@ -844,7 +746,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_FAST_MATH = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -899,7 +801,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
+				MTL_FAST_MATH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -911,7 +813,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EMFL9A2M9;
 				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
@@ -920,8 +824,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MTL_FAST_MATH = NO;
+				MTL_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MetalEasyFoundation/MetalFoundation/Operations";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = No;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -931,7 +838,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EMFL9A2M9;
 				INFOPLIST_FILE = MetalEasyFoundation/InfoSet/Info.plist;
@@ -940,92 +849,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MTL_FAST_MATH = NO;
+				MTL_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MetalEasyFoundation/MetalFoundation/Operations";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = No;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CF0F5EEF22A2126D0032E902 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
-				INFOPLIST_FILE = MetalEasyFoundationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalEasyFoundation.app/MetalEasyFoundation";
-			};
-			name = Debug;
-		};
-		CF0F5EF022A2126D0032E902 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
-				INFOPLIST_FILE = MetalEasyFoundationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalEasyFoundation.app/MetalEasyFoundation";
-			};
-			name = Release;
-		};
-		CF0F5EF222A2126D0032E902 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
-				INFOPLIST_FILE = MetalEasyFoundationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MetalEasyFoundation;
-			};
-			name = Debug;
-		};
-		CF0F5EF322A2126D0032E902 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 496JMV52SE;
-				INFOPLIST_FILE = MetalEasyFoundationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MetalEasyFoundation.LFZ.MetalEasyFoundationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MetalEasyFoundation;
 			};
 			name = Release;
 		};
@@ -1046,24 +876,6 @@
 			buildConfigurations = (
 				CF0F5EEC22A2126D0032E902 /* Debug */,
 				CF0F5EED22A2126D0032E902 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF0F5EEE22A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF0F5EEF22A2126D0032E902 /* Debug */,
-				CF0F5EF022A2126D0032E902 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF0F5EF122A2126D0032E902 /* Build configuration list for PBXNativeTarget "MetalEasyFoundationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF0F5EF222A2126D0032E902 /* Debug */,
-				CF0F5EF322A2126D0032E902 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

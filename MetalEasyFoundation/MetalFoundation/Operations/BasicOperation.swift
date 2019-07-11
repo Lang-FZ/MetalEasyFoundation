@@ -53,7 +53,6 @@ open class BasicOperation: ImageProcessingOperation {
             
             commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, inputTextures: inputTextures, outputTexture: outputTexture)
             commandBuffer.commit()
-            
             updateTargetsWithTexture(outputTexture)
         }
     }

@@ -17,7 +17,7 @@ class BaseListModel: NSObject {
     
     public var title:String = ""
     public var sub_title:String = ""
-    public var action:(() -> ())?
+    public var action:((_ title:String) -> ())?
     
     
     /** 自定义构造函数 */
