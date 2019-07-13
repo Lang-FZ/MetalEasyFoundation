@@ -158,7 +158,7 @@ extension MetalController {
         
         navigationController?.pushViewController(picture, animated: true)
     }
-    //TODO: ZoomBlur 径向模糊
+    //TODO: ZoomBlur 缩放模糊
     private func pushZoomBlur(_ title:String) {
         
         let picture = SelectPicturesController()
@@ -172,6 +172,7 @@ extension MetalController {
         
         navigationController?.pushViewController(picture, animated: true)
     }
+    //TODO: 描边、颜色丰富度
     private func pushToon(_ title:String) {
         
         let picture = SelectPicturesController()
@@ -185,9 +186,11 @@ extension MetalController {
         
         navigationController?.pushViewController(picture, animated: true)
     }
+    //TODO: 机器学习风格滤镜
     private func pushStyleTransfer(_ title:String) {
         print("pushStyleTransfer")
     }
+    //TODO: 拉伸
     private func pushMTLHeap(_ title:String) {
         
         let picture = SelectPicturesController()
@@ -201,6 +204,7 @@ extension MetalController {
         
         navigationController?.pushViewController(picture, animated: true)
     }
+    //TODO: g抠图
     private func pushMask(_ title:String) {
         
         let picture = SelectPicturesController()
