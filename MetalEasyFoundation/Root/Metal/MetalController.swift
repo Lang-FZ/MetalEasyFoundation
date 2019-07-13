@@ -173,15 +173,45 @@ extension MetalController {
         navigationController?.pushViewController(picture, animated: true)
     }
     private func pushToon(_ title:String) {
-        print("pushToon")
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let toon = ToonController()
+            toon.picture_name = picture_name
+            toon.title = title
+            self?.navigationController?.pushViewController(toon, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
     private func pushStyleTransfer(_ title:String) {
         print("pushStyleTransfer")
     }
     private func pushMTLHeap(_ title:String) {
-        print("pushMTLHeap")
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let stretch = StretchController()
+            stretch.picture_name = picture_name
+            stretch.title = title
+            self?.navigationController?.pushViewController(stretch, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
     private func pushMask(_ title:String) {
-        print("pushMask")
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let segment = SegmentController()
+            segment.picture_name = picture_name
+            segment.title = title
+            self?.navigationController?.pushViewController(segment, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
     }
 }

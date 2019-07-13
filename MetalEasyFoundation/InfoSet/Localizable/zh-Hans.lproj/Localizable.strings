@@ -24,3 +24,11 @@ metal.lut.brightness="亮度";
 metal.lut.abao.intensity="阿宝色";
 // MARK: - Metal-ZoomBlur
 metal.zoom.blur.slider.title="模糊系数";
+// MARK: - Metal-Toon
+metal.toon.magtol.slider.title="MagTol";
+metal.toon.quantize.slider.title="Quantize";
+// MARK: - Metal-Stretch
+metal.stretch.slider.title="拉长";
+// MARK: - Metal-Mask Segment
+metal.mask.segment.slider.title="透明度";
+metal.mask.segment.slider.btn="换背景";

@@ -19,7 +19,7 @@ class SettingController: BaseViewController, HadTabBarProtocol {
         let model1 = BaseListModel.init([:])
         model1.title = "setting.language.list.title"
         model1.action = { [weak self] (title) in
-            self?.pushToLanguageVC()
+            self?.pushToLanguageVC(LocalizationTool.getStr(model1.title))
         }
         
         model.data.append(model1)
@@ -87,9 +87,10 @@ extension SettingController: UITableViewDelegate, UITableViewDataSource {
 
 extension SettingController {
     
-    public func pushToLanguageVC() {
+    public func pushToLanguageVC(_ title:String) {
         
         let languageVC = LanguageController()
+        languageVC.title = title
         self.navigationController?.pushViewController(languageVC, animated: true)
     }
 }

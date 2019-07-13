@@ -24,3 +24,11 @@ metal.lut.brightness="Brightness";
 metal.lut.abao.intensity="ABaoIntensity";
 // MARK: - Metal-ZoomBlur
 metal.zoom.blur.slider.title="Blur Size";
+// MARK: - Metal-Toon
+metal.toon.magtol.slider.title="MagTol";
+metal.toon.quantize.slider.title="Quantize";
+// MARK: - Metal-Stretch
+metal.stretch.slider.title="stretch";
+// MARK: - Metal-Mask Segment
+metal.mask.segment.slider.title="alpha";
+metal.mask.segment.slider.btn="change";

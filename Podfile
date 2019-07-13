@@ -6,6 +6,7 @@ inhibit_all_warnings!
 
     pod 'SnapKit'
     pod 'SDWebImage'
+    pod 'JGProgressHUD','2.0.3'
     #pod 'Alamofire'
     #pod 'SwiftyJSON'
     #pod 'FMDB'
