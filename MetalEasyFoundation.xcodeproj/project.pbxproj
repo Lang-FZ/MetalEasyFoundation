@@ -37,6 +37,12 @@
 		5E0DEEAF22D9E504002DF990 /* Segment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEAE22D9E504002DF990 /* Segment.mlmodel */; };
 		5E0DEEB122D9E873002DF990 /* UIImage+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEB022D9E873002DF990 /* UIImage+Segment.swift */; };
 		5E0DEEB322DC2359002DF990 /* StyleTransfer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DEEB222DC2359002DF990 /* StyleTransfer.xcassets */; };
+		5E0DEED322DDE8D2002DF990 /* CyclePageWaterfallFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEECA22DDE8D2002DF990 /* CyclePageWaterfallFlow.swift */; };
+		5E0DEED422DDE8D2002DF990 /* CyclePageCoverFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEECB22DDE8D2002DF990 /* CyclePageCoverFlow.swift */; };
+		5E0DEED522DDE8D2002DF990 /* CyclePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEECD22DDE8D2002DF990 /* CyclePageController.swift */; };
+		5E0DEED622DDE8D2002DF990 /* CyclePagePhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEECF22DDE8D2002DF990 /* CyclePagePhotoModel.swift */; };
+		5E0DEED722DDE8D2002DF990 /* CyclePageWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEED122DDE8D2002DF990 /* CyclePageWaterfallCell.swift */; };
+		5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEED222DDE8D2002DF990 /* CyclePageCollectionCell.swift */; };
 		5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158822D4A0000025E86B /* NormalImageController.swift */; };
 		5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158A22D4A87C0025E86B /* LookupTableController.swift */; };
 		5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
@@ -152,6 +158,12 @@
 		5E0DEEAE22D9E504002DF990 /* Segment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Segment.mlmodel; sourceTree = "<group>"; };
 		5E0DEEB022D9E873002DF990 /* UIImage+Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Segment.swift"; sourceTree = "<group>"; };
 		5E0DEEB222DC2359002DF990 /* StyleTransfer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StyleTransfer.xcassets; sourceTree = "<group>"; };
+		5E0DEECA22DDE8D2002DF990 /* CyclePageWaterfallFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageWaterfallFlow.swift; sourceTree = "<group>"; };
+		5E0DEECB22DDE8D2002DF990 /* CyclePageCoverFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageCoverFlow.swift; sourceTree = "<group>"; };
+		5E0DEECD22DDE8D2002DF990 /* CyclePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageController.swift; sourceTree = "<group>"; };
+		5E0DEECF22DDE8D2002DF990 /* CyclePagePhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePagePhotoModel.swift; sourceTree = "<group>"; };
+		5E0DEED122DDE8D2002DF990 /* CyclePageWaterfallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageWaterfallCell.swift; sourceTree = "<group>"; };
+		5E0DEED222DDE8D2002DF990 /* CyclePageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageCollectionCell.swift; sourceTree = "<group>"; };
 		5E3F158822D4A0000025E86B /* NormalImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalImageController.swift; sourceTree = "<group>"; };
 		5E3F158A22D4A87C0025E86B /* LookupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTableController.swift; sourceTree = "<group>"; };
 		5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
@@ -263,6 +275,7 @@
 		5E0DEE8822D87098002DF990 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEEC822DDE8D2002DF990 /* CyclePageView */,
 				5E0DEE8922D8709F002DF990 /* ProgressHUD.swift */,
 			);
 			path = Utils;
@@ -277,6 +290,51 @@
 				5E0DEE8D22D88795002DF990 /* udnie.mlmodel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5E0DEEC822DDE8D2002DF990 /* CyclePageView */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEEC922DDE8D2002DF990 /* FlowLayout */,
+				5E0DEECC22DDE8D2002DF990 /* Controller */,
+				5E0DEECE22DDE8D2002DF990 /* Model */,
+				5E0DEED022DDE8D2002DF990 /* View */,
+			);
+			path = CyclePageView;
+			sourceTree = "<group>";
+		};
+		5E0DEEC922DDE8D2002DF990 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEECA22DDE8D2002DF990 /* CyclePageWaterfallFlow.swift */,
+				5E0DEECB22DDE8D2002DF990 /* CyclePageCoverFlow.swift */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		5E0DEECC22DDE8D2002DF990 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEECD22DDE8D2002DF990 /* CyclePageController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E0DEECE22DDE8D2002DF990 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEECF22DDE8D2002DF990 /* CyclePagePhotoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E0DEED022DDE8D2002DF990 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEED122DDE8D2002DF990 /* CyclePageWaterfallCell.swift */,
+				5E0DEED222DDE8D2002DF990 /* CyclePageCollectionCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5E9C938A22CDDE87005E8FDE /* MetalListSubController */ = {
@@ -768,6 +826,7 @@
 				5E9C939F22CE1039005E8FDE /* Rendering.swift in Sources */,
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
 				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
+				5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
 				5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */,
 				5E3F159A22D5F92C0025E86B /* SaturationFilter.metal in Sources */,
@@ -789,11 +848,15 @@
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
 				5E0DEE7F22D85551002DF990 /* ToonController.swift in Sources */,
 				5E0DEEB122D9E873002DF990 /* UIImage+Segment.swift in Sources */,
+				5E0DEED622DDE8D2002DF990 /* CyclePagePhotoModel.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
 				5E0DEEA722D9CCB6002DF990 /* StretchFilter.swift in Sources */,
 				5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */,
 				5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */,
+				5E0DEED522DDE8D2002DF990 /* CyclePageController.swift in Sources */,
 				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
+				5E0DEED422DDE8D2002DF990 /* CyclePageCoverFlow.swift in Sources */,
+				5E0DEED722DDE8D2002DF990 /* CyclePageWaterfallCell.swift in Sources */,
 				5E0DEE9122D88795002DF990 /* udnie.mlmodel in Sources */,
 				5E0DEEA922D9E112002DF990 /* SegmentController.swift in Sources */,
 				5E0DEE7D22D754F7002DF990 /* ZoomBlur.swift in Sources */,
@@ -807,6 +870,7 @@
 				5E0DEE8A22D8709F002DF990 /* ProgressHUD.swift in Sources */,
 				5E9C93AB22CF2F35005E8FDE /* FillMode.swift in Sources */,
 				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
+				5E0DEED322DDE8D2002DF990 /* CyclePageWaterfallFlow.swift in Sources */,
 				5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */,
 				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
 				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,

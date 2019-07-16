@@ -25,9 +25,14 @@ class CoreMLStyleTransferController: BaseViewController {
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         return imageView
     }()
+    private lazy var input_image: UIImage = {
+        let input_image = UIImage.init()
+        return input_image
+    }()
     public var picture_name:String = "" {
         didSet {
-            imageView.image = UIImage.init(named: picture_name)
+            input_image = UIImage.init(named: picture_name) ?? UIImage.init()
+            imageView.image = input_image
         }
     }
     
@@ -52,20 +57,41 @@ class CoreMLStyleTransferController: BaseViewController {
     }
     @objc private func select_ml_model() {
         
-        let picture = SelectPicturesController()
-        picture.data_status = .ml_model
+        let cyclePageModel = CyclePagePhotoModel.init()
         
-        picture.selected_index = { [weak self] (index) in
+        let model1 = CyclePagePhotoModel()
+        model1.photoName = "mosaic"
+        
+        let model2 = CyclePagePhotoModel()
+        model2.photoName = "the_scream"
+        
+        let model3 = CyclePagePhotoModel()
+        model3.photoName = "udnie"
+        
+        let model4 = CyclePagePhotoModel()
+        model4.photoName = "candy"
+        
+        cyclePageModel.photoData.append(model1)
+        cyclePageModel.photoData.append(model2)
+        cyclePageModel.photoData.append(model3)
+        cyclePageModel.photoData.append(model4)
+        
+        let cyclePageVC:CyclePageController = CyclePageController.init(.waterfall_flow)
+        cyclePageVC.is_call_back = true
+        cyclePageVC.direction = .vertical
+        cyclePageVC.data = cyclePageModel
+        cyclePageVC.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        cyclePageVC.click_index = { [weak self] (index) in
             self?.replace_image(index)
-            picture.navigationController?.popViewController(animated: true)
         }
         
-        navigationController?.pushViewController(picture, animated: true)
+        self.present(cyclePageVC, animated: true, completion: nil)
     }
     
     private func replace_image(_ index:Int) {
         
-        guard let image = imageView.image?.scaled(to: CGSize.init(width: imageSize, height: imageSize), scalingMode: UIImage.ScalingMode.aspectFit).cgImage else {
+        guard let image = input_image.scaled(to: CGSize.init(width: imageSize, height: imageSize), scalingMode: UIImage.ScalingMode.aspectFit).cgImage else {
             print("CGImage Error")
             return
         }

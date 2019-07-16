@@ -36,14 +36,14 @@ open class BaseViewController: UIViewController {
 //    }
 }
 
-open class iGolaNoneBarController: BaseViewController, NoneNavigationBarProtocol {
+open class NoneBarController: BaseViewController, NoneNavigationBarProtocol {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-open class iGolaNoneBackController: UIViewController, NoneInteractivePopGestureProtocol {
+open class NoneBackController: UIViewController, NoneInteractivePopGestureProtocol {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
