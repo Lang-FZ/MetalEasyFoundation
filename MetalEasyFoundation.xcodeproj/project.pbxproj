@@ -276,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0DEEC822DDE8D2002DF990 /* CyclePageView */,
+				5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */,
 				5E0DEE8922D8709F002DF990 /* ProgressHUD.swift */,
 			);
 			path = Utils;
@@ -337,10 +338,80 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5E0DEED922DDEF30002DF990 /* TikTok */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEEDE22DDF00A002DF990 /* View */,
+				5E0DEEE122DDF021002DF990 /* Filter */,
+			);
+			path = TikTok;
+			sourceTree = "<group>";
+		};
+		5E0DEEDE22DDF00A002DF990 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E0DEEE122DDF021002DF990 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DEEE722DDF021002DF990 /* Zoom */,
+				5E0DEEE522DDF021002DF990 /* SoulOut */,
+				5E0DEEE422DDF021002DF990 /* Shake */,
+				5E0DEEE622DDF021002DF990 /* FlashWhite */,
+				5E0DEEE322DDF021002DF990 /* Burr */,
+				5E0DEEE222DDF021002DF990 /* Hallucination */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		5E0DEEE222DDF021002DF990 /* Hallucination */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hallucination;
+			sourceTree = "<group>";
+		};
+		5E0DEEE322DDF021002DF990 /* Burr */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Burr;
+			sourceTree = "<group>";
+		};
+		5E0DEEE422DDF021002DF990 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shake;
+			sourceTree = "<group>";
+		};
+		5E0DEEE522DDF021002DF990 /* SoulOut */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SoulOut;
+			sourceTree = "<group>";
+		};
+		5E0DEEE622DDF021002DF990 /* FlashWhite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlashWhite;
+			sourceTree = "<group>";
+		};
+		5E0DEEE722DDF021002DF990 /* Zoom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Zoom;
+			sourceTree = "<group>";
+		};
 		5E9C938A22CDDE87005E8FDE /* MetalListSubController */ = {
 			isa = PBXGroup;
 			children = (
-				5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */,
 				5E9C939022CDDE87005E8FDE /* NormalImage */,
 				5E9C938F22CDDE87005E8FDE /* LookupTable */,
 				5E9C939122CDDE87005E8FDE /* ZoomBlur */,
@@ -348,6 +419,7 @@
 				5E9C938C22CDDE87005E8FDE /* CoreMLStyleTransfer */,
 				5E9C938B22CDDE87005E8FDE /* MTLHeap */,
 				5E9C938E22CDDE87005E8FDE /* Mask */,
+				5E0DEED922DDEF30002DF990 /* TikTok */,
 			);
 			path = MetalListSubController;
 			sourceTree = "<group>";
