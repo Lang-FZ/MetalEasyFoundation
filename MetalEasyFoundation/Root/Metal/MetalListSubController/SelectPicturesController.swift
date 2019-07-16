@@ -13,6 +13,13 @@ let selecte_picture_identifier = "selecte_picture_identifier"
 class SelectPicturesController: BaseViewController {
     
     public var selected_picture:((_ picture:String) -> ())?
+    public var selected_index:((_ index:Int) -> ())?
+    
+    public var data_status:PictureDataTypeEnum = .normal {
+        didSet {
+            picture_table.reloadData()
+        }
+    }
     
     // MARK: - 懒加载
     private lazy var data: [String] = {
@@ -33,6 +40,14 @@ class SelectPicturesController: BaseViewController {
         data.sort()
         
         return data
+    }()
+    
+    private lazy var ml_data: [String] = {
+        let ml_data: [String] = ["mosaic",
+                                 "the_scream",
+                                 "udnie",
+                                 "candy"]
+        return ml_data
     }()
     
     lazy private var picture_table: UITableView = {
@@ -74,17 +89,36 @@ extension SelectPicturesController: UITableViewDelegate,UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        switch data_status {
+        case .normal:
+            return data.count
+        case .ml_model:
+            return ml_data.count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: selecte_picture_identifier) as! BaseListCell
-        cell.title.text = data[indexPath.row]
+        switch data_status {
+        case .normal:
+            cell.title.text = data[indexPath.row]
+        case .ml_model:
+            cell.title.text = ml_data[indexPath.row]
+        }
         cell.isLast = (indexPath.row == (data.count-1))
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selected_picture?(data[indexPath.row])
+        switch data_status {
+        case .normal:
+            selected_picture?(data[indexPath.row])
+        case .ml_model:
+            selected_index?(indexPath.row)
+        }
     }
+}
+
+enum PictureDataTypeEnum {
+    case normal
+    case ml_model
 }

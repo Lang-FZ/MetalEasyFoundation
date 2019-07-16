@@ -12,7 +12,7 @@ class LookupTableController: BaseViewController {
     
     // MARK: - 懒加载
     private lazy var renderView: RenderView = {
-        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarH - frameMath(120+15)))
+        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarBotH - frameMath(120+15)))
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
@@ -119,7 +119,7 @@ class LookupTableController: BaseViewController {
         
         abao_intensity_l.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(frameMath(10))
-            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarH-frameMath(20))
+            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarBotH-frameMath(20))
         }
         abao_intensity_s.snp.makeConstraints { (make) in
             make.centerY.equalTo(abao_intensity_l.snp.centerY)

@@ -11,7 +11,7 @@ import UIKit
 class SegmentController: BaseViewController {
 
     private lazy var renderView: RenderView = {
-        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarH - frameMath(40+15)))
+        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarBotH - frameMath(40+15)))
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
@@ -83,7 +83,7 @@ class SegmentController: BaseViewController {
         
         segment_l.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(frameMath(15))
-            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarH-frameMath(20))
+            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarBotH-frameMath(20))
         }
         segment_btn.snp.makeConstraints { (make) in
             make.right.equalTo(view.snp.right).offset(frameMath(-15))

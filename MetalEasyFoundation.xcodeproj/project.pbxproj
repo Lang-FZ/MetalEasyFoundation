@@ -36,6 +36,7 @@
 		5E0DEEAD22D9E253002DF990 /* SegmentFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEAC22D9E253002DF990 /* SegmentFilter.metal */; };
 		5E0DEEAF22D9E504002DF990 /* Segment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEAE22D9E504002DF990 /* Segment.mlmodel */; };
 		5E0DEEB122D9E873002DF990 /* UIImage+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEB022D9E873002DF990 /* UIImage+Segment.swift */; };
+		5E0DEEB322DC2359002DF990 /* StyleTransfer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DEEB222DC2359002DF990 /* StyleTransfer.xcassets */; };
 		5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158822D4A0000025E86B /* NormalImageController.swift */; };
 		5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158A22D4A87C0025E86B /* LookupTableController.swift */; };
 		5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
@@ -150,6 +151,7 @@
 		5E0DEEAC22D9E253002DF990 /* SegmentFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SegmentFilter.metal; sourceTree = "<group>"; };
 		5E0DEEAE22D9E504002DF990 /* Segment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Segment.mlmodel; sourceTree = "<group>"; };
 		5E0DEEB022D9E873002DF990 /* UIImage+Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Segment.swift"; sourceTree = "<group>"; };
+		5E0DEEB222DC2359002DF990 /* StyleTransfer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StyleTransfer.xcassets; sourceTree = "<group>"; };
 		5E3F158822D4A0000025E86B /* NormalImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalImageController.swift; sourceTree = "<group>"; };
 		5E3F158A22D4A87C0025E86B /* LookupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTableController.swift; sourceTree = "<group>"; };
 		5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		5E9C938C22CDDE87005E8FDE /* CoreMLStyleTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEEB222DC2359002DF990 /* StyleTransfer.xcassets */,
 				5E0DEE8B22D8842E002DF990 /* Models */,
 				5E0DEE9E22D88B11002DF990 /* CoreMLStyleTransferController.swift */,
 				5E0DEEA022D89CE2002DF990 /* StyleTransferInput.swift */,
@@ -698,6 +701,7 @@
 				5E9C940522D34D6D005E8FDE /* girl2.jpg in Resources */,
 				5E9C93E922D34C8E005E8FDE /* tree_green1.jpg in Resources */,
 				5E9C93E322D34C70005E8FDE /* natural_green1.jpg in Resources */,
+				5E0DEEB322DC2359002DF990 /* StyleTransfer.xcassets in Resources */,
 				5E9C93BD22D34BA4005E8FDE /* lut_neutral.png in Resources */,
 				5E0DEE9D22D8882D002DF990 /* core_ml_input.jpg in Resources */,
 				5E9C93F522D34CBF005E8FDE /* natural_blue1.jpg in Resources */,

@@ -27,6 +27,8 @@ metal.zoom.blur.slider.title="模糊系数";
 // MARK: - Metal-Toon
 metal.toon.magtol.slider.title="MagTol";
 metal.toon.quantize.slider.title="Quantize";
+// MARK: - Metal-StyleTransfer
+metal.style.transfer.btn.title="选模型";
 // MARK: - Metal-Stretch
 metal.stretch.slider.title="拉长";
 // MARK: - Metal-Mask Segment

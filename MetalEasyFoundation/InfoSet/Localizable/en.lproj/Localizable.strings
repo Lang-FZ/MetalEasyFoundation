@@ -27,6 +27,8 @@ metal.zoom.blur.slider.title="Blur Size";
 // MARK: - Metal-Toon
 metal.toon.magtol.slider.title="MagTol";
 metal.toon.quantize.slider.title="Quantize";
+// MARK: - Metal-StyleTransfer
+metal.style.transfer.btn.title="Select Model";
 // MARK: - Metal-Stretch
 metal.stretch.slider.title="stretch";
 // MARK: - Metal-Mask Segment

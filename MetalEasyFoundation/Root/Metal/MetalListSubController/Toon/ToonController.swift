@@ -11,7 +11,7 @@ import UIKit
 class ToonController: BaseViewController {
 
     private lazy var renderView: RenderView = {
-        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarH - frameMath(80+15)))
+        let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarBotH - frameMath(80+15)))
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
@@ -81,7 +81,7 @@ class ToonController: BaseViewController {
         
         toon_quantize_l.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(frameMath(10))
-            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarH-frameMath(20))
+            make.centerY.equalTo(view.snp.bottom).offset(-kTabBarBotH-frameMath(20))
         }
         toon_quantize_s.snp.makeConstraints { (make) in
             make.centerY.equalTo(toon_quantize_l.snp.centerY)
