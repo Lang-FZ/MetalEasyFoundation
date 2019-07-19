@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0DAFAD22E00CB7002CEEB4 /* TikTokZoomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DAFAC22E00CB7002CEEB4 /* TikTokZoomFilter.swift */; };
+		5E0DAFAF22E00DA7002CEEB4 /* TikTokZoomFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DAFAE22E00DA7002CEEB4 /* TikTokZoomFilter.metal */; };
 		5E0DEE7722D73DD6002DF990 /* SelectPicturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */; };
 		5E0DEE7922D754CF002DF990 /* ZoomBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7822D754CF002DF990 /* ZoomBlurController.swift */; };
 		5E0DEE7B22D754DF002DF990 /* ZoomBlur.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEE7A22D754DF002DF990 /* ZoomBlur.metal */; };
@@ -43,6 +45,9 @@
 		5E0DEED622DDE8D2002DF990 /* CyclePagePhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEECF22DDE8D2002DF990 /* CyclePagePhotoModel.swift */; };
 		5E0DEED722DDE8D2002DF990 /* CyclePageWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEED122DDE8D2002DF990 /* CyclePageWaterfallCell.swift */; };
 		5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEED222DDE8D2002DF990 /* CyclePageCollectionCell.swift */; };
+		5E0DEEE922DEBB6B002DF990 /* TikTokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEE822DEBB6B002DF990 /* TikTokController.swift */; };
+		5E0DEEEB22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEEA22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift */; };
+		5E0DEEED22DEBBAF002DF990 /* TikTokSelectBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DEEEC22DEBBAF002DF990 /* TikTokSelectBarItem.swift */; };
 		5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158822D4A0000025E86B /* NormalImageController.swift */; };
 		5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F158A22D4A87C0025E86B /* LookupTableController.swift */; };
 		5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C93B722D3368D005E8FDE /* Passthrough.metal */; };
@@ -128,6 +133,8 @@
 
 /* Begin PBXFileReference section */
 		0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0DAFAC22E00CB7002CEEB4 /* TikTokZoomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokZoomFilter.swift; sourceTree = "<group>"; };
+		5E0DAFAE22E00DA7002CEEB4 /* TikTokZoomFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokZoomFilter.metal; sourceTree = "<group>"; };
 		5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPicturesController.swift; sourceTree = "<group>"; };
 		5E0DEE7822D754CF002DF990 /* ZoomBlurController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlurController.swift; sourceTree = "<group>"; };
 		5E0DEE7A22D754DF002DF990 /* ZoomBlur.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ZoomBlur.metal; sourceTree = "<group>"; };
@@ -164,6 +171,9 @@
 		5E0DEECF22DDE8D2002DF990 /* CyclePagePhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePagePhotoModel.swift; sourceTree = "<group>"; };
 		5E0DEED122DDE8D2002DF990 /* CyclePageWaterfallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageWaterfallCell.swift; sourceTree = "<group>"; };
 		5E0DEED222DDE8D2002DF990 /* CyclePageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePageCollectionCell.swift; sourceTree = "<group>"; };
+		5E0DEEE822DEBB6B002DF990 /* TikTokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokController.swift; sourceTree = "<group>"; };
+		5E0DEEEA22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSelectFilterdBar.swift; sourceTree = "<group>"; };
+		5E0DEEEC22DEBBAF002DF990 /* TikTokSelectBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSelectBarItem.swift; sourceTree = "<group>"; };
 		5E3F158822D4A0000025E86B /* NormalImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalImageController.swift; sourceTree = "<group>"; };
 		5E3F158A22D4A87C0025E86B /* LookupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTableController.swift; sourceTree = "<group>"; };
 		5E3F159722D5F50D0025E86B /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
@@ -341,6 +351,7 @@
 		5E0DEED922DDEF30002DF990 /* TikTok */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEEE822DEBB6B002DF990 /* TikTokController.swift */,
 				5E0DEEDE22DDF00A002DF990 /* View */,
 				5E0DEEE122DDF021002DF990 /* Filter */,
 			);
@@ -350,6 +361,8 @@
 		5E0DEEDE22DDF00A002DF990 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DEEEA22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift */,
+				5E0DEEEC22DEBBAF002DF990 /* TikTokSelectBarItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +418,8 @@
 		5E0DEEE722DDF021002DF990 /* Zoom */ = {
 			isa = PBXGroup;
 			children = (
+				5E0DAFAC22E00CB7002CEEB4 /* TikTokZoomFilter.swift */,
+				5E0DAFAE22E00DA7002CEEB4 /* TikTokZoomFilter.metal */,
 			);
 			path = Zoom;
 			sourceTree = "<group>";
@@ -895,7 +910,9 @@
 				5E0DEEA122D89CE2002DF990 /* StyleTransferInput.swift in Sources */,
 				5E3F159C22D5FA460025E86B /* SaturationFilter.swift in Sources */,
 				5E9C93B522D31B7C005E8FDE /* LookupFilter.metal in Sources */,
+				5E0DEEE922DEBB6B002DF990 /* TikTokController.swift in Sources */,
 				5E9C939F22CE1039005E8FDE /* Rendering.swift in Sources */,
+				5E0DAFAF22E00DA7002CEEB4 /* TikTokZoomFilter.metal in Sources */,
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
 				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
 				5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */,
@@ -918,11 +935,13 @@
 				5E0DEE8322D861E7002DF990 /* ToonFilter.metal in Sources */,
 				5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
+				5E0DEEEB22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift in Sources */,
 				5E0DEE7F22D85551002DF990 /* ToonController.swift in Sources */,
 				5E0DEEB122D9E873002DF990 /* UIImage+Segment.swift in Sources */,
 				5E0DEED622DDE8D2002DF990 /* CyclePagePhotoModel.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
 				5E0DEEA722D9CCB6002DF990 /* StretchFilter.swift in Sources */,
+				5E0DEEED22DEBBAF002DF990 /* TikTokSelectBarItem.swift in Sources */,
 				5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */,
 				5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */,
 				5E0DEED522DDE8D2002DF990 /* CyclePageController.swift in Sources */,
@@ -940,6 +959,7 @@
 				5E0DEEA522D9CB27002DF990 /* StretchController.swift in Sources */,
 				CF65F39E22A22808008F4219 /* CurrentDelegate.swift in Sources */,
 				5E0DEE8A22D8709F002DF990 /* ProgressHUD.swift in Sources */,
+				5E0DAFAD22E00CB7002CEEB4 /* TikTokZoomFilter.swift in Sources */,
 				5E9C93AB22CF2F35005E8FDE /* FillMode.swift in Sources */,
 				CF65F39A22A21DEF008F4219 /* MetalController.swift in Sources */,
 				5E0DEED322DDE8D2002DF990 /* CyclePageWaterfallFlow.swift in Sources */,

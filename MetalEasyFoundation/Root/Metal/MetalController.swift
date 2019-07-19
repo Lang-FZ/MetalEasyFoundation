@@ -65,6 +65,13 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         }
         model.data.append(model7)
         
+        let model8 = BaseListModel.init([:])
+        model8.title = "metal.list.title.tiktok"
+        model8.action = { [weak self] (title) in
+            self?.tiktok(title)
+        }
+        model.data.append(model8)
+        
         return model
     }()
     
@@ -214,7 +221,7 @@ extension MetalController {
         
         navigationController?.pushViewController(picture, animated: true)
     }
-    //TODO: g抠图
+    //TODO: 抠图
     private func pushMask(_ title:String) {
         
         let picture = SelectPicturesController()
@@ -224,6 +231,20 @@ extension MetalController {
             segment.picture_name = picture_name
             segment.title = title
             self?.navigationController?.pushViewController(segment, animated: true)
+        }
+        
+        navigationController?.pushViewController(picture, animated: true)
+    }
+    //TODO: 抖音特效
+    private func tiktok(_ title:String) {
+        
+        let picture = SelectPicturesController()
+        picture.selected_picture = { [weak self] (picture_name) in
+            
+            let tiktok = TikTokController()
+            tiktok.picture_name = picture_name
+            tiktok.title = title
+            self?.navigationController?.pushViewController(tiktok, animated: true)
         }
         
         navigationController?.pushViewController(picture, animated: true)

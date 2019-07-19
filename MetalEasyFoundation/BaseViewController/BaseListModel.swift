@@ -18,9 +18,14 @@ class BaseListModel: NSObject {
     public var title:String = ""
     public var sub_title:String = ""
     public var action:((_ title:String) -> ())?
+    public var is_selected:Bool = false
+    public var index:Int = 0
     
     
     /** 自定义构造函数 */
+    override init() {
+        super.init()
+    }
     init(_ dict : [String: Any]){
         super.init()
         setValuesForKeys(dict)

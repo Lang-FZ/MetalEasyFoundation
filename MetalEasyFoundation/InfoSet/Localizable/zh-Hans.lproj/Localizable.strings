@@ -18,6 +18,7 @@ metal.list.title.toon="Toon";
 metal.list.title.style.transfer="Core ML 风格映射";
 metal.list.title.heap="增高";
 metal.list.title.mask="抠图换背景";
+metal.list.title.tiktok="抖音特效";
 // MARK: - Metal-LUT
 metal.lut.saturation="饱和度";
 metal.lut.brightness="亮度";
@@ -34,3 +35,11 @@ metal.stretch.slider.title="拉长";
 // MARK: - Metal-Mask Segment
 metal.mask.segment.slider.title="透明度";
 metal.mask.segment.slider.btn="换背景";
+// MARK: - Metal-TikTok
+metal.tiktok.filter.none="无";
+metal.tiktok.filter.zoom="缩放";
+metal.tiktok.filter.soulout="灵魂出窍";
+metal.tiktok.filter.shake="抖动";
+metal.tiktok.filter.flashwhite="闪白";
+metal.tiktok.filter.burr="毛刺";
+metal.tiktok.filter.hallucination="幻觉";

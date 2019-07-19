@@ -18,6 +18,7 @@ metal.list.title.toon="Toon";
 metal.list.title.style.transfer="Core ML Style Transfer";
 metal.list.title.heap="MTLHeap";
 metal.list.title.mask="Mask";
+metal.list.title.tiktok="TikTok";
 // MARK: - Metal-LUT
 metal.lut.saturation="Saturation";
 metal.lut.brightness="Brightness";
@@ -34,3 +35,11 @@ metal.stretch.slider.title="stretch";
 // MARK: - Metal-Mask Segment
 metal.mask.segment.slider.title="alpha";
 metal.mask.segment.slider.btn="change";
+// MARK: - Metal-TikTok
+metal.tiktok.filter.none="None";
+metal.tiktok.filter.zoom="Zoom";
+metal.tiktok.filter.soulout="Soul\nOut";
+metal.tiktok.filter.shake="Shake";
+metal.tiktok.filter.flashwhite="Flash\nWhite";
+metal.tiktok.filter.burr="Burr";
+metal.tiktok.filter.hallucination="Halluci-\nnation";
