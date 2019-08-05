@@ -8,16 +8,16 @@
 
 import UIKit
 
-class TikTokZoomFilter: BasicOperation {
+public class TikTokZoomFilter: BasicOperation {
 
-//    public var tikTokZoomTime: Float = 0.0 {
-//        didSet {
+    public var tikTokZoomTime: Float = 0.0 {
+        didSet {
 //            uniformSettings[0] = tikTokZoomTime
-//        }
-//    }
-//    
-//    public init() {
-//        super.init(vertexFunctionName: "tikTokZoomVertex", fragmentFunctionName: FunctionName.PassthroughFragment, numberOfInputs: 1)
+        }
+    }
+    
+    public init() {
+        super.init(vertexFunctionName: "tikTokZoomVertex", fragmentFunctionName: "tikTokZoomFragment", numberOfInputs: 1)
 //        uniformSettings.appendUniform(0)
-//    }
+    }
 }

@@ -6,25 +6,42 @@
 //  Copyright © 2019 LFZ. All rights reserved.
 //
 
-//#include <metal_stdlib>
-//using namespace metal;
-//
-//struct TikTokZoomVertexIO {
-//    float4 position [[position]];
-//    float2 textureCoordinate [[user(texturecoord)]];
-//    float tikTokZoomTime;
-//};
-//
-//
-//vertex SingleInputVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], uint vid [[vertex_id]]) {
-//
-////#if __METAL_VERSION__ >= 200 //__METAL_IOS__
-////
-////#endif
-//
-//    SingleInputVertexIO outputVertices;
-//    outputVertices.position = float4(position[vid], 0, 1.0);
-//    outputVertices.textureCoordinate = texturecoord[vid];
-//
-//    return outputVertices;
-//}
+#include <metal_stdlib>
+using namespace metal;
+constant float PI = 3.1415926;
+
+struct TikTokZoomVertexIO {
+    float4 position [[position]];
+    float2 textureCoordinate [[user(texturecoord)]];
+};
+
+typedef struct {
+    float time;
+} TikTokZoomTime;
+
+
+//vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant TikTokZoomTime &uniforms [[ buffer(2)]], uint vid [[vertex_id]]) {
+vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], uint vid [[vertex_id]]) {
+    
+    TikTokZoomVertexIO outputVertices;
+    
+    float duration = 0.6;
+    float maxAmplitude = 0.3;
+    float Time = 1.5;
+    
+    float time = fmod(Time, duration);
+    float amplitude = 1.0 + maxAmplitude * abs(sin(time * (PI / duration)));
+    
+    outputVertices.position = float4(position[vid]*amplitude, 0, 1.0);
+    outputVertices.textureCoordinate = texturecoord[vid];
+    
+    return outputVertices;
+}
+
+fragment half4 tikTokZoomFragment(TikTokZoomVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]]) {
+    
+    constexpr sampler quadSampler;
+    half4 color = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate);
+    
+    return color;
+}

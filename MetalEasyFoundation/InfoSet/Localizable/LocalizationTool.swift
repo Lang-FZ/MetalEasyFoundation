@@ -48,8 +48,11 @@ class LocalizationTool: NSObject {
             
             let localizations = Bundle.main.localizations
             let currentLangCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.languageCode) as! String
-            if( localizations.contains(currentLangCode)) {
-                language_temp = currentLangCode
+            
+            for language in localizations {
+                if language.contains(currentLangCode) {
+                    language_temp = language
+                }
             }
             
             if language_temp == "" {

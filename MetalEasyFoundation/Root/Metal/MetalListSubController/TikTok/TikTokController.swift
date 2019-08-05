@@ -8,8 +8,23 @@
 
 import UIKit
 
+enum TikTokFilterType: Int {
+    case normal = 0
+    case zoom = 1
+    case soulOut = 2
+    case shake = 3
+    case flashWhite = 4
+    case burr = 5
+    case hallucination = 6
+}
+
 class TikTokController: BaseViewController {
 
+    private lazy var filterType:TikTokFilterType = .normal
+    private lazy var startTime:TimeInterval = 0
+    private lazy var interval:TimeInterval = 0
+    private var displayLink: CADisplayLink?
+    
     //TODO: ImageView
     private lazy var renderView: RenderView = {
         let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH-kTabBarBotH-frameMath(60+15)))
@@ -34,6 +49,13 @@ class TikTokController: BaseViewController {
         return select_filter_bar
     }()
     
+    //TODO: 滤镜
+    private lazy var zoom_fillter: TikTokZoomFilter = {
+        let zoom_fillter = TikTokZoomFilter.init()
+        zoom_fillter.tikTokZoomTime = 0
+        return zoom_fillter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +63,9 @@ class TikTokController: BaseViewController {
         view.backgroundColor = UIColor.init("#F0F0F0")
         view.addSubview(renderView)
         view.addSubview(select_filter_bar)
+    }
+    deinit {
+        removeFilterTime()
     }
 }
 
@@ -50,22 +75,34 @@ extension TikTokController {
     
     private func choose_filter(_ index:Int) {
         
+        removeFilterTime()
+        removeAllTargetSources()
+        
         switch index {
-        case 0:
+            
+        case TikTokFilterType.normal.rawValue:
+            filterType = .normal
             normalRendering()
-        case 1:
+        case TikTokFilterType.zoom.rawValue:
+            filterType = .zoom
             zoomFilterRendering()
-        case 2:
+        case TikTokFilterType.soulOut.rawValue:
+            filterType = .soulOut
             soulOutFilterRendering()
-        case 3:
+        case TikTokFilterType.shake.rawValue:
+            filterType = .shake
             shakeFilterRendering()
-        case 4:
+        case TikTokFilterType.flashWhite.rawValue:
+            filterType = .flashWhite
             flashWhiteFilterRendering()
-        case 5:
+        case TikTokFilterType.burr.rawValue:
+            filterType = .burr
             burrFilterRendering()
-        case 6:
+        case TikTokFilterType.hallucination.rawValue:
+            filterType = .hallucination
             hallucinationFilterRendering()
         default:
+            filterType = .normal
             normalRendering()
         }
     }
@@ -73,50 +110,48 @@ extension TikTokController {
     private func removeAllTargetSources() {
         picture.removeAllTargets()
         
-//        zoom_blur_fillter.sources.sources = [:]
+        zoom_fillter.sources.sources = [:]
+        zoom_fillter.targets.removeAll()
+        
         renderView.sources.sources = [:]
     }
     
     //TODO: 无滤镜
     private func normalRendering() {
-        removeAllTargetSources()
+        
         picture --> renderView
         picture.processImage()
     }
     
     //TODO: 缩放滤镜
     private func zoomFilterRendering() {
-        removeAllTargetSources()
-        
+        picture --> zoom_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
     
     //TODO: 灵魂出窍滤镜
     private func soulOutFilterRendering() {
-        removeAllTargetSources()
         
     }
     
     //TODO: 抖动滤镜
     private func shakeFilterRendering() {
-        removeAllTargetSources()
         
     }
     
     //TODO: 闪白滤镜
     private func flashWhiteFilterRendering() {
-        removeAllTargetSources()
         
     }
     
     //TODO: 毛刺滤镜
     private func burrFilterRendering() {
-        removeAllTargetSources()
         
     }
     
     //TODO: 幻觉滤镜
     private func hallucinationFilterRendering() {
-        removeAllTargetSources()
         
     }
 }
@@ -126,4 +161,57 @@ extension TikTokController {
 extension TikTokController {
     
     
+}
+
+// MARK: - 定时器
+
+extension TikTokController {
+    
+    //TODO: 刷新
+    @objc private func filterDisplay() {
+        
+        if displayLink == nil {
+            return
+        }
+        
+        interval = Date.timeIntervalBetween1970AndReferenceDate + Date.timeIntervalSinceReferenceDate - startTime
+        print("\(interval)")
+        
+        switch filterType {
+            
+        case .zoom:
+            zoom_fillter.tikTokZoomTime = Float(interval)
+        case .soulOut:
+            print("soulOut")
+        case .shake:
+            print("shake")
+        case .flashWhite:
+            print("flashWhite")
+        case .burr:
+            print("burr")
+        case .hallucination:
+            print("hallucination")
+        case .normal:
+            normalRendering()
+        }
+        
+        picture.processImage()
+    }
+    //TODO: 开启
+    private func startFilterTime() {
+        startTime = Date.timeIntervalBetween1970AndReferenceDate + Date.timeIntervalSinceReferenceDate
+        interval = 0
+        
+        displayLink = CADisplayLink.init(target: self, selector: #selector(filterDisplay))
+        displayLink?.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
+    }
+    //TODO: 移除
+    private func removeFilterTime() {
+        displayLink?.isPaused = true
+        displayLink?.invalidate()
+        displayLink = nil
+        
+        startTime = 0
+        interval = 0
+    }
 }
