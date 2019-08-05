@@ -20,16 +20,14 @@ typedef struct {
 } TikTokZoomTime;
 
 
-//vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant TikTokZoomTime &uniforms [[ buffer(2)]], uint vid [[vertex_id]]) {
-vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], uint vid [[vertex_id]]) {
+vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant float& uniforms [[ buffer(2)]], uint vid [[vertex_id]]) {
     
     TikTokZoomVertexIO outputVertices;
     
     float duration = 0.6;
     float maxAmplitude = 0.3;
-    float Time = 1.5;
     
-    float time = fmod(Time, duration);
+    float time = fmod(uniforms, duration);
     float amplitude = 1.0 + maxAmplitude * abs(sin(time * (PI / duration)));
     
     outputVertices.position = float4(position[vid]*amplitude, 0, 1.0);

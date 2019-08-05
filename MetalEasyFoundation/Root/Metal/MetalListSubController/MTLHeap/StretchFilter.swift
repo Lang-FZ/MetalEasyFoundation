@@ -89,7 +89,7 @@ public class StretchFilter: BasicOperation {
                 outputTexture = Texture.init(width: outputWidth, height: outputHeight)
             }
             
-            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, inputTextures: inputTextures, outputTexture: outputTexture, clearColor: RenderColor.clearColor, imageVertices: imageVertices, textureCoordinates: textureCoordinates)
+            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, vertexUniformSettings: vertexUniformSettings, inputTextures: inputTextures, outputTexture: outputTexture, clearColor: RenderColor.clearColor, imageVertices: imageVertices, textureCoordinates: textureCoordinates)
             commandBuffer.commit()
             
             updateTargetsWithTexture(outputTexture)

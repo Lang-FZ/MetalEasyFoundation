@@ -11,7 +11,7 @@ import Metal
 
 extension MTLCommandBuffer {
     
-    func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings: ShaderUniformSettings? = nil, inputTextures: [UInt: Texture], outputTexture: Texture, clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices, textureCoordinates: [Float] = standardTextureCoordinates) {
+    func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings: ShaderUniformSettings? = nil, vertexUniformSettings: ShaderUniformSettings? = nil, inputTextures: [UInt: Texture], outputTexture: Texture, clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices, textureCoordinates: [Float] = standardTextureCoordinates) {
         
         let vertexBuffer = sharedContext.device.makeBuffer(bytes: imageVertices, length: imageVertices.count * MemoryLayout<Float> .size, options: [])!
         
@@ -46,6 +46,7 @@ extension MTLCommandBuffer {
         }
         
         uniformSettings?.restoreShaderSettings(renderEncoder: renderEncoder)
+        vertexUniformSettings?.restoreVertexShaderSettings(renderEncoder: renderEncoder)
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: imageVertices.count / 2)
         renderEncoder.endEncoding()
     }

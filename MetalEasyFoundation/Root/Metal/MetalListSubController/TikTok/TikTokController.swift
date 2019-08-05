@@ -64,6 +64,10 @@ class TikTokController: BaseViewController {
         view.addSubview(renderView)
         view.addSubview(select_filter_bar)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeFilterTime()
+    }
     deinit {
         removeFilterTime()
     }
@@ -110,8 +114,9 @@ extension TikTokController {
     private func removeAllTargetSources() {
         picture.removeAllTargets()
         
+        zoom_fillter.tikTokZoomTime = 0
         zoom_fillter.sources.sources = [:]
-        zoom_fillter.targets.removeAll()
+        zoom_fillter.removeAllTargets()
         
         renderView.sources.sources = [:]
     }
@@ -125,6 +130,7 @@ extension TikTokController {
     
     //TODO: 缩放滤镜
     private func zoomFilterRendering() {
+        
         picture --> zoom_fillter --> renderView
         picture.processImage()
         startFilterTime()

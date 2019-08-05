@@ -148,6 +148,13 @@ public class ShaderUniformSettings {
             renderEncoder.setFragmentBuffer(uniformBuffer, offset: 0, index: 1)
         }
     }
+    public func restoreVertexShaderSettings(renderEncoder: MTLRenderCommandEncoder, index:Int = 2) {
+        shaderUniformSettingsQueue.sync {
+            guard self.uniformValues.count > 0 else { return }
+            let uniformBuffer = sharedContext.device.makeBuffer(bytes: uniformValues, length: uniformValues.count * MemoryLayout<Float>.size, options: [])!
+            renderEncoder.setVertexBuffer(uniformBuffer, offset: 0, index: index)
+        }
+    }
 }
 
 public protocol UniformConvertible {

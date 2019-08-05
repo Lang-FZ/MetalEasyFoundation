@@ -15,6 +15,7 @@ open class BasicOperation: ImageProcessingOperation {
     public var targets = TargetContainer()
     public var sources = SourceContainer()
     public var uniformSettings = ShaderUniformSettings()
+    public var vertexUniformSettings = ShaderUniformSettings()
     
     let renderPipelineState: MTLRenderPipelineState
     var inputTextures = [UInt : Texture]()
@@ -51,7 +52,7 @@ open class BasicOperation: ImageProcessingOperation {
             
             let outputTexture = Texture.init(width: outputWidth, height: outputHeight)
             
-            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, inputTextures: inputTextures, outputTexture: outputTexture)
+            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, vertexUniformSettings: vertexUniformSettings, inputTextures: inputTextures, outputTexture: outputTexture)
             commandBuffer.commit()
             updateTargetsWithTexture(outputTexture)
         }

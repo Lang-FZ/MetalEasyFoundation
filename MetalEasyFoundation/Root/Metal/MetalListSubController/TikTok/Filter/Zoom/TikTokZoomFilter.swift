@@ -12,12 +12,12 @@ public class TikTokZoomFilter: BasicOperation {
 
     public var tikTokZoomTime: Float = 0.0 {
         didSet {
-//            uniformSettings[0] = tikTokZoomTime
+            vertexUniformSettings[0] = tikTokZoomTime
         }
     }
     
     public init() {
         super.init(vertexFunctionName: "tikTokZoomVertex", fragmentFunctionName: "tikTokZoomFragment", numberOfInputs: 1)
-//        uniformSettings.appendUniform(0)
+        vertexUniformSettings.appendUniform(0)
     }
 }
