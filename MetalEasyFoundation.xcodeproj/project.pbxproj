@@ -109,6 +109,8 @@
 		5E9C940422D34D6D005E8FDE /* girl1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C940222D34D6C005E8FDE /* girl1.jpg */; };
 		5E9C940522D34D6D005E8FDE /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C940322D34D6D005E8FDE /* girl2.jpg */; };
 		5E9C940722D35143005E8FDE /* fruit.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C940622D35143005E8FDE /* fruit.jpeg */; };
+		5ED3369C22F914240096973F /* TikTokSoulOutFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED3369B22F914240096973F /* TikTokSoulOutFilter.swift */; };
+		5ED3369E22F914310096973F /* TikTokSoulOutFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED3369D22F914310096973F /* TikTokSoulOutFilter.metal */; };
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
 		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
@@ -236,6 +238,8 @@
 		5E9C940222D34D6C005E8FDE /* girl1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl1.jpg; sourceTree = "<group>"; };
 		5E9C940322D34D6D005E8FDE /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 		5E9C940622D35143005E8FDE /* fruit.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit.jpeg; sourceTree = "<group>"; };
+		5ED3369B22F914240096973F /* TikTokSoulOutFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSoulOutFilter.swift; sourceTree = "<group>"; };
+		5ED3369D22F914310096973F /* TikTokSoulOutFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokSoulOutFilter.metal; sourceTree = "<group>"; };
 		ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.debug.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalEasyFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F5EC622A2126C0032E902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -404,6 +408,8 @@
 		5E0DEEE522DDF021002DF990 /* SoulOut */ = {
 			isa = PBXGroup;
 			children = (
+				5ED3369B22F914240096973F /* TikTokSoulOutFilter.swift */,
+				5ED3369D22F914310096973F /* TikTokSoulOutFilter.metal */,
 			);
 			path = SoulOut;
 			sourceTree = "<group>";
@@ -934,6 +940,7 @@
 				5E0DEE9322D88795002DF990 /* the_scream.mlmodel in Sources */,
 				5E0DEE8322D861E7002DF990 /* ToonFilter.metal in Sources */,
 				5E3F159422D4B6220025E86B /* Passthrough.metal in Sources */,
+				5ED3369E22F914310096973F /* TikTokSoulOutFilter.metal in Sources */,
 				CF65F38722A216D6008F4219 /* RootTabBarController.swift in Sources */,
 				5E0DEEEB22DEBB8F002DF990 /* TikTokSelectFilterdBar.swift in Sources */,
 				5E0DEE7F22D85551002DF990 /* ToonController.swift in Sources */,
@@ -965,6 +972,7 @@
 				5E0DEED322DDE8D2002DF990 /* CyclePageWaterfallFlow.swift in Sources */,
 				5E3F158922D4A0000025E86B /* NormalImageController.swift in Sources */,
 				CF65F38D22A218C8008F4219 /* Extension+UIFont.swift in Sources */,
+				5ED3369C22F914240096973F /* TikTokSoulOutFilter.swift in Sources */,
 				CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */,
 				5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */,
 				CF65F38122A213B1008F4219 /* BaseNavigationController.swift in Sources */,

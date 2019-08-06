@@ -49,11 +49,18 @@ class TikTokController: BaseViewController {
         return select_filter_bar
     }()
     
-    //TODO: 滤镜
+    //TODO: Zoom 滤镜
     private lazy var zoom_fillter: TikTokZoomFilter = {
         let zoom_fillter = TikTokZoomFilter.init()
         zoom_fillter.tikTokZoomTime = 0
         return zoom_fillter
+    }()
+    
+    //TODO: SoulOut 滤镜
+    private lazy var soulOut_fillter: TikTokSoulOutFilter = {
+        let soulOut_fillter = TikTokSoulOutFilter.init()
+        soulOut_fillter.tikTokSoulOutTime = 0
+        return soulOut_fillter
     }()
     
     
@@ -117,6 +124,9 @@ extension TikTokController {
         zoom_fillter.tikTokZoomTime = 0
         zoom_fillter.sources.sources = [:]
         zoom_fillter.removeAllTargets()
+        soulOut_fillter.tikTokSoulOutTime = 0
+        soulOut_fillter.sources.sources = [:]
+        soulOut_fillter.removeAllTargets()
         
         renderView.sources.sources = [:]
     }
@@ -139,6 +149,9 @@ extension TikTokController {
     //TODO: 灵魂出窍滤镜
     private func soulOutFilterRendering() {
         
+        picture --> soulOut_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
     
     //TODO: 抖动滤镜
@@ -188,7 +201,7 @@ extension TikTokController {
         case .zoom:
             zoom_fillter.tikTokZoomTime = Float(interval)
         case .soulOut:
-            print("soulOut")
+            soulOut_fillter.tikTokSoulOutTime = Float(interval)
         case .shake:
             print("shake")
         case .flashWhite:

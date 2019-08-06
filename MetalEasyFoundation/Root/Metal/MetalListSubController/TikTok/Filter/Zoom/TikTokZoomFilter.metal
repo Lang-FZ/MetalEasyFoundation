@@ -15,10 +15,6 @@ struct TikTokZoomVertexIO {
     float2 textureCoordinate [[user(texturecoord)]];
 };
 
-typedef struct {
-    float time;
-} TikTokZoomTime;
-
 
 vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant float& uniforms [[ buffer(2)]], uint vid [[vertex_id]]) {
     
