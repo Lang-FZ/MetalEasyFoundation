@@ -111,6 +111,14 @@
 		5E9C940722D35143005E8FDE /* fruit.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C940622D35143005E8FDE /* fruit.jpeg */; };
 		5ED3369C22F914240096973F /* TikTokSoulOutFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED3369B22F914240096973F /* TikTokSoulOutFilter.swift */; };
 		5ED3369E22F914310096973F /* TikTokSoulOutFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED3369D22F914310096973F /* TikTokSoulOutFilter.metal */; };
+		5ED336A022F983320096973F /* TikTokShakeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED3369F22F983320096973F /* TikTokShakeFilter.swift */; };
+		5ED336A222F9833A0096973F /* TikTokShakeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A122F9833A0096973F /* TikTokShakeFilter.metal */; };
+		5ED336A422F985520096973F /* TikTokFlashWhiteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A322F985520096973F /* TikTokFlashWhiteFilter.swift */; };
+		5ED336A622F985590096973F /* TikTokFlashWhiteFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A522F985590096973F /* TikTokFlashWhiteFilter.metal */; };
+		5ED336A822F988E30096973F /* TikTokBurrFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A722F988E30096973F /* TikTokBurrFilter.swift */; };
+		5ED336AA22F989530096973F /* TikTokBurrFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A922F989530096973F /* TikTokBurrFilter.metal */; };
+		5ED336AC22F98C080096973F /* TikTokHallucinationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336AB22F98C080096973F /* TikTokHallucinationFilter.swift */; };
+		5ED336AE22F98C110096973F /* TikTokHallucinationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */; };
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
 		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
@@ -240,6 +248,14 @@
 		5E9C940622D35143005E8FDE /* fruit.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit.jpeg; sourceTree = "<group>"; };
 		5ED3369B22F914240096973F /* TikTokSoulOutFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSoulOutFilter.swift; sourceTree = "<group>"; };
 		5ED3369D22F914310096973F /* TikTokSoulOutFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokSoulOutFilter.metal; sourceTree = "<group>"; };
+		5ED3369F22F983320096973F /* TikTokShakeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokShakeFilter.swift; sourceTree = "<group>"; };
+		5ED336A122F9833A0096973F /* TikTokShakeFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokShakeFilter.metal; sourceTree = "<group>"; };
+		5ED336A322F985520096973F /* TikTokFlashWhiteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokFlashWhiteFilter.swift; sourceTree = "<group>"; };
+		5ED336A522F985590096973F /* TikTokFlashWhiteFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokFlashWhiteFilter.metal; sourceTree = "<group>"; };
+		5ED336A722F988E30096973F /* TikTokBurrFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokBurrFilter.swift; sourceTree = "<group>"; };
+		5ED336A922F989530096973F /* TikTokBurrFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokBurrFilter.metal; sourceTree = "<group>"; };
+		5ED336AB22F98C080096973F /* TikTokHallucinationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokHallucinationFilter.swift; sourceTree = "<group>"; };
+		5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokHallucinationFilter.metal; sourceTree = "<group>"; };
 		ADB35AFF857E50D17126C50E /* Pods-MetalEasyFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.debug.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalEasyFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F5EC622A2126C0032E902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -387,6 +403,8 @@
 		5E0DEEE222DDF021002DF990 /* Hallucination */ = {
 			isa = PBXGroup;
 			children = (
+				5ED336AB22F98C080096973F /* TikTokHallucinationFilter.swift */,
+				5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */,
 			);
 			path = Hallucination;
 			sourceTree = "<group>";
@@ -394,6 +412,8 @@
 		5E0DEEE322DDF021002DF990 /* Burr */ = {
 			isa = PBXGroup;
 			children = (
+				5ED336A722F988E30096973F /* TikTokBurrFilter.swift */,
+				5ED336A922F989530096973F /* TikTokBurrFilter.metal */,
 			);
 			path = Burr;
 			sourceTree = "<group>";
@@ -401,6 +421,8 @@
 		5E0DEEE422DDF021002DF990 /* Shake */ = {
 			isa = PBXGroup;
 			children = (
+				5ED3369F22F983320096973F /* TikTokShakeFilter.swift */,
+				5ED336A122F9833A0096973F /* TikTokShakeFilter.metal */,
 			);
 			path = Shake;
 			sourceTree = "<group>";
@@ -417,6 +439,8 @@
 		5E0DEEE622DDF021002DF990 /* FlashWhite */ = {
 			isa = PBXGroup;
 			children = (
+				5ED336A322F985520096973F /* TikTokFlashWhiteFilter.swift */,
+				5ED336A522F985590096973F /* TikTokFlashWhiteFilter.metal */,
 			);
 			path = FlashWhite;
 			sourceTree = "<group>";
@@ -914,6 +938,8 @@
 			files = (
 				5E9C93A922CE2E08005E8FDE /* Constants.swift in Sources */,
 				5E0DEEA122D89CE2002DF990 /* StyleTransferInput.swift in Sources */,
+				5ED336A822F988E30096973F /* TikTokBurrFilter.swift in Sources */,
+				5ED336A022F983320096973F /* TikTokShakeFilter.swift in Sources */,
 				5E3F159C22D5FA460025E86B /* SaturationFilter.swift in Sources */,
 				5E9C93B522D31B7C005E8FDE /* LookupFilter.metal in Sources */,
 				5E0DEEE922DEBB6B002DF990 /* TikTokController.swift in Sources */,
@@ -924,8 +950,10 @@
 				5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
 				5E3F158B22D4A87C0025E86B /* LookupTableController.swift in Sources */,
+				5ED336A222F9833A0096973F /* TikTokShakeFilter.metal in Sources */,
 				5E3F159A22D5F92C0025E86B /* SaturationFilter.metal in Sources */,
 				5E3F159822D5F50D0025E86B /* BrightnessFilter.metal in Sources */,
+				5ED336AC22F98C080096973F /* TikTokHallucinationFilter.swift in Sources */,
 				CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */,
 				5E9C939922CDF807005E8FDE /* Pipeline.swift in Sources */,
 				5E9C93A122CE1099005E8FDE /* ShaderUniformSettings.swift in Sources */,
@@ -934,8 +962,10 @@
 				5E0DEEA322D89E1B002DF990 /* UIImage+Scaling.swift in Sources */,
 				5E9C93A522CE199E005E8FDE /* Position.swift in Sources */,
 				5E0DEE7722D73DD6002DF990 /* SelectPicturesController.swift in Sources */,
+				5ED336AE22F98C110096973F /* TikTokHallucinationFilter.metal in Sources */,
 				5E9C93AD22CF3C97005E8FDE /* PictureInput.swift in Sources */,
 				5E0DEE9F22D88B11002DF990 /* CoreMLStyleTransferController.swift in Sources */,
+				5ED336A422F985520096973F /* TikTokFlashWhiteFilter.swift in Sources */,
 				5E0DEE8122D86135002DF990 /* ToonFilter.swift in Sources */,
 				5E0DEE9322D88795002DF990 /* the_scream.mlmodel in Sources */,
 				5E0DEE8322D861E7002DF990 /* ToonFilter.metal in Sources */,
@@ -950,6 +980,7 @@
 				5E0DEEA722D9CCB6002DF990 /* StretchFilter.swift in Sources */,
 				5E0DEEED22DEBBAF002DF990 /* TikTokSelectBarItem.swift in Sources */,
 				5E9C93B122D2ED87005E8FDE /* BasicOperation.swift in Sources */,
+				5ED336A622F985590096973F /* TikTokFlashWhiteFilter.metal in Sources */,
 				5E9C939B22CE0CA2005E8FDE /* Texture.swift in Sources */,
 				5E0DEED522DDE8D2002DF990 /* CyclePageController.swift in Sources */,
 				CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */,
@@ -985,6 +1016,7 @@
 				CF65F38622A216D6008F4219 /* RootTabBar.swift in Sources */,
 				5E0DEE9022D88795002DF990 /* mosaic.mlmodel in Sources */,
 				5E0DEE7B22D754DF002DF990 /* ZoomBlur.metal in Sources */,
+				5ED336AA22F989530096973F /* TikTokBurrFilter.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

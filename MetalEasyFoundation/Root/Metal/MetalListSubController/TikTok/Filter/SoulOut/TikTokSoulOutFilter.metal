@@ -10,8 +10,6 @@
 #import "ShaderType.h"
 using namespace metal;
 
-constant float PI = 3.1415926;
-
 fragment half4 tikTokSoulOutFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
     
     float duration = 0.7;

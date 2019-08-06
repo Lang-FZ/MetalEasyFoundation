@@ -63,6 +63,34 @@ class TikTokController: BaseViewController {
         return soulOut_fillter
     }()
     
+    //TODO: Shake 滤镜
+    private lazy var shake_fillter: TikTokShakeFilter = {
+        let shake_fillter = TikTokShakeFilter.init()
+        shake_fillter.tikTokShakeTime = 0
+        return shake_fillter
+    }()
+    
+    //TODO: FlashWhite 滤镜
+    private lazy var flashWhite_fillter: TikTokFlashWhiteFilter = {
+        let flashWhite_fillter = TikTokFlashWhiteFilter.init()
+        flashWhite_fillter.tikTokFlashWhiteTime = 0
+        return flashWhite_fillter
+    }()
+    
+    //TODO: Burr 滤镜
+    private lazy var burr_fillter: TikTokBurrFilter = {
+        let burr_fillter = TikTokBurrFilter.init()
+        burr_fillter.tikTokBurrTime = 0
+        return burr_fillter
+    }()
+    
+    //TODO: Hallucination 滤镜
+    private lazy var hallucination_fillter: TikTokHallucinationFilter = {
+        let hallucination_fillter = TikTokHallucinationFilter.init()
+        hallucination_fillter.tikTokHallucinationTime = 0
+        return hallucination_fillter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,14 +147,32 @@ extension TikTokController {
     }
     
     private func removeAllTargetSources() {
+        
         picture.removeAllTargets()
         
         zoom_fillter.tikTokZoomTime = 0
         zoom_fillter.sources.sources = [:]
         zoom_fillter.removeAllTargets()
+        
         soulOut_fillter.tikTokSoulOutTime = 0
         soulOut_fillter.sources.sources = [:]
         soulOut_fillter.removeAllTargets()
+        
+        shake_fillter.tikTokShakeTime = 0
+        shake_fillter.sources.sources = [:]
+        shake_fillter.removeAllTargets()
+        
+        flashWhite_fillter.tikTokFlashWhiteTime = 0
+        flashWhite_fillter.sources.sources = [:]
+        flashWhite_fillter.removeAllTargets()
+        
+        burr_fillter.tikTokBurrTime = 0
+        burr_fillter.sources.sources = [:]
+        burr_fillter.removeAllTargets()
+        
+        hallucination_fillter.tikTokHallucinationTime = 0
+        hallucination_fillter.sources.sources = [:]
+        hallucination_fillter.removeAllTargets()
         
         renderView.sources.sources = [:]
     }
@@ -157,29 +203,34 @@ extension TikTokController {
     //TODO: 抖动滤镜
     private func shakeFilterRendering() {
         
+        picture --> shake_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
     
     //TODO: 闪白滤镜
     private func flashWhiteFilterRendering() {
         
+        picture --> flashWhite_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
     
     //TODO: 毛刺滤镜
     private func burrFilterRendering() {
         
+        picture --> burr_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
     
     //TODO: 幻觉滤镜
     private func hallucinationFilterRendering() {
         
+        picture --> hallucination_fillter --> renderView
+        picture.processImage()
+        startFilterTime()
     }
-}
-
-// MARK: - 滤镜动效
-
-extension TikTokController {
-    
-    
 }
 
 // MARK: - 定时器
@@ -194,7 +245,6 @@ extension TikTokController {
         }
         
         interval = Date.timeIntervalBetween1970AndReferenceDate + Date.timeIntervalSinceReferenceDate - startTime
-        print("\(interval)")
         
         switch filterType {
             
@@ -203,13 +253,13 @@ extension TikTokController {
         case .soulOut:
             soulOut_fillter.tikTokSoulOutTime = Float(interval)
         case .shake:
-            print("shake")
+            shake_fillter.tikTokShakeTime = Float(interval)
         case .flashWhite:
-            print("flashWhite")
+            flashWhite_fillter.tikTokFlashWhiteTime = Float(interval)
         case .burr:
-            print("burr")
+            burr_fillter.tikTokBurrTime = Float(interval)
         case .hallucination:
-            print("hallucination")
+            hallucination_fillter.tikTokHallucinationTime = Float(interval)
         case .normal:
             normalRendering()
         }
