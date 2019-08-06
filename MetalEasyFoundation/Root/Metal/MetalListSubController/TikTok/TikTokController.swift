@@ -102,6 +102,8 @@ class TikTokController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeFilterTime()
+        removeAllTargetSources()
+        normalRendering()
     }
     deinit {
         removeFilterTime()
