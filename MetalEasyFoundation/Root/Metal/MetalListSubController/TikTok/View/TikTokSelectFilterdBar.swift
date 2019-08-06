@@ -128,11 +128,16 @@ extension TikTokSelectFilterdBar: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if current != indexPath.item {
+        clickItem(indexPath.item)
+    }
+    
+    public func clickItem(_ index:Int) {
+        
+        if current != index {
             
             data.data[current].is_selected = false
-            data.data[indexPath.item].is_selected = true
-            current = indexPath.item
+            data.data[index].is_selected = true
+            current = index
             
             filter_collection.reloadData()
         }
