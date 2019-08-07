@@ -27,8 +27,7 @@ class NormalImageController: BaseViewController {
     // MARK: - 系统方法
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.white
+
         view.addSubview(renderView)
         
         picture --> renderView

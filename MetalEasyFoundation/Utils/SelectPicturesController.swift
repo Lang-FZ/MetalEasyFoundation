@@ -70,7 +70,7 @@ class SelectPicturesController: BaseViewController {
     // MARK: - 系统方法
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        
         title = LocalizationTool.getStr("metal.select.picture.title")
         
         view.addSubview(picture_table)

@@ -101,7 +101,6 @@ class TikTokController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.init("#F0F0F0")
         view.addSubview(renderView)
         view.addSubview(select_filter_bar)
     }

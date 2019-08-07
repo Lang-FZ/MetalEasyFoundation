@@ -23,6 +23,10 @@ open class BaseViewController: UIViewController {
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+    }
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

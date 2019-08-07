@@ -51,7 +51,6 @@ class CoreMLStyleTransferController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.init("#F0F0F0")
         view.addSubview(imageView)
         view.addSubview(select_btn)
     }

@@ -177,7 +177,6 @@ class CyclePageController: NoneBarController {
     // MARK: - 系统方法
     override open func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
         
         view.addSubview(cycle_page)
         cycle_page.reloadData()

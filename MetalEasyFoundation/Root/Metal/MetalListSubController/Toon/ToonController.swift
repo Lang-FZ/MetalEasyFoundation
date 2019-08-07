@@ -63,7 +63,6 @@ class ToonController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
         view.addSubview(renderView)
         
         view.addSubview(toon_magtol_l)

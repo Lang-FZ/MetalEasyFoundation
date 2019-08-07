@@ -47,7 +47,6 @@ class StretchController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
         view.addSubview(renderView)
         
         view.addSubview(stretch_l)
