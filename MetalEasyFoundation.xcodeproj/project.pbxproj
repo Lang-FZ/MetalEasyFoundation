@@ -121,7 +121,6 @@
 		5ED336AE22F98C110096973F /* TikTokHallucinationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */; };
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
-		CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */; };
 		CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC222A446A1002F02D0 /* BaseListModel.swift */; };
 		CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC422A44973002F02D0 /* BaseListCell.swift */; };
 		CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC622A44E4C002F02D0 /* LanguageController.swift */; };
@@ -260,7 +259,6 @@
 		CF0F5EC322A2126C0032E902 /* MetalEasyFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalEasyFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F5EC622A2126C0032E902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF0F5ECD22A2126D0032E902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF0F5ED022A2126D0032E902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF0F5ED222A2126D0032E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF164FC222A446A1002F02D0 /* BaseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListModel.swift; sourceTree = "<group>"; };
 		CF164FC422A44973002F02D0 /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
@@ -739,7 +737,6 @@
 			isa = PBXGroup;
 			children = (
 				CF65F39022A21A9E008F4219 /* Localizable */,
-				CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */,
 				CF0F5ED222A2126D0032E902 /* Info.plist */,
 			);
 			path = InfoSet;
@@ -835,7 +832,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E0DEE9C22D8882D002DF990 /* core_ml_the_scream.jpg in Resources */,
-				CF0F5ED122A2126D0032E902 /* LaunchScreen.storyboard in Resources */,
 				5E9C940122D34D5F005E8FDE /* girl4.jpg in Resources */,
 				5E9C93DB22D34C4D005E8FDE /* town_light_warm1.jpg in Resources */,
 				5E0DEE8722D86E8C002DF990 /* color_fillter2.jpg in Resources */,
@@ -1023,14 +1019,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF0F5ECF22A2126D0032E902 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF0F5ED022A2126D0032E902 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		CF65F39122A21A9E008F4219 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1167,6 +1155,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EMFL9A2M9;
@@ -1193,6 +1182,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EMFL9A2M9;
