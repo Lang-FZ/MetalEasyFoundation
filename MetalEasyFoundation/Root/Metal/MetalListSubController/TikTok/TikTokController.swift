@@ -49,6 +49,12 @@ class TikTokController: BaseViewController {
         return select_filter_bar
     }()
     
+    //TODO: 维护 滤镜 是否被引用的表
+    private lazy var filter_info: NSMapTable<AnyObject, NSNumber> = {
+        let filter_info = NSMapTable<AnyObject, NSNumber>.init(keyOptions: [.weakMemory, .objectPointerPersonality], valueOptions: [.weakMemory, .objectPointerPersonality])
+        return filter_info
+    }()
+    
     //TODO: Zoom 滤镜
     private lazy var zoom_fillter: TikTokZoomFilter = {
         let zoom_fillter = TikTokZoomFilter.init()
@@ -113,6 +119,7 @@ class TikTokController: BaseViewController {
 
 extension TikTokController {
     
+    //TODO: 切换滤镜
     private func choose_filter(_ index:Int) {
         
         removeFilterTime()
@@ -146,89 +153,106 @@ extension TikTokController {
             normalRendering()
         }
     }
-    
+    //TODO: 删除被引用的滤镜 sources、targets
     private func removeAllTargetSources() {
         
         picture.removeAllTargets()
         
-        zoom_fillter.tikTokZoomTime = 0
-        zoom_fillter.sources.sources = [:]
-        zoom_fillter.removeAllTargets()
+        if filter_info.object(forKey: zoom_fillter)?.boolValue ?? false {
+            zoom_fillter.tikTokZoomTime = 0
+            zoom_fillter.sources.sources = [:]
+            zoom_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: zoom_fillter)
+        }
         
-        soulOut_fillter.tikTokSoulOutTime = 0
-        soulOut_fillter.sources.sources = [:]
-        soulOut_fillter.removeAllTargets()
+        if filter_info.object(forKey: soulOut_fillter)?.boolValue ?? false {
+            soulOut_fillter.tikTokSoulOutTime = 0
+            soulOut_fillter.sources.sources = [:]
+            soulOut_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: soulOut_fillter)
+        }
         
-        shake_fillter.tikTokShakeTime = 0
-        shake_fillter.sources.sources = [:]
-        shake_fillter.removeAllTargets()
+        if filter_info.object(forKey: shake_fillter)?.boolValue ?? false {
+            shake_fillter.tikTokShakeTime = 0
+            shake_fillter.sources.sources = [:]
+            shake_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: shake_fillter)
+        }
         
-        flashWhite_fillter.tikTokFlashWhiteTime = 0
-        flashWhite_fillter.sources.sources = [:]
-        flashWhite_fillter.removeAllTargets()
+        if filter_info.object(forKey: flashWhite_fillter)?.boolValue ?? false {
+            flashWhite_fillter.tikTokFlashWhiteTime = 0
+            flashWhite_fillter.sources.sources = [:]
+            flashWhite_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: flashWhite_fillter)
+        }
         
-        burr_fillter.tikTokBurrTime = 0
-        burr_fillter.sources.sources = [:]
-        burr_fillter.removeAllTargets()
+        if filter_info.object(forKey: burr_fillter)?.boolValue ?? false {
+            burr_fillter.tikTokBurrTime = 0
+            burr_fillter.sources.sources = [:]
+            burr_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: burr_fillter)
+        }
         
-        hallucination_fillter.tikTokHallucinationTime = 0
-        hallucination_fillter.sources.sources = [:]
-        hallucination_fillter.removeAllTargets()
+        if filter_info.object(forKey: hallucination_fillter)?.boolValue ?? false {
+            hallucination_fillter.tikTokHallucinationTime = 0
+            hallucination_fillter.sources.sources = [:]
+            hallucination_fillter.removeAllTargets()
+            filter_info.setObject(NSNumber(value: false), forKey: hallucination_fillter)
+        }
         
         renderView.sources.sources = [:]
     }
-    
     //TODO: 无滤镜
     private func normalRendering() {
         
         picture --> renderView
         picture.processImage()
     }
-    
     //TODO: 缩放滤镜
     private func zoomFilterRendering() {
         
         picture --> zoom_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: zoom_fillter)
         picture.processImage()
         startFilterTime()
     }
-    
     //TODO: 灵魂出窍滤镜
     private func soulOutFilterRendering() {
         
         picture --> soulOut_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: soulOut_fillter)
         picture.processImage()
         startFilterTime()
     }
-    
     //TODO: 抖动滤镜
     private func shakeFilterRendering() {
         
         picture --> shake_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: shake_fillter)
         picture.processImage()
         startFilterTime()
     }
-    
     //TODO: 闪白滤镜
     private func flashWhiteFilterRendering() {
         
         picture --> flashWhite_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: flashWhite_fillter)
         picture.processImage()
         startFilterTime()
     }
-    
     //TODO: 毛刺滤镜
     private func burrFilterRendering() {
         
         picture --> burr_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: burr_fillter)
         picture.processImage()
         startFilterTime()
     }
-    
     //TODO: 幻觉滤镜
     private func hallucinationFilterRendering() {
         
         picture --> hallucination_fillter --> renderView
+        filter_info.setObject(NSNumber(value: true), forKey: hallucination_fillter)
         picture.processImage()
         startFilterTime()
     }
