@@ -12,12 +12,12 @@ class TikTokBurrFilter: BasicOperation {
     
     public var tikTokBurrTime: Float = 0.0 {
         didSet {
-            uniformSettings[0] = tikTokBurrTime
+            uniformSettings["tikTokBurrTime"] = tikTokBurrTime
         }
     }
     
     public init() {
         super.init(fragmentFunctionName: "tikTokBurrFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0)
+        ({tikTokBurrTime = 0.0})()
     }
 }

@@ -34,8 +34,8 @@ class ZoomBlurController: BaseViewController {
         zoom_blur_s.addTarget(self, action: #selector(zoomBlurChanged(_:)), for: .valueChanged)
         return zoom_blur_s
     }()
-    private lazy var zoom_blur_fillter: ZoomBlur = {
-        let zoom_blur_fillter = ZoomBlur.init()
+    private lazy var zoom_blur_fillter: MeatlZoomBlur = {
+        let zoom_blur_fillter = MeatlZoomBlur.init()
         zoom_blur_fillter.blurSize = 0
         return zoom_blur_fillter
     }()

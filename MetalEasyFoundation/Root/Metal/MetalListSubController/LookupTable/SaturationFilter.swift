@@ -10,12 +10,12 @@ public class SaturationFilter: BasicOperation {
     
     public var saturation: Float = 1.0 {
         didSet {
-            uniformSettings[0] = saturation
+            uniformSettings["saturation"] = saturation
         }
     }
     
     public init() {
-        super.init(fragmentFunctionName: "saturationFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(1.0)
+        super.init(fragmentFunctionName: "saturationMetalFragment", numberOfInputs: 1)
+        ({saturation = 1.0})()
     }
 }

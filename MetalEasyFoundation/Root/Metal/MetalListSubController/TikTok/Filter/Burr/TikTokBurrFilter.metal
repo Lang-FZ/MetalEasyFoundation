@@ -7,12 +7,16 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
+
+typedef struct {
+    float tikTokBurrTime;
+} TikTokBurrTime;
 
 constant float PI = 3.1415926;
 
-fragment half4 tikTokBurrFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
+fragment half4 tikTokBurrFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant TikTokBurrTime& time [[ buffer(1)]]) {
     
     constexpr sampler quadSampler;
     
@@ -20,7 +24,7 @@ fragment half4 tikTokBurrFragment(SingleInputVertexIO fragmentInput [[stage_in]]
     float duration = 0.3;
     float colorROffset = 0.01;
     float colorBOffset = -0.025;
-    float progress = fmod(time, duration * 2.0); // 0~1
+    float progress = fmod(time.tikTokBurrTime, duration * 2.0); // 0~1
     
     float amplitude = max(sin(progress * (PI / duration)), 0.0);
     float jitter = fract(sin(fragmentInput.textureCoordinate[1]) * 43758.5453123) * 2.0 - 1.0; // -1~1

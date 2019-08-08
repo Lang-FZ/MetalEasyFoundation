@@ -10,20 +10,24 @@
 using namespace metal;
 constant float PI = 3.1415926;
 
+typedef struct {
+    float tikTokZoomTime;
+} TikTokZoomTime;
+
 struct TikTokZoomVertexIO {
     float4 position [[position]];
     float2 textureCoordinate [[user(texturecoord)]];
 };
 
 
-vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant float& uniforms [[ buffer(2)]], uint vid [[vertex_id]]) {
+vertex TikTokZoomVertexIO tikTokZoomVertex(device packed_float2 *position [[buffer(0)]], device packed_float2 *texturecoord [[buffer(1)]], constant TikTokZoomTime& Time [[ buffer(2)]], uint vid [[vertex_id]]) {
     
     TikTokZoomVertexIO outputVertices;
     
     float duration = 0.6;
     float maxAmplitude = 0.3;
     
-    float time = fmod(uniforms, duration);
+    float time = fmod(Time.tikTokZoomTime, duration);
     float amplitude = 1.0 + maxAmplitude * abs(sin(time * (PI / duration)));
     
     outputVertices.position = float4(position[vid]*amplitude, 0, 1.0);

@@ -38,7 +38,7 @@ class CyclePageWaterfallCell: UICollectionViewCell {
                 let temp_height = waterfallFlow_inset_top_bottom*CGFloat.init(2)+waterfallFlow_between_line*CGFloat.init(waterfallFlow_section_count-1)
                 let image_height = (model.collection_width_height-temp_height)/CGFloat.init(waterfallFlow_section_count)
                 
-                image.image = UIImage.init(named: "")
+                image.image = UIImage()
                 
                 if let model_image = model.image {
                     
@@ -100,7 +100,7 @@ class CyclePageWaterfallCell: UICollectionViewCell {
                 let temp_width = waterfallFlow_inset_left_right*CGFloat.init(2)+waterfallFlow_between_line*CGFloat.init(waterfallFlow_section_count-1)
                 let image_width = (model.collection_width_height-temp_width)/CGFloat.init(waterfallFlow_section_count)
                 
-                image.image = UIImage.init(named: "")
+                image.image = UIImage()
                 
                 if let model_image = model.image {
                     

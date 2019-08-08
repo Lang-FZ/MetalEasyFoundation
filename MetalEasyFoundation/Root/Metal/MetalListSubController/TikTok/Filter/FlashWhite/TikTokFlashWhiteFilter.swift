@@ -12,12 +12,12 @@ class TikTokFlashWhiteFilter: BasicOperation {
     
     public var tikTokFlashWhiteTime: Float = 0.0 {
         didSet {
-            uniformSettings[0] = tikTokFlashWhiteTime
+            uniformSettings["tikTokFlashWhiteTime"] = tikTokFlashWhiteTime
         }
     }
     
     public init() {
         super.init(fragmentFunctionName: "tikTokFlashWhiteFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0)
+        ({tikTokFlashWhiteTime = 0.0})()
     }
 }

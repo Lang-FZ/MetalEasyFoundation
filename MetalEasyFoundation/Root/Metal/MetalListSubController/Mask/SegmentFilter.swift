@@ -10,9 +10,9 @@ import Foundation
 
 public class SegmentFilter: BasicOperation {
 
-    public var alpha: Float = 0 {
+    public var alpha: Float = 0.0 {
         didSet {
-            uniformSettings[0] = alpha
+            uniformSettings["alpha"] = alpha
         }
     }
     
@@ -32,6 +32,6 @@ public class SegmentFilter: BasicOperation {
     
     public init() {
         super.init(fragmentFunctionName: "segmentFragment", numberOfInputs: 3)
-        uniformSettings.appendUniform(0)
+        ({alpha = 0.0})()
     }
 }

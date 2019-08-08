@@ -12,12 +12,12 @@ class TikTokSoulOutFilter: BasicOperation {
 
     public var tikTokSoulOutTime: Float = 0.0 {
         didSet {
-            uniformSettings[0] = tikTokSoulOutTime
+            uniformSettings["tikTokSoulOutTime"] = tikTokSoulOutTime
         }
     }
     
     public init() {
         super.init(fragmentFunctionName: "tikTokSoulOutFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0)
+        ({tikTokSoulOutTime = 0.0})()
     }
 }

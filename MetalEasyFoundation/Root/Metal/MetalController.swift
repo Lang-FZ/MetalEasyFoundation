@@ -72,6 +72,13 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         }
         model.data.append(model8)
         
+        let model9 = BaseListModel.init([:])
+        model9.title = "metal.list.title.test.camera"
+        model9.action = { [weak self] (title) in
+            self?.testCamera(title)
+        }
+        model.data.append(model9)
+        
         return model
     }()
     
@@ -248,5 +255,11 @@ extension MetalController {
         }
         
         navigationController?.pushViewController(picture, animated: true)
+    }
+    private func testCamera(_ title:String) {
+        
+        let camera = TestCameraController()
+        camera.title = title
+        navigationController?.pushViewController(camera, animated: true)
     }
 }

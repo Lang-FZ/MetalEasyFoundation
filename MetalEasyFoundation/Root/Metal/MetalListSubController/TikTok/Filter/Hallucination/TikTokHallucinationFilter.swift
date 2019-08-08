@@ -12,13 +12,13 @@ class TikTokHallucinationFilter: BasicOperation {
 
     public var tikTokHallucinationTime: Float = 0.0 {
         didSet {
-            uniformSettings[0] = tikTokHallucinationTime
+            uniformSettings["tikTokHallucinationTime"] = tikTokHallucinationTime
         }
     }
     
     public init() {
         super.init(fragmentFunctionName: "tikTokHallucinationFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0)
+        ({tikTokHallucinationTime = 0.0})()
     }
 }
 

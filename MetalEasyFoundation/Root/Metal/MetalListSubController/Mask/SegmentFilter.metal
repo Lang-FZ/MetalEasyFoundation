@@ -7,7 +7,7 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
 
 typedef struct {

@@ -17,7 +17,7 @@ public class StretchFilter: BasicOperation {
     var textureHeap: MTLHeap?
     
     public init() {
-        super.init(fragmentFunctionName: FunctionName.PassthroughFragment, numberOfInputs: 1)
+        super.init(fragmentFunctionName: "passthroughFragment", numberOfInputs: 1)
     }
     
     public override func newTextureAvailable(_ texture: Texture, fromSourceIndex: UInt) {
@@ -50,7 +50,7 @@ public class StretchFilter: BasicOperation {
             outputWidth = firstInputTexture.texture.width
             outputHeight = Int(Float(firstInputTexture.texture.height) * scaleHeightFactor)
             
-            guard let commandBuffer = sharedContext.commandQueue.makeCommandBuffer() else {
+            guard let commandBuffer = sharedMetalRenderingDevice.commandQueue.makeCommandBuffer() else {
                 return
             }
             
@@ -63,13 +63,13 @@ public class StretchFilter: BasicOperation {
                     let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm, width: firstInputTexture.texture.width, height: Int(Float(firstInputTexture.texture.height) * ((texCoordEndY - texCoordBeginY) * (1.5 - 1) + 1)), mipmapped: false)
                     textureDescriptor.usage = [.renderTarget, .shaderRead, .shaderWrite]
                     
-                    let sizeAndAlign = sharedContext.device.heapTextureSizeAndAlign(descriptor: textureDescriptor)
+                    let sizeAndAlign = sharedMetalRenderingDevice.device.heapTextureSizeAndAlign(descriptor: textureDescriptor)
                     let heapDescriptor = MTLHeapDescriptor()
                     heapDescriptor.cpuCacheMode = .defaultCache
                     heapDescriptor.storageMode = .shared
                     heapDescriptor.size = sizeAndAlign.size
                     
-                    textureHeap = sharedContext.device.makeHeap(descriptor: heapDescriptor)
+                    textureHeap = sharedMetalRenderingDevice.device.makeHeap(descriptor: heapDescriptor)
                 }
                 
                 let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm, width: outputWidth, height: outputHeight, mipmapped: false)
@@ -79,17 +79,18 @@ public class StretchFilter: BasicOperation {
                 }
                 
                 newTexture.makeAliasable()
-                outputTexture = Texture.init(texture: newTexture)
+                outputTexture = Texture(orientation: .portrait, texture: newTexture)
                 
             } else {
              
                 if #available(iOS 11, *) {
-                    print("memory: \(sharedContext.device.currentAllocatedSize)")
+                    print("memory: \(sharedMetalRenderingDevice.device.currentAllocatedSize)")
                 }
-                outputTexture = Texture.init(width: outputWidth, height: outputHeight)
+                outputTexture = Texture(device: sharedMetalRenderingDevice.device, orientation: .portrait, width: outputWidth, height: outputHeight)
             }
             
-            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, vertexUniformSettings: vertexUniformSettings, inputTextures: inputTextures, outputTexture: outputTexture, clearColor: RenderColor.clearColor, imageVertices: imageVertices, textureCoordinates: textureCoordinates)
+            commandBuffer.renderQuad(pipelineState: renderPipelineState, uniformSettings: uniformSettings, inputTextures: inputTextures, imageVertices: imageVertices, outputTexture: outputTexture, outputOrientation: .portrait, textureCoordinates: textureCoordinates)
+            
             commandBuffer.commit()
             
             updateTargetsWithTexture(outputTexture)

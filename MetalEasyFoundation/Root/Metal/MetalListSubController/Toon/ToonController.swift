@@ -49,8 +49,8 @@ class ToonController: BaseViewController {
         toon_quantize_s.addTarget(self, action: #selector(toonQuantizeChanged(_:)), for: .valueChanged)
         return toon_quantize_s
     }()
-    private lazy var toon_fillter: ToonFilter = {
-        let toon_fillter = ToonFilter.init()
+    private lazy var toon_fillter: MeatlToonFilter = {
+        let toon_fillter = MeatlToonFilter.init()
         return toon_fillter
     }()
     

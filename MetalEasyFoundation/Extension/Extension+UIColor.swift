@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIColor {
     
-    convenience public init(_ hex:String, alpha:CGFloat = 1) {
+    convenience init(_ hex:String, alpha:CGFloat = 1) {
         
         var color_str = (hex.contains("#") == true ? hex : "#"+hex) as NSString
         

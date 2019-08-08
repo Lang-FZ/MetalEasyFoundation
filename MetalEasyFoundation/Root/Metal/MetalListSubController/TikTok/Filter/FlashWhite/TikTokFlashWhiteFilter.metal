@@ -7,17 +7,21 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
+
+typedef struct {
+    float tikTokFlashWhiteTime;
+} TikTokFlashWhiteTime;
 
 constant float PI = 3.1415926;
 
-fragment half4 tikTokFlashWhiteFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
+fragment half4 tikTokFlashWhiteFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant TikTokFlashWhiteTime& time [[ buffer(1)]]) {
     
     constexpr sampler quadSampler;
     
     float duration = 0.6;
-    float progress = fmod(time, duration); // 0~1
+    float progress = fmod(time.tikTokFlashWhiteTime, duration); // 0~1
     
     half4 whiteMask = half4(1.0, 1.0, 1.0, 1.0);
     float amplitude = abs(sin(progress * (PI / duration)));

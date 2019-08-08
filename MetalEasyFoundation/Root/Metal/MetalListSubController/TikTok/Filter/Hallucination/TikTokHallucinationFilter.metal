@@ -7,17 +7,21 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
+
+typedef struct {
+    float tikTokHallucinationTime;
+} TikTokHallucinationTime;
 
 constant float PI = 3.1415926;
 constant float duration = 2.0;
 
-fragment half4 tikTokHallucinationFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
+fragment half4 tikTokHallucinationFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant TikTokHallucinationTime& time [[ buffer(1)]]) {
     
     constexpr sampler quadSampler;
     
-    float progress = fmod(time, duration);
+    float progress = fmod(time.tikTokHallucinationTime, duration);
     
     float scale = 1.2;
     float padding = 0.5 * (1.0 - 1.0 / scale);

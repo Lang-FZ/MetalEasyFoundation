@@ -111,6 +111,7 @@ class TikTokController: BaseViewController {
     }
     deinit {
         removeFilterTime()
+        print("TikTokController deinit")
     }
 }
 

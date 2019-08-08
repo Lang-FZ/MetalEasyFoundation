@@ -51,6 +51,8 @@ class CoreMLStyleTransferController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor("F0F0F0")
+        
         view.addSubview(imageView)
         view.addSubview(select_btn)
     }
@@ -59,16 +61,16 @@ class CoreMLStyleTransferController: BaseViewController {
         let cyclePageModel = CyclePagePhotoModel.init()
         
         let model1 = CyclePagePhotoModel()
-        model1.photoName = "mosaic"
+        model1.photoName = "mosaic.jpg"
         
         let model2 = CyclePagePhotoModel()
-        model2.photoName = "the_scream"
+        model2.photoName = "the_scream.jpg"
         
         let model3 = CyclePagePhotoModel()
-        model3.photoName = "udnie"
+        model3.photoName = "udnie.jpg"
         
         let model4 = CyclePagePhotoModel()
-        model4.photoName = "candy"
+        model4.photoName = "candy.jpg"
         
         cyclePageModel.photoData.append(model1)
         cyclePageModel.photoData.append(model2)

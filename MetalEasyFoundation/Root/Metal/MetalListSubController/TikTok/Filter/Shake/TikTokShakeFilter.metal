@@ -7,10 +7,14 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
 
-fragment half4 tikTokShakeFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
+typedef struct {
+    float tikTokShakeTime;
+} TikTokShakeTime;
+
+fragment half4 tikTokShakeFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant TikTokShakeTime& time [[ buffer(1)]]) {
     
     constexpr sampler quadSampler;
     
@@ -18,7 +22,7 @@ fragment half4 tikTokShakeFragment(SingleInputVertexIO fragmentInput [[stage_in]
     float maxScale = 1.1;
     float offset = 0.02;
     
-    float progress = fmod(time, duration) / duration; // 0~1
+    float progress = fmod(time.tikTokShakeTime, duration) / duration; // 0~1
     float2 offsetCoords = float2(offset, offset) * progress;
     float scale = 1.0 + (maxScale - 1.0) * progress;
     

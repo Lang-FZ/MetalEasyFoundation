@@ -7,16 +7,20 @@
 //
 
 #include <metal_stdlib>
-#import "ShaderType.h"
+#import "OperationShaderTypes.h"
 using namespace metal;
 
-fragment half4 tikTokSoulOutFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant float& time [[ buffer(1)]]) {
+typedef struct {
+    float tikTokSoulOutTime;
+} TikTokSoulOutTime;
+
+fragment half4 tikTokSoulOutFragment(SingleInputVertexIO fragmentInput [[stage_in]], texture2d<half> inputTexture [[texture(0)]], constant TikTokSoulOutTime& time [[ buffer(1)]]) {
     
     float duration = 0.7;
     float maxAlpha = 0.4;
     float maxScale = 1.8;
     
-    float progress = fmod(time, duration) / duration; // 0~1
+    float progress = fmod(time.tikTokSoulOutTime, duration) / duration; // 0~1
     float alpha = maxAlpha * (1.0 - progress);
     float scale = 1.0 + (maxScale - 1.0) * progress;
     

@@ -12,12 +12,12 @@ class TikTokShakeFilter: BasicOperation {
 
     public var tikTokShakeTime: Float = 0.0 {
         didSet {
-            uniformSettings[0] = tikTokShakeTime
+            uniformSettings["tikTokShakeTime"] = tikTokShakeTime
         }
     }
     
     public init() {
         super.init(fragmentFunctionName: "tikTokShakeFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0)
+        ({tikTokShakeTime = 0.0})()
     }
 }

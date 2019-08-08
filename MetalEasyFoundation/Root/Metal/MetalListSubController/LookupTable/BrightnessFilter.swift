@@ -10,12 +10,12 @@ public class BrightnessFilter: BasicOperation {
     
     public var brightness: Float = 0.0 {
         didSet {
-            uniformSettings[0] = brightness
+            uniformSettings["brightness"] = brightness
         }
     }
     
     public init() {
-        super.init(fragmentFunctionName: "brightnessFragment", numberOfInputs: 1)
-        uniformSettings.appendUniform(0.0)
+        super.init(fragmentFunctionName: "brightnessMetalFragment", numberOfInputs: 1)
+        ({brightness = 0.0})()
     }
 }
