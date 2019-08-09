@@ -110,8 +110,8 @@ class MetalController: BaseViewController, HadTabBarProtocol {
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
+        print("MetalController-deinit")
     }
-
 }
 
 extension MetalController {
@@ -191,16 +191,18 @@ extension MetalController {
     //TODO: 描边、颜色丰富度
     private func pushToon(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let toon = ToonController()
-            toon.picture_name = picture_name
             toon.title = title
+            if type == .picture {
+                toon.picture_name = picture_name
+            }
+            toon.type = type
             self?.navigationController?.pushViewController(toon, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: 机器学习风格滤镜
     private func pushStyleTransfer(_ title:String) {

@@ -146,6 +146,7 @@ class ZoomBlurController: BaseViewController {
     }
 }
 
+// MARK: - 滤镜改参数
 extension ZoomBlurController {
     
     @objc private func zoomBlurChanged(_ sender: UISlider) {
@@ -156,6 +157,7 @@ extension ZoomBlurController {
     }
 }
 
+// MARK: - 镜头相关
 extension ZoomBlurController: CameraDelegate {
     
     func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer) {
@@ -170,23 +172,23 @@ extension ZoomBlurController: CameraDelegate {
         let image = renderView.currentTexture?.texture.toUIImage() ?? UIImage()
         
         let oldStatus = PHPhotoLibrary.authorizationStatus()
-        PHPhotoLibrary.requestAuthorization { (status) in
+        PHPhotoLibrary.requestAuthorization { [weak self] (status) in
             
             if status == .denied {
                 
                 if oldStatus != .denied {
-                    self.showSuccessHud("请允许访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
+                    self?.showSuccessHud("请允许访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
                     }
                 } else {
                     
                 }
             } else if status == .authorized {
                 
-                self.saveImageToPhotoCollection(image)
+                self?.saveImageToPhotoCollection(image)
                 
             } else if status == .restricted {
                 
-                self.showSuccessHud("系统原因不能访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
+                self?.showSuccessHud("系统原因不能访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
                 }
             }
         }
@@ -201,7 +203,7 @@ extension ZoomBlurController: CameraDelegate {
     private func saveImageToPhotoCollection(_ image:UIImage) {
         
         do {
-            try PHPhotoLibrary.shared().performChangesAndWait {
+            try PHPhotoLibrary.shared().performChangesAndWait { 
                 PHAssetCreationRequest.creationRequestForAsset(from: image)
             }
         } catch {

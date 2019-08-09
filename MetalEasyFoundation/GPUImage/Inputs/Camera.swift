@@ -2,7 +2,7 @@ import Foundation
 import AVFoundation
 import Metal
 
-public protocol CameraDelegate {
+public protocol CameraDelegate: class {
     func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer)
 }
 
@@ -53,7 +53,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
     public var logFPS:Bool = false
     
     public let targets = TargetContainer()
-    public var delegate: CameraDelegate?
+    public weak var delegate: CameraDelegate?
     public let captureSession:AVCaptureSession
     let inputCamera:AVCaptureDevice!
     let videoInput:AVCaptureDeviceInput!

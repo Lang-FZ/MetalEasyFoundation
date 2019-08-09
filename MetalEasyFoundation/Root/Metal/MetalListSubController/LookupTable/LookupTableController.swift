@@ -151,6 +151,9 @@ class LookupTableController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("LUT-deinit")
+    }
 }
 
 extension LookupTableController {

@@ -7,15 +7,41 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
 
 class ToonController: BaseViewController {
 
+    private lazy var camera: Camera = {
+        let camera = try! Camera(sessionPreset: AVCaptureSession.Preset.hd4K3840x2160, location: PhysicalCameraLocation.backFacing, captureAsYUV: true)
+        camera.delegate = self
+        return camera
+    }()
+    private var picture : PictureInput!
     private lazy var renderView: RenderView = {
         let renderView = RenderView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarBotH - frameMath(80+15)))
         renderView.fillMode = FillMode.preserveAspectRatio
         return renderView
     }()
-    private var picture : PictureInput!
+    
+    private lazy var btn: UIButton = {
+        
+        let btn = UIButton.init(type: .custom)
+        btn.backgroundColor = UIColor.red
+        btn.addTarget(self, action: #selector(takePhoto), for: UIControl.Event.touchUpInside)
+        
+        btn.frame = CGRect.init(x: 0, y: 0, width: 80, height: 80)
+        btn.center = CGPoint.init(x: kScreenW / 2, y: kScreenH - kNaviBarH - kTabBarBotH - frameMath(40) - 50)
+        
+        btn.layer.borderWidth = 2
+        btn.layer.borderColor = UIColor.white.cgColor
+        btn.layer.cornerRadius = 40
+        btn.layer.shadowColor = UIColor.black.cgColor
+        btn.layer.shadowOffset = CGSize.init(width: 0, height: 5)
+        btn.layer.transform = CATransform3DTranslate(btn.layer.transform, 0, 0, 10)
+        
+        return btn
+    }()
     
     private lazy var toon_magtol_l: UILabel = {
         let toon_magtol_l = UILabel.init()
@@ -60,6 +86,18 @@ class ToonController: BaseViewController {
         }
     }
     
+    public var type:CameraOrPictureType = .picture {
+        didSet {
+            if type == .camera {
+                camera --> toon_fillter --> renderView
+                camera.startCapture()
+            } else {
+                picture --> toon_fillter --> renderView
+                picture.processImage()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,10 +108,30 @@ class ToonController: BaseViewController {
         view.addSubview(toon_quantize_l)
         view.addSubview(toon_quantize_s)
         
-        setUI()
+        if type == .camera {
+            view.addSubview(btn)
+        }
         
-        picture --> toon_fillter --> renderView
-        picture.processImage()
+        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(resignActive), name: UIApplication.willResignActiveNotification, object: nil)
+        
+        setUI()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if type == .camera {
+            camera.stopCapture()
+        }
+    }
+    @objc private func becomeActive() {
+        if type == .camera {
+            camera.startCapture()
+        }
+    }
+    @objc private func resignActive() {
+        if type == .camera {
+            camera.stopCapture()
+        }
     }
     
     private func setUI() {
@@ -103,16 +161,87 @@ class ToonController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("Toon-deinit")
+        if type == .camera {
+            camera.stopCapture()
+        }
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension ToonController {
     
     @objc private func toonMagtolChanged(_ sender: UISlider) {
         toon_fillter.magtol = sender.value
-        picture.processImage()
+        if type == .picture {
+            picture.processImage()
+        }
     }
     @objc private func toonQuantizeChanged(_ sender: UISlider) {
         toon_fillter.quantize = sender.value
-        picture.processImage()
+        if type == .picture {        
+            picture.processImage()
+        }
+    }
+}
+
+// MARK: - 镜头相关
+extension ToonController: CameraDelegate {
+    
+    func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer) {
+        
+    }
+    
+    //TODO: 点击拍照按钮
+    @objc private func takePhoto() {
+        camera.stopCapture()
+        self.showLoading()
+        
+        let image = renderView.currentTexture?.texture.toUIImage() ?? UIImage()
+        
+        let oldStatus = PHPhotoLibrary.authorizationStatus()
+        PHPhotoLibrary.requestAuthorization { [weak self] (status) in
+            
+            if status == .denied {
+                
+                if oldStatus != .denied {
+                    self?.showSuccessHud("请允许访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
+                    }
+                } else {
+                    
+                }
+            } else if status == .authorized {
+                
+                self?.saveImageToPhotoCollection(image)
+                
+            } else if status == .restricted {
+                
+                self?.showSuccessHud("系统原因不能访问相册", have_words: true, seconds: 2, timeHidden: true, hasImage: false) {
+                }
+            }
+        }
+        
+        DispatchQueue.main.async {
+            self.dismissLoading()
+            self.camera.startCapture()
+        }
+    }
+    
+    //TODO: 保存图片
+    private func saveImageToPhotoCollection(_ image:UIImage) {
+        
+        do {
+            try PHPhotoLibrary.shared().performChangesAndWait {
+                PHAssetCreationRequest.creationRequestForAsset(from: image)
+            }
+        } catch {
+            fatalError("保存图片出错")
+        }
+        
+        DispatchQueue.main.async {
+            self.dismissLoading()
+            self.camera.startCapture()
+        }
     }
 }

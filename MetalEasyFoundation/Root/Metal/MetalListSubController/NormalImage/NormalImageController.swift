@@ -37,4 +37,7 @@ class NormalImageController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("NormalImage-deinit")
+    }
 }

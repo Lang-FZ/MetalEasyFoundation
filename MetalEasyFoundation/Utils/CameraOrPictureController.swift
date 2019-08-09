@@ -64,6 +64,9 @@ class CameraOrPictureController: BaseViewController {
         view.addSubview(metal_table)
         metal_table.reloadData()
     }
+    deinit {
+        print("CameraOrPicture-deinit")
+    }
 }
 
 extension CameraOrPictureController: UITableViewDataSource, UITableViewDelegate {

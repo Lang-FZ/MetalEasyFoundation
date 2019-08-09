@@ -152,4 +152,8 @@ class CoreMLStyleTransferController: BaseViewController {
         
         return pixelBuffer!
     }
+    
+    deinit {
+        print("CoreMLStyleTransfer-deinit")
+    }
 }

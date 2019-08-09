@@ -55,6 +55,9 @@ class LanguageController: BaseViewController {
 
         view.addSubview(language_table)
     }
+    deinit {
+        print("Language-deinit")
+    }
 }
 
 extension LanguageController: UITableViewDelegate, UITableViewDataSource {

@@ -55,8 +55,8 @@ class SettingController: BaseViewController, HadTabBarProtocol {
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
+        print("Setting-deinit")
     }
-
 }
 
 extension SettingController {

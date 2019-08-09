@@ -75,6 +75,9 @@ class StretchController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("Stretch-deinit")
+    }
 }
 
 extension StretchController {

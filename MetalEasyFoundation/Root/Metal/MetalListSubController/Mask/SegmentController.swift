@@ -99,6 +99,9 @@ class SegmentController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("Segment-deinit")
+    }
 }
 
 extension SegmentController {

@@ -80,6 +80,9 @@ class SelectPicturesController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    deinit {
+        print("SelectPictures-deinit")
+    }
 }
 
 // MARK: - tableView 代理 数据源
