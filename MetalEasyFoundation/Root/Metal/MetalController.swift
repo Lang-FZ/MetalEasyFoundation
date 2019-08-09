@@ -175,16 +175,18 @@ extension MetalController {
     //TODO: ZoomBlur 缩放模糊
     private func pushZoomBlur(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let zoom_blur = ZoomBlurController()
-            zoom_blur.picture_name = picture_name
             zoom_blur.title = title
+            if type == .picture {
+                zoom_blur.picture_name = picture_name
+            }
+            zoom_blur.type = type
             self?.navigationController?.pushViewController(zoom_blur, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: 描边、颜色丰富度
     private func pushToon(_ title:String) {

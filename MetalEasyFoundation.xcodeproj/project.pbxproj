@@ -54,6 +54,8 @@
 		5E3F159A22D5F92C0025E86B /* SaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159922D5F92C0025E86B /* SaturationFilter.metal */; };
 		5E3F159C22D5FA460025E86B /* SaturationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159B22D5FA460025E86B /* SaturationFilter.swift */; };
 		5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */; };
+		5E4AABAA22FD4DFA00DEFA06 /* CameraOrPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AABA922FD4DFA00DEFA06 /* CameraOrPictureController.swift */; };
+		5E4AABAC22FD7DF900DEFA06 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4AABAB22FD7DF900DEFA06 /* Photos.framework */; };
 		5E87BA5822FC06170045975A /* FillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87BA5722FC06170045975A /* FillMode.swift */; };
 		5E9C93BC22D34BA4005E8FDE /* lut_abao.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BA22D34BA4005E8FDE /* lut_abao.png */; };
 		5E9C93BD22D34BA4005E8FDE /* lut_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BB22D34BA4005E8FDE /* lut_neutral.png */; };
@@ -359,6 +361,8 @@
 		5E3F159922D5F92C0025E86B /* SaturationFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SaturationFilter.metal; sourceTree = "<group>"; };
 		5E3F159B22D5FA460025E86B /* SaturationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationFilter.swift; sourceTree = "<group>"; };
 		5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessFilter.swift; sourceTree = "<group>"; };
+		5E4AABA922FD4DFA00DEFA06 /* CameraOrPictureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOrPictureController.swift; sourceTree = "<group>"; };
+		5E4AABAB22FD7DF900DEFA06 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		5E87BA5722FC06170045975A /* FillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillMode.swift; sourceTree = "<group>"; };
 		5E9C93BA22D34BA4005E8FDE /* lut_abao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_abao.png; sourceTree = "<group>"; };
 		5E9C93BB22D34BA4005E8FDE /* lut_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_neutral.png; sourceTree = "<group>"; };
@@ -627,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0575B0DB8077C2D98F85B5A /* libPods-MetalEasyFoundation.a in Frameworks */,
+				5E4AABAC22FD7DF900DEFA06 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +641,7 @@
 		42FE188EB86C907B2F230D66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E4AABAB22FD7DF900DEFA06 /* Photos.framework */,
 				0D8532916FF444D4CC0391FF /* libPods-MetalEasyFoundation.a */,
 			);
 			name = Frameworks;
@@ -645,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0DEEC822DDE8D2002DF990 /* CyclePageView */,
+				5E4AABA922FD4DFA00DEFA06 /* CameraOrPictureController.swift */,
 				5E0DEE7622D73DD6002DF990 /* SelectPicturesController.swift */,
 				5E0DEE8922D8709F002DF990 /* ProgressHUD.swift */,
 			);
@@ -1604,6 +1611,7 @@
 				5ED3383022FBC00D0096973F /* SobelEdgeDetection.swift in Sources */,
 				5ED3374022FBBFE90096973F /* Haze.swift in Sources */,
 				5ED3372F22FBBFE90096973F /* OpacityAdjustment.metal in Sources */,
+				5E4AABAA22FD4DFA00DEFA06 /* CameraOrPictureController.swift in Sources */,
 				5E0DEED622DDE8D2002DF990 /* CyclePagePhotoModel.swift in Sources */,
 				CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */,
 				5ED336F922FBBFD70096973F /* ColorSwizzle.metal in Sources */,

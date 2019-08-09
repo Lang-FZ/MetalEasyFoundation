@@ -9,8 +9,11 @@ setting.root.title="通用设置";
 setting.language.list.title="设置语言";
 setting.language.chinese="中文";
 setting.language.english="英文";
-// MARK: - Metal
+// MARK: - Camera Picture
+metal.select.camera.picture.title="镜头或图片";
 metal.select.picture.title="选择图片";
+metal.select.camera.title="调用镜头";
+// MARK: - Metal
 metal.list.title.normal="显示视图";
 metal.list.title.lut="LUT颜色滤镜";
 metal.list.title.zoom.blur="Zoom Blur";
