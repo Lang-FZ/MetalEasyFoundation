@@ -22,7 +22,6 @@ metal.list.title.style.transfer="Core ML 风格映射";
 metal.list.title.heap="增高";
 metal.list.title.mask="抠图换背景";
 metal.list.title.tiktok="抖音特效";
-metal.list.title.test.camera="测试拍照";
 // MARK: - Metal-LUT
 metal.lut.saturation="饱和度";
 metal.lut.brightness="亮度";

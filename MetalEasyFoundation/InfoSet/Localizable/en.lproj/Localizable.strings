@@ -22,7 +22,6 @@ metal.list.title.style.transfer="Core ML Style Transfer";
 metal.list.title.heap="MTLHeap";
 metal.list.title.mask="Mask";
 metal.list.title.tiktok="TikTok";
-metal.list.title.test.camera="Test Camera";
 // MARK: - Metal-LUT
 metal.lut.saturation="Saturation";
 metal.lut.brightness="Brightness";

@@ -106,7 +106,6 @@
 		5ED336AA22F989530096973F /* TikTokBurrFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336A922F989530096973F /* TikTokBurrFilter.metal */; };
 		5ED336AC22F98C080096973F /* TikTokHallucinationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336AB22F98C080096973F /* TikTokHallucinationFilter.swift */; };
 		5ED336AE22F98C110096973F /* TikTokHallucinationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */; };
-		5ED336B322FBBAA20096973F /* TestCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336B222FBBAA20096973F /* TestCameraController.swift */; };
 		5ED336D222FBBFA70096973F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336C722FBBFA60096973F /* Position.swift */; };
 		5ED336D322FBBFA70096973F /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336C822FBBFA60096973F /* Pipeline.swift */; };
 		5ED336D422FBBFA70096973F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED336C922FBBFA60096973F /* Color.swift */; };
@@ -413,7 +412,6 @@
 		5ED336A922F989530096973F /* TikTokBurrFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokBurrFilter.metal; sourceTree = "<group>"; };
 		5ED336AB22F98C080096973F /* TikTokHallucinationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokHallucinationFilter.swift; sourceTree = "<group>"; };
 		5ED336AD22F98C110096973F /* TikTokHallucinationFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TikTokHallucinationFilter.metal; sourceTree = "<group>"; };
-		5ED336B222FBBAA20096973F /* TestCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCameraController.swift; sourceTree = "<group>"; };
 		5ED336C722FBBFA60096973F /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		5ED336C822FBBFA60096973F /* Pipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
 		5ED336C922FBBFA60096973F /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -811,7 +809,6 @@
 				5E9C938B22CDDE87005E8FDE /* MTLHeap */,
 				5E9C938E22CDDE87005E8FDE /* Mask */,
 				5E0DEED922DDEF30002DF990 /* TikTok */,
-				5ED336B122FBBA880096973F /* TestCamera */,
 			);
 			path = MetalListSubController;
 			sourceTree = "<group>";
@@ -940,14 +937,6 @@
 				5E9C93FA22D34D1B005E8FDE /* tree_yellow1.jpg */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		5ED336B122FBBA880096973F /* TestCamera */ = {
-			isa = PBXGroup;
-			children = (
-				5ED336B222FBBAA20096973F /* TestCameraController.swift */,
-			);
-			path = TestCamera;
 			sourceTree = "<group>";
 		};
 		5ED336BE22FBBF900096973F /* GPUImage */ = {
@@ -1488,7 +1477,6 @@
 				5E0DEEA122D89CE2002DF990 /* StyleTransferInput.swift in Sources */,
 				5ED337FF22FBC0060096973F /* KuwaharaRadius3Filter.swift in Sources */,
 				5ED3374322FBBFE90096973F /* HighlightAndShadowTint.metal in Sources */,
-				5ED336B322FBBAA20096973F /* TestCameraController.swift in Sources */,
 				5ED3379B22FBBFF80096973F /* SoftLightBlend.swift in Sources */,
 				5ED3380822FBC0070096973F /* Solarize.swift in Sources */,
 				5ED3383122FBC00D0096973F /* ChromaKey.metal in Sources */,

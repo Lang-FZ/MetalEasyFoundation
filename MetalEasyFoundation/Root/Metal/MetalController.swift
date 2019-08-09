@@ -72,13 +72,6 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         }
         model.data.append(model8)
         
-        let model9 = BaseListModel.init([:])
-        model9.title = "metal.list.title.test.camera"
-        model9.action = { [weak self] (title) in
-            self?.testCamera(title)
-        }
-        model.data.append(model9)
-        
         return model
     }()
     
@@ -161,16 +154,18 @@ extension MetalController {
     //TODO: LookupTable 阿宝色
     private func pushLUT(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let lut = LookupTableController()
-            lut.picture_name = picture_name
             lut.title = title
+            if type == .picture {
+                lut.picture_name = picture_name
+            }
+            lut.type = type
             self?.navigationController?.pushViewController(lut, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: ZoomBlur 缩放模糊
     private func pushZoomBlur(_ title:String) {
@@ -249,21 +244,17 @@ extension MetalController {
     //TODO: 抖音特效
     private func tiktok(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let tiktok = TikTokController()
-            tiktok.picture_name = picture_name
             tiktok.title = title
+            if type == .picture {
+                tiktok.picture_name = picture_name
+            }
+            tiktok.type = type
             self?.navigationController?.pushViewController(tiktok, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
-    }
-    private func testCamera(_ title:String) {
-        
-        let camera = TestCameraController()
-        camera.title = title
-        navigationController?.pushViewController(camera, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
 }
