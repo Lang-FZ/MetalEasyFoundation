@@ -14,7 +14,6 @@ metal.select.camera.picture.title="Camera Or Picture";
 metal.select.picture.title="Select Picture";
 metal.select.camera.title="Call Camera Lens";
 // MARK: - Metal
-metal.list.title.normal="Normal Image";
 metal.list.title.lut="LookupTable";
 metal.list.title.zoom.blur="Zoom Blur";
 metal.list.title.toon="Toon";

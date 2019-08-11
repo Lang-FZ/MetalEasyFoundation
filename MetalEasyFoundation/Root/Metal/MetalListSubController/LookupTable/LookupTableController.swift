@@ -14,7 +14,7 @@ class LookupTableController: BaseViewController {
     
     // MARK: - 懒加载
     private lazy var camera: Camera = {
-        let camera = try! Camera(sessionPreset: AVCaptureSession.Preset.hd4K3840x2160, location: PhysicalCameraLocation.backFacing, captureAsYUV: true)
+        let camera = try! Camera(sessionPreset: AVCaptureSession.Preset.hd1280x720, location: PhysicalCameraLocation.backFacing, captureAsYUV: true)
         camera.delegate = self
         return camera
     }()
@@ -43,6 +43,21 @@ class LookupTableController: BaseViewController {
         
         return btn
     }()
+    lazy var transfer_lens: UIImageView = {
+        let transfer_lens = UIImageView(frame: CGRect(x: kScreenW-50, y: kNaviBarH+20, width: 30, height: 30))
+        transfer_lens.image = UIImage.init(named: "transfer_lens")
+        transfer_lens.isUserInteractionEnabled = true
+        transfer_lens.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(transferLens)))
+        return transfer_lens
+    }()
+    @objc private func transferLens() {
+        
+        if camera.location == .backFacing {
+            camera.location = .frontFacing
+        } else {
+            camera.location = .backFacing
+        }
+    }
     
     //TODO: 饱和度
     private lazy var saturation_l: UILabel = {
@@ -148,6 +163,7 @@ class LookupTableController: BaseViewController {
         
         if type == .camera {
             view.addSubview(btn)
+            view.addSubview(transfer_lens)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -159,6 +175,12 @@ class LookupTableController: BaseViewController {
         super.viewDidDisappear(animated)
         if type == .camera {
             camera.stopCapture()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if type == .camera {
+            camera.startCapture()
         }
     }
     @objc private func becomeActive() {

@@ -28,7 +28,7 @@ class TikTokController: BaseViewController {
     private var displayLink: CADisplayLink?
     
     private lazy var camera: Camera = {
-        let camera = try! Camera(sessionPreset: AVCaptureSession.Preset.hd4K3840x2160, location: PhysicalCameraLocation.backFacing, captureAsYUV: true)
+        let camera = try! Camera(sessionPreset: AVCaptureSession.Preset.hd1280x720, location: PhysicalCameraLocation.backFacing, captureAsYUV: true)
         camera.delegate = self
         return camera
     }()
@@ -57,6 +57,21 @@ class TikTokController: BaseViewController {
         
         return btn
     }()
+    lazy var transfer_lens: UIImageView = {
+        let transfer_lens = UIImageView(frame: CGRect(x: kScreenW-50, y: kNaviBarH+20, width: 30, height: 30))
+        transfer_lens.image = UIImage.init(named: "transfer_lens")
+        transfer_lens.isUserInteractionEnabled = true
+        transfer_lens.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(transferLens)))
+        return transfer_lens
+    }()
+    @objc private func transferLens() {
+        
+        if camera.location == .backFacing {
+            camera.location = .frontFacing
+        } else {
+            camera.location = .backFacing
+        }
+    }
     
     public var picture_name:String = "" {
         didSet {
@@ -136,6 +151,7 @@ class TikTokController: BaseViewController {
         
         if type == .camera {
             view.addSubview(btn)
+            view.addSubview(transfer_lens)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -150,6 +166,12 @@ class TikTokController: BaseViewController {
         super.viewDidDisappear(animated)
         if type == .camera {
             camera.stopCapture()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if type == .camera {
+            camera.startCapture()
         }
     }
     @objc private func becomeActive() {

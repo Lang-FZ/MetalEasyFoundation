@@ -17,60 +17,53 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         let model = BaseListModel.init([:])
         
         let model1 = BaseListModel.init([:])
-        model1.title = "metal.list.title.normal"
+        model1.title = "metal.list.title.lut"
         model1.action = { [weak self] (title) in
-            self?.pushNormal(title)
+            self?.pushLUT(title)
         }
         model.data.append(model1)
         
         let model2 = BaseListModel.init([:])
-        model2.title = "metal.list.title.lut"
+        model2.title = "metal.list.title.zoom.blur"
         model2.action = { [weak self] (title) in
-            self?.pushLUT(title)
+            self?.pushZoomBlur(title)
         }
         model.data.append(model2)
         
         let model3 = BaseListModel.init([:])
-        model3.title = "metal.list.title.zoom.blur"
+        model3.title = "metal.list.title.toon"
         model3.action = { [weak self] (title) in
-            self?.pushZoomBlur(title)
+            self?.pushToon(title)
         }
         model.data.append(model3)
         
         let model4 = BaseListModel.init([:])
-        model4.title = "metal.list.title.toon"
+        model4.title = "metal.list.title.style.transfer"
         model4.action = { [weak self] (title) in
-            self?.pushToon(title)
+            self?.pushStyleTransfer(title)
         }
         model.data.append(model4)
         
         let model5 = BaseListModel.init([:])
-        model5.title = "metal.list.title.style.transfer"
+        model5.title = "metal.list.title.heap"
         model5.action = { [weak self] (title) in
-            self?.pushStyleTransfer(title)
+            self?.pushMTLHeap(title)
         }
         model.data.append(model5)
         
         let model6 = BaseListModel.init([:])
-        model6.title = "metal.list.title.heap"
+        model6.title = "metal.list.title.mask"
         model6.action = { [weak self] (title) in
-            self?.pushMTLHeap(title)
+            self?.pushMask(title)
         }
         model.data.append(model6)
         
         let model7 = BaseListModel.init([:])
-        model7.title = "metal.list.title.mask"
+        model7.title = "metal.list.title.tiktok"
         model7.action = { [weak self] (title) in
-            self?.pushMask(title)
-        }
-        model.data.append(model7)
-        
-        let model8 = BaseListModel.init([:])
-        model8.title = "metal.list.title.tiktok"
-        model8.action = { [weak self] (title) in
             self?.tiktok(title)
         }
-        model.data.append(model8)
+        model.data.append(model7)
         
         return model
     }()
@@ -137,20 +130,6 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
 
 extension MetalController {
 
-    //TODO: 渲染图片
-    private func pushNormal(_ title:String) {
-        
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
-            
-            let normal = NormalImageController()
-            normal.title = title
-            normal.picture_name = picture_name
-            self?.navigationController?.pushViewController(normal, animated: true)
-        }
-        
-        navigationController?.pushViewController(picture, animated: true)
-    }
     //TODO: LookupTable 阿宝色
     private func pushLUT(_ title:String) {
         
@@ -216,30 +195,34 @@ extension MetalController {
     //TODO: 拉伸
     private func pushMTLHeap(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let stretch = StretchController()
-            stretch.picture_name = picture_name
             stretch.title = title
+            if type == .picture {
+                stretch.picture_name = picture_name
+            }
+            stretch.type = type
             self?.navigationController?.pushViewController(stretch, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: 抠图
     private func pushMask(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let segment = SegmentController()
-            segment.picture_name = picture_name
             segment.title = title
+            if type == .picture {
+                segment.picture_name = picture_name
+            }
+            segment.type = type
             self?.navigationController?.pushViewController(segment, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: 抖音特效
     private func tiktok(_ title:String) {

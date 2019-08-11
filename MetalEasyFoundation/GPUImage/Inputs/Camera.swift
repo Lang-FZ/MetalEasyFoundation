@@ -13,7 +13,7 @@ public enum PhysicalCameraLocation {
     func imageOrientation() -> ImageOrientation {
         switch self {
         case .backFacing: return .landscapeRight
-        case .frontFacing: return .landscapeLeft
+        case .frontFacing: return .landscapeRight
         }
     }
     
@@ -47,6 +47,22 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
     public var location:PhysicalCameraLocation {
         didSet {
             // TODO: Swap the camera locations, framebuffers as needed
+            guard let newVideoInput = try? AVCaptureDeviceInput(device: location.device()!) else { return }
+            
+            self.captureSession.beginConfiguration()
+            self.captureSession.removeInput(self.videoInput)
+            self.captureSession.addInput(newVideoInput)
+            
+//            captureConnection = self.videoOutput.connection(with: .video)
+//
+//            if captureConnection.isVideoOrientationSupported {
+//                captureConnection.videoOrientation = .portrait
+//            }
+//
+//            captureConnection.isVideoMirrored = location == .frontFacing
+            
+            self.captureSession.commitConfiguration()
+            self.videoInput = newVideoInput
         }
     }
     public var runBenchmark:Bool = false
@@ -56,7 +72,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
     public weak var delegate: CameraDelegate?
     public let captureSession:AVCaptureSession
     let inputCamera:AVCaptureDevice!
-    let videoInput:AVCaptureDeviceInput!
+    var videoInput:AVCaptureDeviceInput!
     let videoOutput:AVCaptureVideoDataOutput!
     var videoTextureCache: CVMetalTextureCache?
     
