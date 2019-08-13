@@ -181,16 +181,18 @@ extension MetalController {
     //TODO: 机器学习风格滤镜
     private func pushStyleTransfer(_ title:String) {
         
-        let picture = SelectPicturesController()
-        picture.selected_picture = { [weak self] (picture_name) in
+        let camera_picture = CameraOrPictureController()
+        camera_picture.selected_render_type = { [weak self] (type, picture_name) in
             
             let transfer = CoreMLStyleTransferController()
-            transfer.picture_name = picture_name
             transfer.title = title
+            if type == .picture {
+                transfer.picture_name = picture_name
+            }
+            transfer.type = type
             self?.navigationController?.pushViewController(transfer, animated: true)
         }
-        
-        navigationController?.pushViewController(picture, animated: true)
+        navigationController?.pushViewController(camera_picture, animated: true)
     }
     //TODO: 拉伸
     private func pushMTLHeap(_ title:String) {

@@ -55,6 +55,8 @@
 		5E3F159E22D5FAA40025E86B /* BrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */; };
 		5E4AABAA22FD4DFA00DEFA06 /* CameraOrPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AABA922FD4DFA00DEFA06 /* CameraOrPictureController.swift */; };
 		5E4AABAC22FD7DF900DEFA06 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4AABAB22FD7DF900DEFA06 /* Photos.framework */; };
+		5E854A6823026AFC00291FE1 /* StyleTransferFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E854A6723026AFC00291FE1 /* StyleTransferFilter.swift */; };
+		5E854A6A23026B8900291FE1 /* StyleTransferFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E854A6923026B8900291FE1 /* StyleTransferFilter.metal */; };
 		5E87BA5822FC06170045975A /* FillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87BA5722FC06170045975A /* FillMode.swift */; };
 		5E9C93BC22D34BA4005E8FDE /* lut_abao.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BA22D34BA4005E8FDE /* lut_abao.png */; };
 		5E9C93BD22D34BA4005E8FDE /* lut_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C93BB22D34BA4005E8FDE /* lut_neutral.png */; };
@@ -360,6 +362,8 @@
 		5E3F159D22D5FAA40025E86B /* BrightnessFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessFilter.swift; sourceTree = "<group>"; };
 		5E4AABA922FD4DFA00DEFA06 /* CameraOrPictureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOrPictureController.swift; sourceTree = "<group>"; };
 		5E4AABAB22FD7DF900DEFA06 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		5E854A6723026AFC00291FE1 /* StyleTransferFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTransferFilter.swift; sourceTree = "<group>"; };
+		5E854A6923026B8900291FE1 /* StyleTransferFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = StyleTransferFilter.metal; sourceTree = "<group>"; };
 		5E87BA5722FC06170045975A /* FillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillMode.swift; sourceTree = "<group>"; };
 		5E9C93BA22D34BA4005E8FDE /* lut_abao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_abao.png; sourceTree = "<group>"; };
 		5E9C93BB22D34BA4005E8FDE /* lut_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_neutral.png; sourceTree = "<group>"; };
@@ -827,6 +831,8 @@
 				5E0DEE9E22D88B11002DF990 /* CoreMLStyleTransferController.swift */,
 				5E0DEEA022D89CE2002DF990 /* StyleTransferInput.swift */,
 				5E0DEEA222D89E1B002DF990 /* UIImage+Scaling.swift */,
+				5E854A6723026AFC00291FE1 /* StyleTransferFilter.swift */,
+				5E854A6923026B8900291FE1 /* StyleTransferFilter.metal */,
 			);
 			path = CoreMLStyleTransfer;
 			sourceTree = "<group>";
@@ -1531,6 +1537,7 @@
 				5ED3382C22FBC00D0096973F /* PrewittEdgeDetection.metal in Sources */,
 				5ED336D922FBBFA70096973F /* Timestamp.swift in Sources */,
 				5ED337B322FBBFF80096973F /* LightenBlend.swift in Sources */,
+				5E854A6A23026B8900291FE1 /* StyleTransferFilter.metal in Sources */,
 				5ED336FB22FBBFD70096973F /* NearbyTexelSampling.metal in Sources */,
 				5ED337EB22FBC0060096973F /* EmbossFilter.swift in Sources */,
 				5ED337F322FBC0060096973F /* HalfTone.metal in Sources */,
@@ -1677,6 +1684,7 @@
 				5E0DEED322DDE8D2002DF990 /* CyclePageWaterfallFlow.swift in Sources */,
 				5ED3380E22FBC0070096973F /* Pixellate.metal in Sources */,
 				5ED3373722FBBFE90096973F /* BrightnessAdjustment.swift in Sources */,
+				5E854A6823026AFC00291FE1 /* StyleTransferFilter.swift in Sources */,
 				5ED336DC22FBBFA70096973F /* Texture.swift in Sources */,
 				5ED336D322FBBFA70096973F /* Pipeline.swift in Sources */,
 				5ED3380522FBC0060096973F /* Toon.metal in Sources */,

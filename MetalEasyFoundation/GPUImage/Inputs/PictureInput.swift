@@ -3,9 +3,9 @@ import MetalKit
 
 public class PictureInput: ImageSource {
     public let targets = TargetContainer()
-    var internalTexture:Texture?
+    public var internalTexture:Texture?
     var hasProcessedImage:Bool = false
-    var internalImage:CGImage?
+    public var internalImage:CGImage?
 
     public init(image:CGImage, smoothlyScaleOutput:Bool = false, orientation:ImageOrientation = .portrait) {
         internalImage = image

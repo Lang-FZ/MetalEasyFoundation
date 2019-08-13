@@ -47,4 +47,16 @@ extension UIImage {
         
         return scaledImage
     }
+    
+    class func createImageWithColor(_ color:UIColor, _ frame:CGRect) -> UIImage {
+        
+        UIGraphicsBeginImageContext(frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(color.cgColor)
+        context?.fill(frame)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
 }
