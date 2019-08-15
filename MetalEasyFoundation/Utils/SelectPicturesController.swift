@@ -32,7 +32,7 @@ class SelectPicturesController: BaseViewController {
         while let file_name:String = dir_enum?.nextObject() as? String {
             
             if file_name.lowercased().contains(".jpg") || file_name.lowercased().contains(".jpeg") || file_name.lowercased().contains(".png") {
-                if !file_name.lowercased().contains("lut_") && !file_name.contains("JGProgressHUD") {
+                if !file_name.lowercased().contains("lut_") && !file_name.contains("JGProgressHUD") && !file_name.contains("LaunchImage") && !file_name.contains("AppIcon") {
                     data.append(file_name)
                 }
             }

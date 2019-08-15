@@ -53,14 +53,6 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
             self.captureSession.removeInput(self.videoInput)
             self.captureSession.addInput(newVideoInput)
             
-//            captureConnection = self.videoOutput.connection(with: .video)
-//
-//            if captureConnection.isVideoOrientationSupported {
-//                captureConnection.videoOrientation = .portrait
-//            }
-//
-//            captureConnection.isVideoMirrored = location == .frontFacing
-            
             self.captureSession.commitConfiguration()
             self.videoInput = newVideoInput
         }
