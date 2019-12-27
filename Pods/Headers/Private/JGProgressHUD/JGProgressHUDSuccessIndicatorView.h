@@ -1,1 +1,1 @@
-../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.h
+../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDSuccessIndicatorView.h

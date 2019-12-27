@@ -1318,7 +1318,6 @@
 				CF0F5EBF22A2126C0032E902 /* Sources */,
 				CF0F5EC022A2126C0032E902 /* Frameworks */,
 				CF0F5EC122A2126C0032E902 /* Resources */,
-				305629DDD7708C08718A326C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1424,23 +1423,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		305629DDD7708C08718A326C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		41B915A766C693ABC1EC1344 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

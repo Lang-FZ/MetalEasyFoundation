@@ -1,1 +1,1 @@
-../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.h
+../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeZoomAnimation.h

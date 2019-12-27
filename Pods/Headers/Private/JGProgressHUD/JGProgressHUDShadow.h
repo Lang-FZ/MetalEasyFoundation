@@ -1,1 +1,1 @@
-../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.h
+../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUDShadow.h

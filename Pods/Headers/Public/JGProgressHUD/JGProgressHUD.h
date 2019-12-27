@@ -1,1 +1,1 @@
-../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUD.h
+../../../JGProgressHUD/JGProgressHUD/JGProgressHUD/include/JGProgressHUD.h
