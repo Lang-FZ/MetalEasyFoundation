@@ -41,7 +41,6 @@
 		37F8EDC5DD0EF6515CC5E019CFF92D0F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B989DBB9A12BB3EC7D1A26F7D1A4E0 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		38B4450BAA5E54BBC328C246B7AC4F99 /* SDAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B62903A67C54863EEF457BEF296EB526 /* SDAnimatedImageView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		38D46DB9704C8E2658ADCC67FF846440 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30588BB9DED754C0CDE0F7FB97170C /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		38E07C8DCFBDA12729D554DB88C76371 /* JGProgressHUDImageIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = E21DD4B643DA0FCF2E13557B6E0F5FC4 /* JGProgressHUDImageIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38E762FD8A945BF9C1BB2CDEB5889951 /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C13A13FD8C82E07A6BF36272B3C4E /* SDWebImageIndicator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		38EFA7A5BDECC1FC694243A7139C3047 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC609397CAE727328D16A00098DB5 /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3D6085CD92FFD56CA7DC96F005C53502 /* SDWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 59548345BAF956948ED08F53388E643D /* SDWeakProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -79,7 +78,6 @@
 		6BD5EEF4EAC8A99E34A8FB339E3E346F /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F53A2E49747F655FC0A2F764AAAA6 /* ConstraintOffsetTarget.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6D0870CC82FB47D1735981E75679EB33 /* JGProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E02C3933B04E96A38B0435816806818B /* JGProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6D9B467BEB2EC77C07443B66C204F6BA /* jg_hud_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2570F1C527D4289592347FA7F3DC14A /* jg_hud_error@2x.png */; };
-		6E91FA5B1D40BB52DCD2CD815BC57437 /* JGProgressHUDIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA747100DFDA46581307A91133FDF157 /* JGProgressHUDIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6F8101DF65F305212B5AA3587028D765 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF18B39D9C33567CFBEBA42BF4D1198 /* ConstraintPriority.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		71EEBFDA27DB5674D3AC11EDE0D4FE03 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDF20342F0A8609F750818409CB8653 /* SDWebImageTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		72011B0EB7ACCD3891DDB2D9253D68BE /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 622944138F74652F54B1CA7CD6DB5A03 /* SDImageAPNGCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -92,15 +90,12 @@
 		7B0E811348709C5B81C0058C6E4FA192 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE6388D87A8E2D526ACABCB5BB47C2 /* JGProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C2ED1DAA23533E175A0224B4E2F0E24 /* JGProgressHUDShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 20546AC2B56B36A9A5D8D1C118BA28BB /* JGProgressHUDShadow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C477CF08C23CB76868B185DAAE8AFF0 /* SDImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E06C819C78DFA81B3E78D0493D2B4067 /* SDImageCodersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7C7FEF72AF8064DAD1FD6F3795AD3F29 /* JGProgressHUDSuccessIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC3F283A8EDE1F1A58F841011859C9CE /* JGProgressHUDSuccessIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7D1004D59B5E5E4095E49DE849E1433B /* JGProgressHUDRingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A6CA85A26BF23D85AA669641D30C32 /* JGProgressHUDRingIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7EC7E5CC084FC6A07AA4E71F0F377BB8 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 766FAD21E5FC5A24724418FD865BB730 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7FA4A9147F7A737D8EE5D557DE846B94 /* SDImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C503C103ED79DC9A64B42B670511D1 /* SDImageCodersManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		803ECBB135F2FDCC31F38C3A720B9061 /* SDWebImageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D02C9E5417C9363967B5D8F6FC0A2C /* SDWebImageDefine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		80DA2EA015D0BB48D62E6B423532FE2C /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B7CE88BDD5619E20415099E7036F23 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		84A35BECD5CBE4F0042B3B740C779539 /* SDAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA1648F4EA8B869DEF22FD8949E3647 /* SDAnimatedImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		854E8DCA6AC8C988B5DB85C8657A6A89 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD76583042053A35A82411DED52842C2 /* ConstraintMakerPriortizable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		87D4DE99CD248D5068135CF8CEA248A2 /* JGProgressHUDPieIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F07B5D398945EE5E618DD9C517EEAE /* JGProgressHUDPieIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8800371F52D3DEBDF34931D428C610D8 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8631C8F447B07847BF4F61BA35CCD /* ConstraintAttributes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B5B8C32C6FA9C790E1C6B3EA7626336 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 37319F2DAEF8CCDA6D1B57A0E2476504 /* SDImageGraphics.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8E265AE05D9FF9AA7D012B38E1292A96 /* SDAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A69AF3AAC3DEDBDE910D321BBE78F5EF /* SDAnimatedImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -111,13 +106,11 @@
 		93EB0B8CE0AE7FFC996562B4DB55CE24 /* SDImageCachesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E435512B2645206A75591772CD1AADC6 /* SDImageCachesManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9632644600ADB882D9540E36CE84328C /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACB3C6D5D1D5AA7E961813D9291DE36 /* LayoutConstraint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		964076793CBCBE68C9E9FB5F7BF42251 /* JGProgressHUDFadeZoomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 167CAAA76A7BF459CBD07164C4BE69B9 /* JGProgressHUDFadeZoomAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		96651238D8A8C9E43ABAB66B86705FDC /* JGProgressHUDFadeZoomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E840957037303FF70C21EE1BEB673B0E /* JGProgressHUDFadeZoomAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9807A78A9140DBC2E065BBC0B55E3685 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EB8F2AB32E54C9EEF410D6AEA9AC995F /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9912B758EFE345DB72EE03DB4ED86630 /* SDImageGIFCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5463AEC1912E2DA2F8A079D9CB02FC2B /* SDImageGIFCoderInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9934E1DEC10D877E5E59AE57C318ECFD /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 794101023C6FEABCB1C649048DC97EB8 /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		99412862508B05B25EB263781D325224 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5837C137FBAB28CD71A9BF3789547 /* Constraint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9A68B49491E89F69DDDFFD78A3D99061 /* SDWebImageCacheKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C5327C1B8469C4B64C8B900A8DC9167A /* SDWebImageCacheKeyFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9C29A13C69860FB77C4AD49040EC697B /* JGProgressHUDShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4838E86BD75FDCAD59E164F00168D803 /* JGProgressHUDShadow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9C364B849F6A9993F1C1E8B1BF0F3D82 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8AB616A1116213F94D75DA077F28 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FD198C2ADE5CAAEE6B86210D6617A51 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B83312078CD6CD2BFED86CEF482DEB /* ConstraintPriorityTarget.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A153DFA8ACCF900A8235F678AB5C66D2 /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D77EE75D38485114B2CA4EE260AF0C /* SDImageCoderHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -130,11 +123,9 @@
 		ADB269445976EB1535E532F7E853E83F /* SDImageAPNGCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CCDB6FA7116B74DC588266F9CADABE1 /* SDImageAPNGCoderInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AFB3E4D8448751B295E8D16DDBB77586 /* Pods-MetalEasyFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E823835BE946B2CA508BE852A4072C /* Pods-MetalEasyFoundation-dummy.m */; };
 		B0E56E6794767E92C86966ABCB6E4CE1 /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F546A3F2BEFF5ED940C8635632176F /* JGProgressHUDAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B17BD18FB7A7B4C11F326BEFE5949ED0 /* JGProgressHUD-Defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B31C8EB45EBDB76DAB43E236CAC7EA /* JGProgressHUD-Defines.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B225FC43A35EED9376E67158D6238594 /* SDWebImageCacheKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A8A0D22FBF476937D3C24DF4307D8F /* SDWebImageCacheKeyFilter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B38B31930E04412FF4390F40B506868F /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 8398D95CED6EF38D9DD63EE64A6A4565 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B4AE70BB3B7544E6E79FC96E60E6BA1F /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB9EB1A12DDBE2ED5BE78DBC17388C6 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B6E36F301D33A5AED6BC7CDB158543EF /* JGProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 85442790B5D2B86B12A158517DEE90E8 /* JGProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B7BB6201681EEF74E913C330B4E8E3F7 /* SDImageCachesManagerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A03DC6B70B881E0386ED1C247C1D88 /* SDImageCachesManagerOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA50B2813238B73794AA166ACC10D0EB /* SDImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 69A243BDF29FAA4490CDD4074DD7357F /* SDImageCoderHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BAA51A7451DA65E1D06CDC5AC3FB3A38 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD84A2324D8DB416224B7C4A80F0D0 /* ConstraintInsetTarget.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -143,8 +134,6 @@
 		BEA811584C7EEB15D82B4CB9FCE29EBF /* jg_hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 29174CA332A0CE18E511FB48F615939A /* jg_hud_error.png */; };
 		BF60AD1CBB20952ADA29421BDA01B37D /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E3DF79ACCB5D1768917A7ACFCC5323 /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BFCA4CB30C1DF0F978DB88EDC74EDEE0 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5BADAE95DA75DF86F41304CE340368 /* SDMemoryCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C3359DB630C64D68EF15A58DDDE936B3 /* JGProgressHUDFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F573B946BE720E450174CB22199B150 /* JGProgressHUDFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C405A47D528652C600C0E659D550E22A /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B618337050993B64D4F987EDC5592857 /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C53A81ACDABD5FA994DF6CD47AF05DB5 /* SDWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F90B7B250A0078FE7134F3B7F9BA83 /* SDWebImageError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C554CB837E990D160FC39DA39B0C24F8 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562E74044F5B8C3375EF7D54A838A74 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C84EFC543F51290CEB4FAFA8BB2E63B1 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBC71CD5D4106D71777CEAAF01FC552 /* SDWebImage-dummy.m */; };
@@ -153,6 +142,19 @@
 		CD6EB00C1A5FAFEAE9DF50F30619FFF6 /* UIImage+Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 012CAD9101BFBCF37F7CB851FA0736B0 /* UIImage+Transform.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CE1C625D67497149BAC2B217ED583B4A /* SDWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 104D3D9989E56954DE332977D964B047 /* SDWebImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CF2B46DA0C8D824B1BA270A06F2DE0AE /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C7CEE3E1961DECD2DF288CCB9773C6 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFCCE42323B5C8D2007F824A /* JGProgressHUDFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41623B5C8D1007F824A /* JGProgressHUDFadeAnimation.h */; };
+		CFCCE42423B5C8D2007F824A /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41723B5C8D1007F824A /* JGProgressHUDErrorIndicatorView.h */; };
+		CFCCE42523B5C8D2007F824A /* JGProgressHUDIndeterminateIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41823B5C8D1007F824A /* JGProgressHUDIndeterminateIndicatorView.h */; };
+		CFCCE42623B5C8D2007F824A /* JGProgressHUDShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41923B5C8D1007F824A /* JGProgressHUDShadow.h */; };
+		CFCCE42723B5C8D2007F824A /* JGProgressHUDFadeZoomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41A23B5C8D1007F824A /* JGProgressHUDFadeZoomAnimation.h */; };
+		CFCCE42823B5C8D2007F824A /* JGProgressHUDAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41B23B5C8D1007F824A /* JGProgressHUDAnimation.h */; };
+		CFCCE42923B5C8D2007F824A /* JGProgressHUD-Defines.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41C23B5C8D1007F824A /* JGProgressHUD-Defines.h */; };
+		CFCCE42A23B5C8D2007F824A /* JGProgressHUDIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41D23B5C8D1007F824A /* JGProgressHUDIndicatorView.h */; };
+		CFCCE42B23B5C8D2007F824A /* JGProgressHUDImageIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41E23B5C8D1007F824A /* JGProgressHUDImageIndicatorView.h */; };
+		CFCCE42C23B5C8D2007F824A /* JGProgressHUDRingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE41F23B5C8D1007F824A /* JGProgressHUDRingIndicatorView.h */; };
+		CFCCE42D23B5C8D2007F824A /* JGProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE42023B5C8D1007F824A /* JGProgressHUD.h */; };
+		CFCCE42E23B5C8D2007F824A /* JGProgressHUDPieIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE42123B5C8D1007F824A /* JGProgressHUDPieIndicatorView.h */; };
+		CFCCE42F23B5C8D2007F824A /* JGProgressHUDSuccessIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE42223B5C8D2007F824A /* JGProgressHUDSuccessIndicatorView.h */; };
 		D4F3BB3FA6C8FE50806DC8A89C2F0145 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EABA693896F4134B613C8D2EDBE6D /* SnapKit-dummy.m */; };
 		D6987FA6A7041A6722FC3EB7B389E2F3 /* JGProgressHUDFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564C28C8D0C40ED14BF4151E196413 /* JGProgressHUDFadeAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D6C4B4D6856408F597772ACD2573F316 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EFBB6A47BF52E4C73F25DEDC3571B2 /* JGProgressHUDIndeterminateIndicatorView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -161,13 +163,11 @@
 		DAB8159F29247057B01904E290A098F9 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD00F16C67ED8F8A64A633AEC130E0 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB00437DE018EF3896043FFCE8336ACD /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F432769CC1F2D7944DABFC1124A9C /* ConstraintLayoutGuide.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB4371AC47476817D15C59D9C0EEC9F8 /* JGProgressHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9AE666885583781E334C94F1F69E1 /* JGProgressHUDIndicatorView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DB90647D94C0B67B7ED1CCF229D08BDD /* JGProgressHUDIndeterminateIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 196FFF62F9E4DFF1A4CB4D452C9BB0C1 /* JGProgressHUDIndeterminateIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DD1467164E14367DA250DEE821A80907 /* SDImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 836DF435F78449BDA67B5A635E0CA097 /* SDImageTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DDC6384AD423F30771D505780BCA7786 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8284B41044E3D04214D06D887452CBBB /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DF0D7A3371FFACF56D9C29906DFFB78D /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15392D871701C0F5881C3D519860BB6B /* ConstraintDSL.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DFB7DDCF0649CC7607D4D52E3D7F72B9 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA0C10F9655556628279609C17D9E /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E040FD294113494DDF82AA873EAD240B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DD6454994B0BF171B309A0303113A2 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E07245F71D120F50B3C55CE38C66F619 /* JGProgressHUDAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 36EA283C60B0C1C41C6B03A5DBB8EC2F /* JGProgressHUDAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E11D213660AD298BC37EB4C44EE069C7 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E542A064C2CD8A47F1EFB29F5558685D /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E1CD0533CE2A3DB5684304BA1019B542 /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D34CF487AB2D8B1C976695FF8D1CA3E4 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E241B70C2682286BD75A5FDF76A1CAC8 /* SDImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D084D7A09FC74B4B260A4648D008DA56 /* SDImageFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -246,7 +246,6 @@
 		167CAAA76A7BF459CBD07164C4BE69B9 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
 		18564C28C8D0C40ED14BF4151E196413 /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
 		18EBC609397CAE727328D16A00098DB5 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
-		196FFF62F9E4DFF1A4CB4D452C9BB0C1 /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
 		1984A99BD4E2081F793810D4B8880172 /* Pods-MetalEasyFoundation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalEasyFoundation-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1EA72448CAB058F78F06441845220C47 /* JGProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JGProgressHUD.modulemap; sourceTree = "<group>"; };
 		1F14982B6684F2EB2910FB9F7B5FA55C /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -256,32 +255,28 @@
 		22D21239F9F8BAFE6A0766B18BC1A5BD /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		22EF531D224442D199BFC8E41C14974F /* Pods-MetalEasyFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalEasyFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		238FB70AEE0390565AF1A6BD182BE3C0 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
-		24B2CFF37332E72A0A5DD4C64583504A /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSnapKit.a; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24B2CFF37332E72A0A5DD4C64583504A /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2582EC9D44DDF4F6B75F1DF1E19A34A0 /* SDImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoader.h; path = SDWebImage/SDImageLoader.h; sourceTree = "<group>"; };
 		2673A2C4B4FA4153D28A2D18D655EB1D /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		28C4299DF7015D104151AFFC09DA84EF /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
 		29174CA332A0CE18E511FB48F615939A /* jg_hud_error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_error.png; path = JGProgressHUD/Resources/jg_hud_error.png; sourceTree = "<group>"; };
 		2937FB2A1CA388ADCC957A8E1CF6BBE2 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		2A640E4027784E13A77DEC905F28DC66 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
-		2B47642CCA3EE8706B2F80E50B3A2304 /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJGProgressHUD.a; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B47642CCA3EE8706B2F80E50B3A2304 /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7FDB806621A2DD5A3C74D1BEA01F03 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		2DDDCFA29DF0D3C80244A6CD1FB441B7 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		2F5BADAE95DA75DF86F41304CE340368 /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/SDMemoryCache.m; sourceTree = "<group>"; };
 		2FDA571D4BDDE7C6CA4C4DFFD0756E6C /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		33939D355757B2057627B5E8D8E312DA /* SDImageAPNGCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoder.h; path = SDWebImage/SDImageAPNGCoder.h; sourceTree = "<group>"; };
 		359A245F7818F7F324966CEFBD82EEEB /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
-		36EA283C60B0C1C41C6B03A5DBB8EC2F /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
 		37319F2DAEF8CCDA6D1B57A0E2476504 /* SDImageGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGraphics.m; path = SDWebImage/SDImageGraphics.m; sourceTree = "<group>"; };
 		37673DAD61C093A55A1B5C7F74686BB9 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/SDImageCachesManager.m; sourceTree = "<group>"; };
-		38A6CA85A26BF23D85AA669641D30C32 /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDRingIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
 		3C8F432769CC1F2D7944DABFC1124A9C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		3F9E2D32345955355A5EEE3DD53ECDAE /* JGProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.xcconfig; sourceTree = "<group>"; };
 		425A329D576ED8823B9CE88DE83BAB42 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
 		42CEFA0FD05382D655225B3D5383CCA3 /* SDImageCacheDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheDefine.h; path = SDWebImage/SDImageCacheDefine.h; sourceTree = "<group>"; };
 		42DD84A2324D8DB416224B7C4A80F0D0 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		44B31C8EB45EBDB76DAB43E236CAC7EA /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JGProgressHUD-Defines.h"; path = "JGProgressHUD/JGProgressHUD/JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
 		47200C30965ACB4E0F1D197E6F1C8A99 /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
-		4838E86BD75FDCAD59E164F00168D803 /* JGProgressHUDShadow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDShadow.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.h; sourceTree = "<group>"; };
 		4B6073A989D2AF8C5D41222C21A3982A /* jg_hud_error@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_error@3x.png"; path = "JGProgressHUD/Resources/jg_hud_error@3x.png"; sourceTree = "<group>"; };
 		50A03DC6B70B881E0386ED1C247C1D88 /* SDImageCachesManagerOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManagerOperation.m; path = SDWebImage/Private/SDImageCachesManagerOperation.m; sourceTree = "<group>"; };
 		50DAD1A07115B3E809512A6617BAF6B0 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
@@ -298,7 +293,7 @@
 		58F0ABA0D46501E2196D8AE0584D0445 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
 		59548345BAF956948ED08F53388E643D /* SDWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWeakProxy.h; path = SDWebImage/Private/SDWeakProxy.h; sourceTree = "<group>"; };
 		5B7D86F199B1735BD054673645A1035C /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
-		5EBE19923A195ACA8E608C0312AB4F10 /* JGProgressHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = JGProgressHUD.bundle; path = "JGProgressHUD-JGProgressHUD.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBE19923A195ACA8E608C0312AB4F10 /* JGProgressHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JGProgressHUD.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F24BA90E74F1CF164838A37DA2A2EBB /* jg_hud_success@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_success@3x.png"; path = "JGProgressHUD/Resources/jg_hud_success@3x.png"; sourceTree = "<group>"; };
 		622944138F74652F54B1CA7CD6DB5A03 /* SDImageAPNGCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAPNGCoder.m; path = SDWebImage/SDImageAPNGCoder.m; sourceTree = "<group>"; };
 		62FD00F16C67ED8F8A64A633AEC130E0 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
@@ -313,7 +308,6 @@
 		69A243BDF29FAA4490CDD4074DD7357F /* SDImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoderHelper.h; path = SDWebImage/SDImageCoderHelper.h; sourceTree = "<group>"; };
 		6AFBCD825ED941D3B53A121992BC488D /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		6CCDB6FA7116B74DC588266F9CADABE1 /* SDImageAPNGCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoderInternal.h; path = SDWebImage/Private/SDImageAPNGCoderInternal.h; sourceTree = "<group>"; };
-		6F573B946BE720E450174CB22199B150 /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
 		719F2E1A4B39A199947BECD37EB88856 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		71E823835BE946B2CA508BE852A4072C /* Pods-MetalEasyFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MetalEasyFoundation-dummy.m"; sourceTree = "<group>"; };
 		73BFC4A12FC9AACF992321FB04EAE2E0 /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/SDImageCoder.m; sourceTree = "<group>"; };
@@ -335,7 +329,6 @@
 		836DF435F78449BDA67B5A635E0CA097 /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/SDImageTransformer.h; sourceTree = "<group>"; };
 		8398D95CED6EF38D9DD63EE64A6A4565 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		83E5436ABEE72E2162CB42C4F3373040 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
-		85442790B5D2B86B12A158517DEE90E8 /* JGProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUD.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.h; sourceTree = "<group>"; };
 		85671ECA052E01E3C113B8F6AA7E03B0 /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/NSImage+Compatibility.m"; sourceTree = "<group>"; };
 		8772FBE65AB7E02F9BCB17E4E762C4C3 /* ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		87A5837C137FBAB28CD71A9BF3789547 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
@@ -351,7 +344,7 @@
 		955E2EFE80FC43A50090D62B1858D675 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		993578C3EB14B93106BFB2114CCA8568 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		9B5C0815714E337EAB5097858B56982D /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDSuccessIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F1C3E8A01395F2B14E2BFF9ACDC32EC /* Pods-MetalEasyFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MetalEasyFoundation.modulemap"; sourceTree = "<group>"; };
 		A104E885E10B3190C3696A1364658B61 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		A41DBF51F12305D07FE25262601E1F10 /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/SDAnimatedImageView.h; sourceTree = "<group>"; };
@@ -368,7 +361,6 @@
 		B5BF4818088C9C49E1C5C428EA23C1B3 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
 		B5F546A3F2BEFF5ED940C8635632176F /* JGProgressHUDAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.m; sourceTree = "<group>"; };
 		B6106C1A3F0065651A24921DF41C7E6E /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/SDImageTransformer.m; sourceTree = "<group>"; };
-		B618337050993B64D4F987EDC5592857 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
 		B62903A67C54863EEF457BEF296EB526 /* SDAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageView.m; path = SDWebImage/SDAnimatedImageView.m; sourceTree = "<group>"; };
 		B65145CBDAAAD89DDED562E256E82ADA /* JGProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		B8E3DF79ACCB5D1768917A7ACFCC5323 /* SDWebImageDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDefine.h; path = SDWebImage/SDWebImageDefine.h; sourceTree = "<group>"; };
@@ -388,12 +380,25 @@
 		C5327C1B8469C4B64C8B900A8DC9167A /* SDWebImageCacheKeyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheKeyFilter.h; path = SDWebImage/SDWebImageCacheKeyFilter.h; sourceTree = "<group>"; };
 		C53556DCFABEE69B214E9212B61822B7 /* Pods-MetalEasyFoundation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalEasyFoundation-acknowledgements.plist"; sourceTree = "<group>"; };
 		C55AFDDB386A65E405BC39773E78BB0A /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
-		C59B56BBA8E907EA9D0F518B1D0EA615 /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MetalEasyFoundation.a"; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59B56BBA8E907EA9D0F518B1D0EA615 /* libPods-MetalEasyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MetalEasyFoundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59F7A2626902AF1B016F9260E5F6EE8 /* Pods-MetalEasyFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MetalEasyFoundation-umbrella.h"; sourceTree = "<group>"; };
 		C7B989DBB9A12BB3EC7D1A26F7D1A4E0 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		CC42603E1FF227DBB9F9175B401DAD28 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
 		CDBC71CD5D4106D71777CEAAF01FC552 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		CF13B25E46E263BE06A93147EFA12BFE /* UIImage+Metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Metadata.h"; path = "SDWebImage/UIImage+Metadata.h"; sourceTree = "<group>"; };
+		CFCCE41623B5C8D1007F824A /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeAnimation.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
+		CFCCE41723B5C8D1007F824A /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE41823B5C8D1007F824A /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE41923B5C8D1007F824A /* JGProgressHUDShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDShadow.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDShadow.h; sourceTree = "<group>"; };
+		CFCCE41A23B5C8D1007F824A /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
+		CFCCE41B23B5C8D1007F824A /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
+		CFCCE41C23B5C8D1007F824A /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JGProgressHUD-Defines.h"; path = "JGProgressHUD/JGProgressHUD/include/JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
+		CFCCE41D23B5C8D1007F824A /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE41E23B5C8D1007F824A /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDImageIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE41F23B5C8D1007F824A /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDRingIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE42023B5C8D1007F824A /* JGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUD.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUD.h; sourceTree = "<group>"; };
+		CFCCE42123B5C8D1007F824A /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
+		CFCCE42223B5C8D2007F824A /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		D084D7A09FC74B4B260A4648D008DA56 /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/SDImageFrame.m; sourceTree = "<group>"; };
 		D34CF487AB2D8B1C976695FF8D1CA3E4 /* SDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDiskCache.h; path = SDWebImage/SDDiskCache.h; sourceTree = "<group>"; };
 		D5FEB3C568B410F10803AE02C74E36DC /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/SDImageLoadersManager.h; sourceTree = "<group>"; };
@@ -401,8 +406,6 @@
 		D732D50A70516EB396EFD488234EE58E /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
 		D9C7CEE3E1961DECD2DF288CCB9773C6 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		DA3C6BF5FBB3F6F2BD07F4B3F88A786B /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		DA747100DFDA46581307A91133FDF157 /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
-		DC3F283A8EDE1F1A58F841011859C9CE /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		DC5E8B973684A3C02AEAD51461708B7E /* JGProgressHUDPieIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDPieIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.m; sourceTree = "<group>"; };
 		DDE600D7176390ECD75C7EED85BF7E09 /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/SDImageFrame.h; sourceTree = "<group>"; };
 		DE0EC7C9BE617841C044E940E1C531BE /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
@@ -410,7 +413,6 @@
 		DEDF20342F0A8609F750818409CB8653 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
 		E02C3933B04E96A38B0435816806818B /* JGProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		E06C819C78DFA81B3E78D0493D2B4067 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/SDImageCodersManager.h; sourceTree = "<group>"; };
-		E21DD4B643DA0FCF2E13557B6E0F5FC4 /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDImageIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
 		E22EABA693896F4134B613C8D2EDBE6D /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		E2B7EDFA1CF6667856CA94E4D2F7136C /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/SDImageIOCoder.h; sourceTree = "<group>"; };
 		E3264F6429DBDBCE5C6ADBE504B5A951 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
@@ -420,19 +422,17 @@
 		E542A064C2CD8A47F1EFB29F5558685D /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		E70EF0A2A0EE9FA81CF32359E7173294 /* SDImageAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAssetManager.h; path = SDWebImage/Private/SDImageAssetManager.h; sourceTree = "<group>"; };
 		E8244756171EFDF76DD748D173249F66 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		E840957037303FF70C21EE1BEB673B0E /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
 		E8D9AE666885583781E334C94F1F69E1 /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
 		EB781B36EC56D2728DBAC184537ADE7F /* SDImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGIFCoder.m; path = SDWebImage/SDImageGIFCoder.m; sourceTree = "<group>"; };
 		EB8F2AB32E54C9EEF410D6AEA9AC995F /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		EFAB17E2C48B4595E6C5F84AB7FE33C4 /* jg_hud_success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_success.png; path = JGProgressHUD/Resources/jg_hud_success.png; sourceTree = "<group>"; };
 		F2A1F122806A73EE713CFD9833857CCD /* SDWebImageDownloaderConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderConfig.h; path = SDWebImage/SDWebImageDownloaderConfig.h; sourceTree = "<group>"; };
-		F2F07B5D398945EE5E618DD9C517EEAE /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
 		F38B44D58636A8A562A2461AA170AA92 /* Pods-MetalEasyFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalEasyFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		F4072CD04B1F8113B76FD6ADD5DB1C23 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		F4B83312078CD6CD2BFED86CEF482DEB /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		F544705899199199B8D26A531AD1EF22 /* JGProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		F57B85F0DB301FBC00221083307479AC /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
-		F800B5C8FF28AD44432C7D7542B64C04 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F800B5C8FF28AD44432C7D7542B64C04 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E27226E22ED99598F28EBA03BD5DBC /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
 		FA20560DE2AB52D852E2049FFB087A89 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		FAA1648F4EA8B869DEF22FD8949E3647 /* SDAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImage.h; path = SDWebImage/SDAnimatedImage.h; sourceTree = "<group>"; };
@@ -497,7 +497,6 @@
 				F952F647BA253F821F5CA3A481D7BFAB /* Core */,
 				CB096217BE9387843D63C945782B7B0D /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -540,7 +539,6 @@
 				DA3C6BF5FBB3F6F2BD07F4B3F88A786B /* UILayoutSupport+Extensions.swift */,
 				CAC60B9AE8FCBD1DDC630416C87C7FB0 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -591,35 +589,34 @@
 		C30AFCFDC9EAD7902DAFD749B18FF24B /* JGProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				85442790B5D2B86B12A158517DEE90E8 /* JGProgressHUD.h */,
+				CFCCE41C23B5C8D1007F824A /* JGProgressHUD-Defines.h */,
+				CFCCE42023B5C8D1007F824A /* JGProgressHUD.h */,
+				CFCCE41B23B5C8D1007F824A /* JGProgressHUDAnimation.h */,
+				CFCCE41723B5C8D1007F824A /* JGProgressHUDErrorIndicatorView.h */,
+				CFCCE41623B5C8D1007F824A /* JGProgressHUDFadeAnimation.h */,
+				CFCCE41A23B5C8D1007F824A /* JGProgressHUDFadeZoomAnimation.h */,
+				CFCCE41E23B5C8D1007F824A /* JGProgressHUDImageIndicatorView.h */,
+				CFCCE41823B5C8D1007F824A /* JGProgressHUDIndeterminateIndicatorView.h */,
+				CFCCE41D23B5C8D1007F824A /* JGProgressHUDIndicatorView.h */,
+				CFCCE42123B5C8D1007F824A /* JGProgressHUDPieIndicatorView.h */,
+				CFCCE41F23B5C8D1007F824A /* JGProgressHUDRingIndicatorView.h */,
+				CFCCE41923B5C8D1007F824A /* JGProgressHUDShadow.h */,
+				CFCCE42223B5C8D2007F824A /* JGProgressHUDSuccessIndicatorView.h */,
 				0EBE6388D87A8E2D526ACABCB5BB47C2 /* JGProgressHUD.m */,
-				44B31C8EB45EBDB76DAB43E236CAC7EA /* JGProgressHUD-Defines.h */,
-				36EA283C60B0C1C41C6B03A5DBB8EC2F /* JGProgressHUDAnimation.h */,
 				B5F546A3F2BEFF5ED940C8635632176F /* JGProgressHUDAnimation.m */,
-				B618337050993B64D4F987EDC5592857 /* JGProgressHUDErrorIndicatorView.h */,
 				56B727B09983ED3C3D74A335424CBA29 /* JGProgressHUDErrorIndicatorView.m */,
-				6F573B946BE720E450174CB22199B150 /* JGProgressHUDFadeAnimation.h */,
 				18564C28C8D0C40ED14BF4151E196413 /* JGProgressHUDFadeAnimation.m */,
-				E840957037303FF70C21EE1BEB673B0E /* JGProgressHUDFadeZoomAnimation.h */,
 				167CAAA76A7BF459CBD07164C4BE69B9 /* JGProgressHUDFadeZoomAnimation.m */,
-				E21DD4B643DA0FCF2E13557B6E0F5FC4 /* JGProgressHUDImageIndicatorView.h */,
 				0DDE639EBEE83EF6C1B05A02894FC01F /* JGProgressHUDImageIndicatorView.m */,
-				196FFF62F9E4DFF1A4CB4D452C9BB0C1 /* JGProgressHUDIndeterminateIndicatorView.h */,
 				C2EFBB6A47BF52E4C73F25DEDC3571B2 /* JGProgressHUDIndeterminateIndicatorView.m */,
-				DA747100DFDA46581307A91133FDF157 /* JGProgressHUDIndicatorView.h */,
 				E8D9AE666885583781E334C94F1F69E1 /* JGProgressHUDIndicatorView.m */,
-				F2F07B5D398945EE5E618DD9C517EEAE /* JGProgressHUDPieIndicatorView.h */,
 				DC5E8B973684A3C02AEAD51461708B7E /* JGProgressHUDPieIndicatorView.m */,
-				38A6CA85A26BF23D85AA669641D30C32 /* JGProgressHUDRingIndicatorView.h */,
 				7A19743899426A16752723BFD9E729BB /* JGProgressHUDRingIndicatorView.m */,
-				4838E86BD75FDCAD59E164F00168D803 /* JGProgressHUDShadow.h */,
 				20546AC2B56B36A9A5D8D1C118BA28BB /* JGProgressHUDShadow.m */,
-				DC3F283A8EDE1F1A58F841011859C9CE /* JGProgressHUDSuccessIndicatorView.h */,
 				9B5C0815714E337EAB5097858B56982D /* JGProgressHUDSuccessIndicatorView.m */,
 				0133A8766EB59972455486359A32812A /* Resources */,
 				9E2862BCDC559362AAF53D7D16AE8DD7 /* Support Files */,
 			);
-			name = JGProgressHUD;
 			path = JGProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -811,20 +808,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B17BD18FB7A7B4C11F326BEFE5949ED0 /* JGProgressHUD-Defines.h in Headers */,
+				CFCCE42D23B5C8D2007F824A /* JGProgressHUD.h in Headers */,
+				CFCCE42A23B5C8D2007F824A /* JGProgressHUDIndicatorView.h in Headers */,
+				CFCCE42723B5C8D2007F824A /* JGProgressHUDFadeZoomAnimation.h in Headers */,
+				CFCCE42F23B5C8D2007F824A /* JGProgressHUDSuccessIndicatorView.h in Headers */,
+				CFCCE42C23B5C8D2007F824A /* JGProgressHUDRingIndicatorView.h in Headers */,
 				6D0870CC82FB47D1735981E75679EB33 /* JGProgressHUD-umbrella.h in Headers */,
-				B6E36F301D33A5AED6BC7CDB158543EF /* JGProgressHUD.h in Headers */,
-				E07245F71D120F50B3C55CE38C66F619 /* JGProgressHUDAnimation.h in Headers */,
-				C405A47D528652C600C0E659D550E22A /* JGProgressHUDErrorIndicatorView.h in Headers */,
-				C3359DB630C64D68EF15A58DDDE936B3 /* JGProgressHUDFadeAnimation.h in Headers */,
-				96651238D8A8C9E43ABAB66B86705FDC /* JGProgressHUDFadeZoomAnimation.h in Headers */,
-				38E07C8DCFBDA12729D554DB88C76371 /* JGProgressHUDImageIndicatorView.h in Headers */,
-				DB90647D94C0B67B7ED1CCF229D08BDD /* JGProgressHUDIndeterminateIndicatorView.h in Headers */,
-				6E91FA5B1D40BB52DCD2CD815BC57437 /* JGProgressHUDIndicatorView.h in Headers */,
-				87D4DE99CD248D5068135CF8CEA248A2 /* JGProgressHUDPieIndicatorView.h in Headers */,
-				7D1004D59B5E5E4095E49DE849E1433B /* JGProgressHUDRingIndicatorView.h in Headers */,
-				9C29A13C69860FB77C4AD49040EC697B /* JGProgressHUDShadow.h in Headers */,
-				7C7FEF72AF8064DAD1FD6F3795AD3F29 /* JGProgressHUDSuccessIndicatorView.h in Headers */,
+				CFCCE42E23B5C8D2007F824A /* JGProgressHUDPieIndicatorView.h in Headers */,
+				CFCCE42323B5C8D2007F824A /* JGProgressHUDFadeAnimation.h in Headers */,
+				CFCCE42423B5C8D2007F824A /* JGProgressHUDErrorIndicatorView.h in Headers */,
+				CFCCE42B23B5C8D2007F824A /* JGProgressHUDImageIndicatorView.h in Headers */,
+				CFCCE42623B5C8D2007F824A /* JGProgressHUDShadow.h in Headers */,
+				CFCCE42523B5C8D2007F824A /* JGProgressHUDIndeterminateIndicatorView.h in Headers */,
+				CFCCE42823B5C8D2007F824A /* JGProgressHUDAnimation.h in Headers */,
+				CFCCE42923B5C8D2007F824A /* JGProgressHUD-Defines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

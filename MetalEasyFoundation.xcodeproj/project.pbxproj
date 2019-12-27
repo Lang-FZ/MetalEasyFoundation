@@ -622,6 +622,7 @@
 		CF65F39922A21DEF008F4219 /* MetalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalController.swift; sourceTree = "<group>"; };
 		CF65F39B22A21E02008F4219 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		CF65F39D22A22807008F4219 /* CurrentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDelegate.swift; sourceTree = "<group>"; };
+		CFCCE43023B5CA24007F824A /* MetalEasyFoundation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetalEasyFoundation-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBC5BDF2760617FF00AC0124 /* Pods-MetalEasyFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalEasyFoundation.release.xcconfig"; path = "Target Support Files/Pods-MetalEasyFoundation/Pods-MetalEasyFoundation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1232,6 +1233,7 @@
 				CF65F38F22A21A86008F4219 /* InfoSet */,
 				CF65F38822A21791008F4219 /* Default.swift */,
 				CF0F5ECD22A2126D0032E902 /* Assets.xcassets */,
+				CFCCE43023B5CA24007F824A /* MetalEasyFoundation-Bridging-Header.h */,
 			);
 			path = MetalEasyFoundation;
 			sourceTree = "<group>";
@@ -1339,6 +1341,7 @@
 				TargetAttributes = {
 					CF0F5EC222A2126C0032E902 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -1862,6 +1865,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 496JMV52SE;
@@ -1877,6 +1881,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = MetalDemo;
 				SWIFT_ENABLE_BATCH_MODE = No;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalEasyFoundation/MetalEasyFoundation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1891,6 +1897,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 496JMV52SE;
@@ -1906,6 +1913,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = MetalDemo;
 				SWIFT_ENABLE_BATCH_MODE = No;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalEasyFoundation/MetalEasyFoundation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
