@@ -26,8 +26,8 @@ fragment half4 localBinaryPatternFragment(NearbyTexelVertexIO fragmentInput [[st
     byteTally += 64.0h / 255.0h * step(centerIntensity, bottomRightIntensity);
     byteTally += 128.0h / 255.0h * step(centerIntensity, rightIntensity);
     
-    // TODO: Replace the above with a dot product and two vec4s
-    // TODO: Apply step to a matrix, rather than individually
+    // MARK: Replace the above with a dot product and two vec4s
+    // MARK: Apply step to a matrix, rather than individually
     
     return half4(byteTally, byteTally, byteTally, 1.0h);
 }

@@ -46,7 +46,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
 
     public var location:PhysicalCameraLocation {
         didSet {
-            // TODO: Swap the camera locations, framebuffers as needed
+            // MARK: Swap the camera locations, framebuffers as needed
             guard let newVideoInput = try? AVCaptureDeviceInput(device: location.device()!) else { return }
             
             self.captureSession.beginConfiguration()

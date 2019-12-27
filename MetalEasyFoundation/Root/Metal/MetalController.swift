@@ -130,7 +130,7 @@ extension MetalController: UITableViewDelegate, UITableViewDataSource {
 
 extension MetalController {
 
-    //TODO: LookupTable 阿宝色
+    // MARK: LookupTable 阿宝色
     private func pushLUT(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -146,7 +146,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: ZoomBlur 缩放模糊
+    // MARK: ZoomBlur 缩放模糊
     private func pushZoomBlur(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -162,7 +162,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: 描边、颜色丰富度
+    // MARK: 描边、颜色丰富度
     private func pushToon(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -178,7 +178,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: 机器学习风格滤镜
+    // MARK: 机器学习风格滤镜
     private func pushStyleTransfer(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -194,7 +194,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: 拉伸
+    // MARK: 拉伸
     private func pushMTLHeap(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -210,7 +210,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: 抠图
+    // MARK: 抠图
     private func pushMask(_ title:String) {
         
         let camera_picture = CameraOrPictureController()
@@ -226,7 +226,7 @@ extension MetalController {
         }
         navigationController?.pushViewController(camera_picture, animated: true)
     }
-    //TODO: 抖音特效
+    // MARK: 抖音特效
     private func tiktok(_ title:String) {
         
         let camera_picture = CameraOrPictureController()

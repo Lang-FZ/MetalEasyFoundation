@@ -31,7 +31,7 @@ public struct Timestamp: Comparable {
 }
 
 public func ==(x:Timestamp, y:Timestamp) -> Bool {
-    // TODO: Fix this
+    // MARK: Fix this
 //    if (x.flags.contains(TimestampFlags.PositiveInfinity) && y.flags.contains(TimestampFlags.PositiveInfinity)) {
 //        return true
 //    } else if (x.flags.contains(TimestampFlags.NegativeInfinity) && y.flags.contains(TimestampFlags.NegativeInfinity)) {
@@ -51,7 +51,7 @@ public func ==(x:Timestamp, y:Timestamp) -> Bool {
 }
 
 public func <(x:Timestamp, y:Timestamp) -> Bool {
-    // TODO: Fix this
+    // MARK: Fix this
 //    if (x.flags.contains(TimestampFlags.PositiveInfinity) || y.flags.contains(TimestampFlags.NegativeInfinity)) {
 //        return false
 //    } else if (x.flags.contains(TimestampFlags.NegativeInfinity) || y.flags.contains(TimestampFlags.PositiveInfinity)) {

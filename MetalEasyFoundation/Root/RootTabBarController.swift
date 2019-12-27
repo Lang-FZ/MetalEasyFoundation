@@ -59,7 +59,7 @@ class RootTabBarController: BaseTabBarController {
 
 extension RootTabBarController {
     
-    //TODO: 获取上一次退出app的索引
+    // MARK: 获取上一次退出app的索引
     private func getLastIndex() -> Int {
         
         var last_index = index_metal
@@ -76,17 +76,17 @@ extension RootTabBarController {
 
 extension RootTabBarController {
     
-    //TODO: 外部修改当前选中
+    // MARK: 外部修改当前选中
     public func changeCurrentVC(_ index:Int) {
         custom_tabBar.selectedItem(index)
     }
     
-    //TODO: 切换 TabBar 选中
+    // MARK: 切换 TabBar 选中
     private func selectedVC(_ index:Int) {
         self.selectedIndex = index
     }
     
-    //TODO: 拿到当前VC
+    // MARK: 拿到当前VC
     public func currentViewController() -> UIViewController {
 
         if let modalVC = self.presentedViewController {
@@ -106,7 +106,7 @@ extension RootTabBarController {
         }
     }
     
-    //TODO: 拿到当前根VC
+    // MARK: 拿到当前根VC
     public func currentRootViewController() -> UIViewController {
         
         switch selectedIndex {
@@ -122,7 +122,7 @@ extension RootTabBarController {
         }
     }
     
-    //TODO: 当前所在 navigationController
+    // MARK: 当前所在 navigationController
     public func currentNavigationController() -> BaseNavigationController {
         
         switch selectedIndex {
@@ -143,12 +143,12 @@ extension RootTabBarController {
 
 extension RootTabBarController {
     
-    //TODO: metal
+    // MARK: metal
     @objc public func go_to_metal(_ animated:Bool = false) {
         currentNavigationController().popToRootViewController(animated: animated)
         changeCurrentVC(index_metal)
     }
-    //TODO: setting
+    // MARK: setting
     @objc public func go_to_setting(_ animated:Bool = false) {
         currentNavigationController().popToRootViewController(animated: animated)
         changeCurrentVC(index_setting)

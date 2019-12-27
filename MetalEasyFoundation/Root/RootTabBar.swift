@@ -106,7 +106,7 @@ class RootTabBar: UIView {
 
 extension RootTabBar {
     
-    //TODO: 初始化视图
+    // MARK: 初始化视图
     private func createRootTabBar() {
         
         self.addSubview(self.visual)
@@ -117,7 +117,7 @@ extension RootTabBar {
         self.setup_UI()
     }
     
-    //TODO: 约束
+    // MARK: 约束
     private func setup_UI() {
         
         metal_title.snp.makeConstraints { (make) in
@@ -130,7 +130,7 @@ extension RootTabBar {
         }
     }
     
-    //TODO: 选中某个 tabBar
+    // MARK: 选中某个 tabBar
     @objc public func selectedItem(_ index:Int, block_action:Bool = true) {
         
         if block_action {

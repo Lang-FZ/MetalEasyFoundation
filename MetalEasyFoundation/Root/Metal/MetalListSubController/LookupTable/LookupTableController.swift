@@ -59,7 +59,7 @@ class LookupTableController: BaseViewController {
         }
     }
     
-    //TODO: 饱和度
+    // MARK: 饱和度
     private lazy var saturation_l: UILabel = {
         let saturation_l = UILabel.init()
         saturation_l.textColor = UIColor.init("#323232")
@@ -82,7 +82,7 @@ class LookupTableController: BaseViewController {
         return saturation_fillter
     }()
     
-    //TODO: 亮度
+    // MARK: 亮度
     private lazy var brightness_l: UILabel = {
         let brightness_l = UILabel.init()
         brightness_l.textColor = UIColor.init("#323232")
@@ -105,7 +105,7 @@ class LookupTableController: BaseViewController {
         return brightness_fillter
     }()
     
-    //TODO: 阿宝色
+    // MARK: 阿宝色
     private lazy var abao_intensity_l: UILabel = {
         let abao_intensity_l = UILabel.init()
         abao_intensity_l.textColor = UIColor.init("#323232")
@@ -269,7 +269,7 @@ extension LookupTableController: CameraDelegate {
         
     }
     
-    //TODO: 点击拍照按钮
+    // MARK: 点击拍照按钮
     @objc private func takePhoto() {
         camera.stopCapture()
         self.showLoading()
@@ -304,7 +304,7 @@ extension LookupTableController: CameraDelegate {
         }
     }
     
-    //TODO: 保存图片
+    // MARK: 保存图片
     private func saveImageToPhotoCollection(_ image:UIImage) {
         
         do {

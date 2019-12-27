@@ -5,7 +5,7 @@ public class LevelsAdjustment: BasicOperation {
     public var minOutput:Color = Color(red:0.0, green:0.0, blue:0.0) { didSet { uniformSettings["minOutput"] = minOutput } }
     public var maxOutput:Color = Color(red:1.0, green:1.0, blue:1.0) { didSet { uniformSettings["maxOutput"] = maxOutput } }
     
-    // TODO: Is this an acceptable interface, or do I need to bring this closer to the old implementation?
+    // MARK: Is this an acceptable interface, or do I need to bring this closer to the old implementation?
     
     public init() {
         super.init(fragmentFunctionName: "levelsFragment", numberOfInputs: 1)

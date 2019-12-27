@@ -44,8 +44,8 @@ fragment half4 colorLocalBinaryPatternFragment(NearbyTexelVertexIO fragmentInput
     greenByteTally += 64.0h / 255.0h * step(centerColor.g, bottomRightColor.g);
     greenByteTally += 128.0h / 255.0h * step(centerColor.g, rightColor.g);
     
-    // TODO: Replace the above with a dot product and two vec4s
-    // TODO: Apply step to a matrix, rather than individually
+    // MARK: Replace the above with a dot product and two vec4s
+    // MARK: Apply step to a matrix, rather than individually
     
     return half4(redByteTally, blueByteTally, greenByteTally, 1.0h);
 }

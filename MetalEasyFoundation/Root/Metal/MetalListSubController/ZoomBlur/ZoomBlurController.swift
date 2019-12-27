@@ -186,7 +186,7 @@ extension ZoomBlurController: CameraDelegate {
         
     }
     
-    //TODO: 点击拍照按钮
+    // MARK: 点击拍照按钮
     @objc private func takePhoto() {
         camera.stopCapture()
         self.showLoading()
@@ -221,7 +221,7 @@ extension ZoomBlurController: CameraDelegate {
         }
     }
     
-    //TODO: 保存图片
+    // MARK: 保存图片
     private func saveImageToPhotoCollection(_ image:UIImage) {
         
         do {

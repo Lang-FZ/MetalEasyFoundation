@@ -100,7 +100,7 @@ public class TargetContainer:Sequence {
     }
     
     public func append(_ target:ImageConsumer, indexAtTarget:UInt) {
-        // TODO: Don't allow the addition of a target more than once
+        // MARK: Don't allow the addition of a target more than once
         dispatchQueue.async{
             self.targets.append(WeakImageConsumer(value:target, indexAtTarget:indexAtTarget))
         }

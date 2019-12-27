@@ -88,12 +88,12 @@ extension CameraOrPictureController: UITableViewDataSource, UITableViewDelegate 
 
 extension CameraOrPictureController {
     
-    //TODO: 调用镜头
+    // MARK: 调用镜头
     private func selectedCameraVC() {
         
         selected_render_type?(.camera, "")
     }
-    //TODO: 选取图片
+    // MARK: 选取图片
     private func selectedPictureVC() {
         
         let picture = SelectPicturesController()

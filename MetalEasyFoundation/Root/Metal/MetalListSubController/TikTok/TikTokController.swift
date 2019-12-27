@@ -84,7 +84,7 @@ class TikTokController: BaseViewController {
         }
     }
     
-    //TODO: 选择滤镜Bar
+    // MARK: 选择滤镜Bar
     private lazy var select_filter_bar: TikTokSelectFilterdBar = {
         let select_filter_bar = TikTokSelectFilterdBar.init(frame: CGRect.init(x: 0, y: kScreenH-kTabBarBotH-frameMath(60+15), width: kScreenW, height: kTabBarBotH+frameMath(60+15)))
         select_filter_bar.backgroundColor = UIColor.white
@@ -94,48 +94,48 @@ class TikTokController: BaseViewController {
         return select_filter_bar
     }()
     
-    //TODO: 维护 滤镜 是否被引用的表
+    // MARK: 维护 滤镜 是否被引用的表
     private lazy var filter_info: NSMapTable<AnyObject, NSNumber> = {
         let filter_info = NSMapTable<AnyObject, NSNumber>.init(keyOptions: [.weakMemory, .objectPointerPersonality], valueOptions: [.weakMemory, .objectPointerPersonality])
         return filter_info
     }()
     
-    //TODO: Zoom 滤镜
+    // MARK: Zoom 滤镜
     private lazy var zoom_fillter: TikTokZoomFilter = {
         let zoom_fillter = TikTokZoomFilter.init()
         zoom_fillter.tikTokZoomTime = 0
         return zoom_fillter
     }()
     
-    //TODO: SoulOut 滤镜
+    // MARK: SoulOut 滤镜
     private lazy var soulOut_fillter: TikTokSoulOutFilter = {
         let soulOut_fillter = TikTokSoulOutFilter.init()
         soulOut_fillter.tikTokSoulOutTime = 0
         return soulOut_fillter
     }()
     
-    //TODO: Shake 滤镜
+    // MARK: Shake 滤镜
     private lazy var shake_fillter: TikTokShakeFilter = {
         let shake_fillter = TikTokShakeFilter.init()
         shake_fillter.tikTokShakeTime = 0
         return shake_fillter
     }()
     
-    //TODO: FlashWhite 滤镜
+    // MARK: FlashWhite 滤镜
     private lazy var flashWhite_fillter: TikTokFlashWhiteFilter = {
         let flashWhite_fillter = TikTokFlashWhiteFilter.init()
         flashWhite_fillter.tikTokFlashWhiteTime = 0
         return flashWhite_fillter
     }()
     
-    //TODO: Burr 滤镜
+    // MARK: Burr 滤镜
     private lazy var burr_fillter: TikTokBurrFilter = {
         let burr_fillter = TikTokBurrFilter.init()
         burr_fillter.tikTokBurrTime = 0
         return burr_fillter
     }()
     
-    //TODO: Hallucination 滤镜
+    // MARK: Hallucination 滤镜
     private lazy var hallucination_fillter: TikTokHallucinationFilter = {
         let hallucination_fillter = TikTokHallucinationFilter.init()
         hallucination_fillter.tikTokHallucinationTime = 0
@@ -198,7 +198,7 @@ class TikTokController: BaseViewController {
 
 extension TikTokController {
     
-    //TODO: 切换滤镜
+    // MARK: 切换滤镜
     private func choose_filter(_ index:Int) {
         
         removeFilterTime()
@@ -232,7 +232,7 @@ extension TikTokController {
             normalRendering()
         }
     }
-    //TODO: 删除被引用的滤镜 sources、targets
+    // MARK: 删除被引用的滤镜 sources、targets
     private func removeAllTargetSources() {
         
         if type == .camera {
@@ -285,7 +285,7 @@ extension TikTokController {
         
         renderView.sources.sources = [:]
     }
-    //TODO: 无滤镜
+    // MARK: 无滤镜
     private func normalRendering() {
         
         if type == .camera {
@@ -296,7 +296,7 @@ extension TikTokController {
             picture.processImage()
         }
     }
-    //TODO: 缩放滤镜
+    // MARK: 缩放滤镜
     private func zoomFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: zoom_fillter)
@@ -310,7 +310,7 @@ extension TikTokController {
         }
         startFilterTime()
     }
-    //TODO: 灵魂出窍滤镜
+    // MARK: 灵魂出窍滤镜
     private func soulOutFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: soulOut_fillter)
@@ -324,7 +324,7 @@ extension TikTokController {
         }
         startFilterTime()
     }
-    //TODO: 抖动滤镜
+    // MARK: 抖动滤镜
     private func shakeFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: shake_fillter)
@@ -338,7 +338,7 @@ extension TikTokController {
         }
         startFilterTime()
     }
-    //TODO: 闪白滤镜
+    // MARK: 闪白滤镜
     private func flashWhiteFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: flashWhite_fillter)
@@ -352,7 +352,7 @@ extension TikTokController {
         }
         startFilterTime()
     }
-    //TODO: 毛刺滤镜
+    // MARK: 毛刺滤镜
     private func burrFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: burr_fillter)
@@ -366,7 +366,7 @@ extension TikTokController {
         }
         startFilterTime()
     }
-    //TODO: 幻觉滤镜
+    // MARK: 幻觉滤镜
     private func hallucinationFilterRendering() {
         
         filter_info.setObject(NSNumber(value: true), forKey: hallucination_fillter)
@@ -386,7 +386,7 @@ extension TikTokController {
 
 extension TikTokController {
     
-    //TODO: 刷新
+    // MARK: 刷新
     @objc private func filterDisplay() {
         
         if displayLink == nil {
@@ -417,7 +417,7 @@ extension TikTokController {
             picture.processImage()
         }
     }
-    //TODO: 开启
+    // MARK: 开启
     private func startFilterTime() {
         startTime = Date.timeIntervalBetween1970AndReferenceDate + Date.timeIntervalSinceReferenceDate
         interval = 0
@@ -425,7 +425,7 @@ extension TikTokController {
         displayLink = CADisplayLink.init(target: self, selector: #selector(filterDisplay))
         displayLink?.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
-    //TODO: 移除
+    // MARK: 移除
     private func removeFilterTime() {
         displayLink?.isPaused = true
         displayLink?.invalidate()
@@ -443,7 +443,7 @@ extension TikTokController: CameraDelegate {
         
     }
     
-    //TODO: 点击拍照按钮
+    // MARK: 点击拍照按钮
     @objc private func takePhoto() {
         camera.stopCapture()
         self.showLoading()
@@ -478,7 +478,7 @@ extension TikTokController: CameraDelegate {
         }
     }
     
-    //TODO: 保存图片
+    // MARK: 保存图片
     private func saveImageToPhotoCollection(_ image:UIImage) {
         
         do {

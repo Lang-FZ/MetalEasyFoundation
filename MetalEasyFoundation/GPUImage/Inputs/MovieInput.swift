@@ -20,8 +20,8 @@ public class MovieInput: ImageSource {
     var numberOfFramesCaptured = 0
     var totalFrameTimeDuringCapture:Double = 0.0
 
-    // TODO: Add movie reader synchronization
-    // TODO: Someone will have to add back in the AVPlayerItem logic, because I don't know how that works
+    // MARK: Add movie reader synchronization
+    // MARK: Someone will have to add back in the AVPlayerItem logic, because I don't know how that works
     public init(asset:AVAsset, playAtActualSpeed:Bool = false, loop:Bool = false) throws {
         self.asset = asset
         self.playAtActualSpeed = playAtActualSpeed
@@ -38,7 +38,7 @@ public class MovieInput: ImageSource {
         let readerVideoTrackOutput = AVAssetReaderTrackOutput(track:self.asset.tracks(withMediaType: AVMediaType.video)[0], outputSettings:outputSettings)
         readerVideoTrackOutput.alwaysCopiesSampleData = false
         assetReader.add(readerVideoTrackOutput)
-        // TODO: Audio here
+        // MARK: Audio here
     }
 
     public convenience init(url:URL, playAtActualSpeed:Bool = false, loop:Bool = false) throws {
@@ -76,7 +76,7 @@ public class MovieInput: ImageSource {
                     self.assetReader.cancelReading()
                     
                     if (self.loop) {
-                        // TODO: Restart movie processing
+                        // MARK: Restart movie processing
                     } else {
                         self.endProcessing()
                     }
@@ -152,7 +152,7 @@ public class MovieInput: ImageSource {
         CVPixelBufferLockBaseAddress(movieFrame, CVPixelBufferLockFlags(rawValue:CVOptionFlags(0)))
 
         let conversionMatrix = colorConversionMatrix601FullRangeDefault
-        // TODO: Get this color query working
+        // MARK: Get this color query working
 //        if let colorAttachments = CVBufferGetAttachment(movieFrame, kCVImageBufferYCbCrMatrixKey, nil) {
 //            if(CFStringCompare(colorAttachments, kCVImageBufferYCbCrMatrix_ITU_R_601_4, 0) == .EqualTo) {
 //                _preferredConversion = kColorConversion601FullRange

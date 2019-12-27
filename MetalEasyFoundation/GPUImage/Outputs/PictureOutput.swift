@@ -32,7 +32,7 @@ public class PictureOutput: ImageConsumer {
             do {
                 try imageData.write(to: self.url, options:.atomic)
             } catch {
-                // TODO: Handle this better
+                // MARK: Handle this better
                 print("WARNING: Couldn't save image with error:\(error)")
             }
         }
@@ -47,7 +47,7 @@ public class PictureOutput: ImageConsumer {
         if let imageCallback = imageAvailableCallback {
             let cgImageFromBytes = texture.cgImage()
             
-            // TODO: Let people specify orientations
+            // MARK: Let people specify orientations
             let image = UIImage(cgImage:cgImageFromBytes, scale:1.0, orientation:.up)
             
             imageCallback(image)
@@ -62,8 +62,8 @@ public class PictureOutput: ImageConsumer {
             let image = UIImage(cgImage:cgImageFromBytes, scale:1.0, orientation:.up)
             let imageData:Data
             switch encodedImageFormat {
-            case .png: imageData = image.pngData()! // TODO: Better error handling here
-            case .jpeg: imageData = image.jpegData(compressionQuality: 0.8)! // TODO: Be able to set image quality
+            case .png: imageData = image.pngData()! // MARK: Better error handling here
+            case .jpeg: imageData = image.jpegData(compressionQuality: 0.8)! // MARK: Be able to set image quality
             }
             
             imageCallback(imageData)

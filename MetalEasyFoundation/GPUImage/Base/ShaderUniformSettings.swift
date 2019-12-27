@@ -56,7 +56,7 @@ public class ShaderUniformSettings {
  
     public subscript(key:String) -> Color {
         get {
-            // TODO: Fix this
+            // MARK: Fix this
             return Color(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         }
         set(newValue) {
@@ -82,7 +82,7 @@ public class ShaderUniformSettings {
 
     public subscript(key:String) -> Position {
         get {
-            // TODO: Fix this
+            // MARK: Fix this
             return Position(0.0, 0.0)
         }
         set(newValue) {
@@ -100,7 +100,7 @@ public class ShaderUniformSettings {
 
     public subscript(key:String) -> Size {
         get {
-            // TODO: Fix this
+            // MARK: Fix this
             return Size(width:0.0, height:0.0)
         }
         set(newValue) {
@@ -118,7 +118,7 @@ public class ShaderUniformSettings {
 
     public subscript(key:String) -> Matrix3x3 {
         get {
-            // TODO: Fix this
+            // MARK: Fix this
             return Matrix3x3.identity
         }
         set(newValue) {
@@ -136,7 +136,7 @@ public class ShaderUniformSettings {
 
     public subscript(key:String) -> Matrix4x4 {
         get {
-            // TODO: Fix this
+            // MARK: Fix this
             return Matrix4x4.identity
         }
         set(newValue) {
