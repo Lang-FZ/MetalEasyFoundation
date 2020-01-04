@@ -74,11 +74,7 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         metal_table.dataSource = self
         metal_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
         metal_table.view.separatorStyle = .none
-//        metal_table.estimatedRowHeight = 44.0
-//        metal_table.rowHeight = UITableView.automaticDimension
         metal_table.view.scrollIndicatorInsets = UIEdgeInsets.zero
-        
-//        metal_table.register(BaseListCell.self, forCellReuseIdentifier: MetalListIdentifier)
         
         return metal_table
     }()

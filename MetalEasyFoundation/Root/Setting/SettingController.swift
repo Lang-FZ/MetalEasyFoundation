@@ -33,11 +33,7 @@ class SettingController: BaseViewController, HadTabBarProtocol {
         setting_table.dataSource = self
         setting_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
         setting_table.view.separatorStyle = .none
-//        setting_table.estimatedRowHeight = 44.0
-//        setting_table.rowHeight = UITableView.automaticDimension
         setting_table.view.scrollIndicatorInsets = UIEdgeInsets.zero
-        
-//        setting_table.register(BaseListCell.self, forCellReuseIdentifier: SettingListIdentifier)
         
         return setting_table
     }()

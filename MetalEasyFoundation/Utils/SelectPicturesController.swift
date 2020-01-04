@@ -57,11 +57,7 @@ class SelectPicturesController: BaseViewController {
         picture_table.dataSource = self
         picture_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
         picture_table.view.separatorStyle = .none
-//        picture_table.view.estimatedRowHeight = 44.0
-//        picture_table.view.rowHeight = UITableView.automaticDimension
         picture_table.view.scrollIndicatorInsets = .zero
-        
-//        picture_table.view.register(BaseListCell.self, forCellReuseIdentifier: selecte_picture_identifier)
         
         return picture_table
     }()

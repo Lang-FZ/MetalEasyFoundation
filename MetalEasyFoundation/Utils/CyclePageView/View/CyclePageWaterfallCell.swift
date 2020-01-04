@@ -21,12 +21,6 @@ class CyclePageWaterfallCell: UICollectionViewCell {
         let image = UIImageView.init()
         return image
     }()
-//    private lazy var loading: UIActivityIndicatorView = {
-//        let loading = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.whiteLarge)
-//        loading.hidesWhenStopped = true
-//        loading.center = CGPoint.init(x: self.image.frame.size.width/2, y: self.image.frame.size.height/2)
-//        return loading
-//    }()
     
     // MARK: - setModel
     var model: CyclePagePhotoModel = CyclePagePhotoModel.init() {
@@ -79,13 +73,9 @@ class CyclePageWaterfallCell: UICollectionViewCell {
                             make.height.equalTo(image_height)
                         })
                         
-//                        loading.startAnimating()
-                        
                         let index = self.model.indexPath
                         
                         SDWebImageDownloader.shared.downloadImage(with: model.photoUrl, options: SDWebImageDownloaderOptions.useNSURLCache, progress: nil) { (url_image, data, error, success) in
-                            
-//                            self.loading.stopAnimating()
                             
                             if let image:UIImage = url_image {
                                 let image_width = image_height/image.size.height*image.size.width
@@ -143,10 +133,7 @@ class CyclePageWaterfallCell: UICollectionViewCell {
                         
                         let index = self.model.indexPath
                         
-//                        loading.startAnimating()
                         SDWebImageDownloader.shared.downloadImage(with: model.photoUrl, options: SDWebImageDownloaderOptions.useNSURLCache, progress: nil) { (url_image, data, error, success) in
-                            
-//                            self.loading.stopAnimating()
                             
                             if let image:UIImage = UIImage.init(data: url_image!.sd_imageData()!) {
                                 let image_height = image_width/image.size.width*image.size.height
@@ -180,7 +167,6 @@ extension CyclePageWaterfallCell {
         backgroundColor = UIColor.clear
         
         addSubview(image)
-//        addSubview(loading)
         
         setup_UI()
         self.layer.masksToBounds = true

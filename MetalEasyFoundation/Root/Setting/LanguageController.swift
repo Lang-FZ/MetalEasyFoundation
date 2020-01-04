@@ -39,11 +39,7 @@ class LanguageController: BaseViewController {
         language_table.dataSource = self
         language_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
         language_table.view.separatorStyle = .none
-//        language_table.estimatedRowHeight = 44.0
-//        language_table.rowHeight = UITableView.automaticDimension
         language_table.view.scrollIndicatorInsets = UIEdgeInsets.zero
-        
-//        language_table.register(BaseListCell.self, forCellReuseIdentifier: LanguageListIdentifier)
         
         return language_table
     }()
