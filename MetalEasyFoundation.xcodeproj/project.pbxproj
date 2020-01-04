@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -294,7 +294,7 @@
 		CF0F5EC722A2126C0032E902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F5EC622A2126C0032E902 /* AppDelegate.swift */; };
 		CF0F5ECE22A2126D0032E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0F5ECD22A2126D0032E902 /* Assets.xcassets */; };
 		CF164FC322A446A1002F02D0 /* BaseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC222A446A1002F02D0 /* BaseListModel.swift */; };
-		CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC422A44973002F02D0 /* BaseListCell.swift */; };
+		CF164FC522A44973002F02D0 /* BaseListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC422A44973002F02D0 /* BaseListNode.swift */; };
 		CF164FC722A44E4C002F02D0 /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164FC622A44E4C002F02D0 /* LanguageController.swift */; };
 		CF65F37F22A213B1008F4219 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */; };
 		CF65F38022A213B1008F4219 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF65F37D22A213B1008F4219 /* BaseViewController.swift */; };
@@ -606,7 +606,7 @@
 		CF0F5ECD22A2126D0032E902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0F5ED222A2126D0032E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF164FC222A446A1002F02D0 /* BaseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListModel.swift; sourceTree = "<group>"; };
-		CF164FC422A44973002F02D0 /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
+		CF164FC422A44973002F02D0 /* BaseListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListNode.swift; sourceTree = "<group>"; };
 		CF164FC622A44E4C002F02D0 /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		CF65F37D22A213B1008F4219 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -1245,7 +1245,7 @@
 				CF65F37C22A213B1008F4219 /* BaseTabBarController.swift */,
 				CF65F37D22A213B1008F4219 /* BaseViewController.swift */,
 				CF164FC222A446A1002F02D0 /* BaseListModel.swift */,
-				CF164FC422A44973002F02D0 /* BaseListCell.swift */,
+				CF164FC422A44973002F02D0 /* BaseListNode.swift */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -1487,7 +1487,7 @@
 				5ED337A822FBBFF80096973F /* ColorBurnBlend.metal in Sources */,
 				CF65F39C22A21E02008F4219 /* SettingController.swift in Sources */,
 				5ED337A622FBBFF80096973F /* HueBlend.swift in Sources */,
-				CF164FC522A44973002F02D0 /* BaseListCell.swift in Sources */,
+				CF164FC522A44973002F02D0 /* BaseListNode.swift in Sources */,
 				5E0DEED822DDE8D2002DF990 /* CyclePageCollectionCell.swift in Sources */,
 				5ED3379822FBBFF80096973F /* SaturationBlend.metal in Sources */,
 				CF65F38E22A218C8008F4219 /* Extension+UIColor.swift in Sources */,
@@ -1865,6 +1865,7 @@
 				SWIFT_ENABLE_BATCH_MODE = No;
 				SWIFT_OBJC_BRIDGING_HEADER = "MetalEasyFoundation/MetalEasyFoundation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1896,6 +1897,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = MetalDemo;
 				SWIFT_ENABLE_BATCH_MODE = No;
 				SWIFT_OBJC_BRIDGING_HEADER = "MetalEasyFoundation/MetalEasyFoundation-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

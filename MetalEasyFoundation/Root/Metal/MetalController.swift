@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let MetalListIdentifier = "MetalListIdentifier"
-
 class MetalController: BaseViewController, HadTabBarProtocol {
 
     lazy private var model: BaseListModel = {
@@ -68,18 +66,19 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         return model
     }()
     
-    lazy private var metal_table: UITableView = {
+    lazy private var metal_table: ASTableNode = {
         
-        let metal_table = UITableView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH-kTabBarH), style: .plain)
+        let metal_table = ASTableNode.init(style: .plain)
+        metal_table.frame = CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH-kTabBarH)
         metal_table.delegate = self
         metal_table.dataSource = self
         metal_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
-        metal_table.separatorStyle = .none
-        metal_table.estimatedRowHeight = 44.0
-        metal_table.rowHeight = UITableView.automaticDimension
-        metal_table.scrollIndicatorInsets = UIEdgeInsets.zero
+        metal_table.view.separatorStyle = .none
+//        metal_table.estimatedRowHeight = 44.0
+//        metal_table.rowHeight = UITableView.automaticDimension
+        metal_table.view.scrollIndicatorInsets = UIEdgeInsets.zero
         
-        metal_table.register(BaseListCell.self, forCellReuseIdentifier: MetalListIdentifier)
+//        metal_table.register(BaseListCell.self, forCellReuseIdentifier: MetalListIdentifier)
         
         return metal_table
     }()
@@ -90,7 +89,8 @@ class MetalController: BaseViewController, HadTabBarProtocol {
         title = LocalizationTool.getStr("metal.root.title")
         navigationController?.tabBarItem.title = ""
         
-        view.addSubview(metal_table)
+        view.addSubnode(metal_table)
+        metal_table.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(changedLanguage), name: Language_Changed_Notification, object: nil)
     }
@@ -109,19 +109,25 @@ extension MetalController {
     }
 }
 
-extension MetalController: UITableViewDelegate, UITableViewDataSource {
+extension MetalController: ASTableDelegate, ASTableDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableNode: ASTableNode) -> Int {
+        return 1
+    }
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         return model.data.count
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MetalListIdentifier) as! BaseListCell
-        cell.model = model.data[indexPath.row]
-        cell.isLast = (indexPath.row == (model.data.count-1))
-        return cell
+    func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let block: ASCellNodeBlock = { [weak self] in
+            let node = BaseListNode()
+            node.model = self?.model.data[indexPath.row] ?? BaseListModel.init([:])
+            node.isLast = (indexPath.row == ((self?.model.data.count ?? 0)-1))
+            return node
+        }
+        return block
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+        tableNode.deselectRow(at: indexPath, animated: true)
         model.data[indexPath.row].action?(LocalizationTool.getStr(model.data[indexPath.row].title))
     }
 }

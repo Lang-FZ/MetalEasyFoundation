@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-let selecte_picture_identifier = "selecte_picture_identifier"
+import AsyncDisplayKit
 
 class SelectPicturesController: BaseViewController {
     
@@ -50,18 +49,19 @@ class SelectPicturesController: BaseViewController {
         return ml_data
     }()
     
-    lazy private var picture_table: UITableView = {
+    lazy private var picture_table: ASTableNode = {
         
-        let picture_table = UITableView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH), style: .plain)
+        let picture_table = ASTableNode.init(style: .plain)
+        picture_table.frame = CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH)
         picture_table.delegate = self
         picture_table.dataSource = self
         picture_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
-        picture_table.separatorStyle = .none
-        picture_table.estimatedRowHeight = 44.0
-        picture_table.rowHeight = UITableView.automaticDimension
-        picture_table.scrollIndicatorInsets = UIEdgeInsets.zero
+        picture_table.view.separatorStyle = .none
+//        picture_table.view.estimatedRowHeight = 44.0
+//        picture_table.view.rowHeight = UITableView.automaticDimension
+        picture_table.view.scrollIndicatorInsets = .zero
         
-        picture_table.register(BaseListCell.self, forCellReuseIdentifier: selecte_picture_identifier)
+//        picture_table.view.register(BaseListCell.self, forCellReuseIdentifier: selecte_picture_identifier)
         
         return picture_table
     }()
@@ -73,7 +73,7 @@ class SelectPicturesController: BaseViewController {
         
         title = LocalizationTool.getStr("metal.select.picture.title")
         
-        view.addSubview(picture_table)
+        view.addSubnode(picture_table)
         picture_table.reloadData()
     }
     
@@ -86,12 +86,12 @@ class SelectPicturesController: BaseViewController {
 }
 
 // MARK: - tableView 代理 数据源
-extension SelectPicturesController: UITableViewDelegate,UITableViewDataSource {
+extension SelectPicturesController: ASTableDelegate, ASTableDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableNode: ASTableNode) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         switch data_status {
         case .normal:
             return data.count
@@ -99,19 +99,21 @@ extension SelectPicturesController: UITableViewDelegate,UITableViewDataSource {
             return ml_data.count
         }
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: selecte_picture_identifier) as! BaseListCell
-        switch data_status {
-        case .normal:
-            cell.title.text = data[indexPath.row]
-        case .ml_model:
-            cell.title.text = ml_data[indexPath.row]
+    func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let block: ASCellNodeBlock = { [weak self] in
+            let node = BaseListNode()
+            switch self?.data_status ?? .normal {
+            case .normal:
+                node.title_text = self?.data[indexPath.row] ?? ""
+            case .ml_model:
+                node.title_text = self?.ml_data[indexPath.row] ?? ""
+            }
+            node.isLast = (indexPath.row == ((self?.data.count ?? 0)-1))
+            return node
         }
-        cell.isLast = (indexPath.row == (data.count-1))
-        return cell
+        return block
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         switch data_status {
         case .normal:
             selected_picture?(data[indexPath.row])
@@ -119,6 +121,12 @@ extension SelectPicturesController: UITableViewDelegate,UITableViewDataSource {
             selected_index?(indexPath.row)
         }
     }
+//    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
+//        return true
+//    }
+//    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+//        context.beginBatchFetching()
+//    }
 }
 
 enum PictureDataTypeEnum {

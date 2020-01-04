@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let SettingListIdentifier = "SettingListIdentifier"
-
 class SettingController: BaseViewController, HadTabBarProtocol {
 
     lazy private var model: BaseListModel = {
@@ -27,29 +25,30 @@ class SettingController: BaseViewController, HadTabBarProtocol {
         return model
     }()
     
-    lazy private var setting_table: UITableView = {
+    lazy private var setting_table: ASTableNode = {
         
-        let setting_table = UITableView.init(frame: CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH-kTabBarH), style: .plain)
+        let setting_table = ASTableNode.init(style: .plain)
+        setting_table.frame = CGRect.init(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH-kNaviBarH-kTabBarH)
         setting_table.delegate = self
         setting_table.dataSource = self
         setting_table.backgroundColor = UIColor.init("#F0F0F0", alpha: 0.8)
-        setting_table.separatorStyle = .none
-        setting_table.estimatedRowHeight = 44.0
-        setting_table.rowHeight = UITableView.automaticDimension
-        setting_table.scrollIndicatorInsets = UIEdgeInsets.zero
+        setting_table.view.separatorStyle = .none
+//        setting_table.estimatedRowHeight = 44.0
+//        setting_table.rowHeight = UITableView.automaticDimension
+        setting_table.view.scrollIndicatorInsets = UIEdgeInsets.zero
         
-        setting_table.register(BaseListCell.self, forCellReuseIdentifier: SettingListIdentifier)
+//        setting_table.register(BaseListCell.self, forCellReuseIdentifier: SettingListIdentifier)
         
         return setting_table
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = LocalizationTool.getStr("setting.root.title")
         navigationController?.tabBarItem.title = ""
         
-        view.addSubview(setting_table)
+        view.addSubnode(setting_table)
+        setting_table.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(changedLanguage), name: Language_Changed_Notification, object: nil)
     }
@@ -68,21 +67,27 @@ extension SettingController {
     }
 }
 
-extension SettingController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.data.count
+extension SettingController: ASTableDelegate, ASTableDataSource {
+   
+   func numberOfSections(in tableNode: ASTableNode) -> Int {
+       return 1
+   }
+   func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+       return model.data.count
+   }
+    func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let block: ASCellNodeBlock = { [weak self] in
+            let node = BaseListNode()
+            node.model = self?.model.data[indexPath.row] ?? BaseListModel.init([:])
+            node.isLast = (indexPath.row == ((self?.model.data.count ?? 0)-1))
+            return node
+        }
+        return block
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingListIdentifier) as! BaseListCell
-        cell.model = model.data[indexPath.row]
-        cell.isLast = (indexPath.row == (model.data.count-1))
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        model.data[indexPath.row].action?("")
-    }
+   func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+       tableNode.deselectRow(at: indexPath, animated: true)
+       model.data[indexPath.row].action?("")
+   }
 }
 
 extension SettingController {
